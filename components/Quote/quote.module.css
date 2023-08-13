@@ -5,7 +5,7 @@
   border-bottom: 2px solid #2c2f34;
   margin-top: 10vh;
   margin-bottom: 10vh;
-  height: fit-content;
+  /* height: fit-content; */
   justify-content: center;
   align-items: center;
 
@@ -14,7 +14,7 @@
 .quoteTitle {
   font-size: 6vw;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   margin: 0;
   color: #2c2f34;
   opacity: 0.75;
@@ -40,7 +40,7 @@ min-width: 50vw;
 }
 
 .quoteContent > p{
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   line-height: 1.2;
   padding: 2vw;
   color: #2c2f34;
