@@ -80,7 +80,7 @@ align-items: center;
 .title h2{
   font-size: 3vw;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-weight: 300;
   color: white;
   margin: 0;
@@ -90,7 +90,7 @@ align-items: center;
 .title h3{
   font-size: 4vw;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-weight: 600;
   color: white;   
   margin: 0;
@@ -133,7 +133,7 @@ font-size: 8vw;
   .title h2{
     font-size: 12vw;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     font-weight: 300;
     color: white;
     margin: 0;
@@ -143,7 +143,7 @@ font-size: 8vw;
   .title h3{
     font-size: 16vw;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     font-weight: 600;
     color: white;   
     margin: 0;

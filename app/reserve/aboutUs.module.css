@@ -41,7 +41,7 @@
     color: white !important;
     font-size: 1.2vw !important;
     font-weight: 400 !important;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   }
 
   .back{
@@ -51,7 +51,7 @@
     padding: 0.5vw 1.5vw;
     color: white;
     font-size: 1vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     text-transform: uppercase;
     margin-top: 2vh;
   }
@@ -132,14 +132,14 @@ min-height: 30vh;
     font-size: 1vw;
     list-style: disc;
     margin-left: 1.5vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
   }
 
   .row h2{
     font-size: 1vw;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
   }
 
@@ -153,13 +153,13 @@ min-height: 30vh;
 
   .price > h3{
     font-size: 0.8vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
   }
 
   .price > h4{
     font-size: 3vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34; 
     line-height: 1;
   }
@@ -167,7 +167,7 @@ min-height: 30vh;
   .continue{
     font-size: 1vw;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: white;
     background-color: #FDC316;
     padding: 0.5vw 1vw;
@@ -183,7 +183,7 @@ min-height: 30vh;
 
   .priceContainer > p{
     font-size: 0.8vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34; 
   }
 
@@ -206,7 +206,7 @@ min-height: 30vh;
 
   .add > h6{
     font-size: 1.5vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34; 
     margin-left: 1vw;
     margin-right: 1vw;
@@ -261,7 +261,7 @@ opacity: 0.5;
   .guests > h2{
     min-width: fit-content;
     font-size: 1.2vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
     font-weight: 400;
     margin-right: 2vw;
@@ -307,7 +307,7 @@ opacity: 0.5;
     width: 100%;
     text-align: center;
     font-size: 1vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     text-decoration: underline;
     color: white;
     font-weight: 400;
@@ -323,7 +323,7 @@ opacity: 0.5;
     width: 100%;
     text-align: center;
     font-size: 1vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     text-decoration: underline;
     color: white;
     font-weight: 400;
@@ -348,7 +348,7 @@ opacity: 0.5;
 
   .sidebarElement >h3{
     font-size: 1.2vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: white;
     font-weight: 400;
     transition: all 0.5s;
@@ -366,14 +366,14 @@ margin-left: 1vw;
 
   .roomDetail > h2{
     font-size: 1vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: white;
     font-weight: 400;
   }
 
   .roomDetail > h4{
     font-size: 1vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: white;
     font-weight: 400;
     margin-left: 1vw;
@@ -382,7 +382,7 @@ margin-left: 1vw;
   
   
    .input{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     width: 48%;
     position: relative;
   }
@@ -396,7 +396,7 @@ margin-left: 1vw;
     font-size: 1vw;
     color: #2C2F34;
     padding-top: 1.2vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     font-weight: 400;
   }
   
@@ -408,7 +408,7 @@ margin-left: 1vw;
     color: #B4B4B4;
     font-size: 1vw;
     transition: all 0.5s;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     font-weight: 400;
   
   }
@@ -422,7 +422,7 @@ margin-left: 1vw;
   
   font-size: 0.8vw;
   top: 2vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-weight: 400;
   }
   
@@ -434,7 +434,7 @@ margin-left: 1vw;
     top: 2vw;
     text-transform: uppercase;
     color: #B4B4B4;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     font-weight: 400;
     }
   
@@ -455,7 +455,7 @@ margin-left: 1vw;
     }
   
     .inputContainer > .input > h3{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #2C2F34;
       font-size: 1vw;
     }
@@ -482,7 +482,7 @@ margin-left: 1vw;
         top: 0.5vw !important;
         text-transform: uppercase;
         color: #B4B4B4;
-        font-family: 'Poppins', sans-serif;
+          /* font-family: 'Poppins', sans-serif; */
         font-weight: 400;
         }
   
@@ -494,7 +494,7 @@ margin-left: 1vw;
           color: #B4B4B4;
           font-size: 1vw;
           transition: all 0.5s;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
           font-weight: 400;
         
         }
@@ -502,7 +502,7 @@ margin-left: 1vw;
   
           font-size: 0.8vw !important;
           top: 0.5vw !important;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
           font-weight: 400;
       
           }
@@ -529,7 +529,7 @@ margin-left: 1vw;
 
   
    .input{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     width: 100%;
     position: relative;
   }
@@ -543,7 +543,7 @@ margin-left: 1vw;
     font-size: 1vw;
     color: #2C2F34;
     padding-top: 1.2vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   }
   
    .input > input:placeholder-shown + h2{
@@ -554,7 +554,7 @@ margin-left: 1vw;
     color: #B4B4B4;
     font-size: 1vw;
     transition: all 0.5s;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   
   }
    .input > input:focus {
@@ -567,7 +567,7 @@ margin-left: 1vw;
   
   font-size: 0.8vw;
   top: 0.3vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   }
   
    .input > input + h2{
@@ -578,7 +578,7 @@ margin-left: 1vw;
     top: 0.3vw;
     text-transform: uppercase;
     color: #B4B4B4;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     }
   
    .input{
@@ -609,7 +609,7 @@ margin-left: 1vw;
         top: 0.6vw !important;
         text-transform: uppercase;
         color: #B4B4B4;
-        font-family: 'Poppins', sans-serif;
+          /* font-family: 'Poppins', sans-serif; */
         }
   
         .inputMonth > input:placeholder-shown + h2{
@@ -620,14 +620,14 @@ margin-left: 1vw;
           color: #B4B4B4;
           font-size: 3vw !important;
           transition: all 0.5s;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
         
         }
         .inputMonth > input:focus + h2{
   
           font-size: 1.8vw !important;
           top: 0.6vw !important;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
       
           }
   
@@ -722,7 +722,7 @@ margin-left: 1vw;
         top: 0.6vw !important;
         text-transform: uppercase;
         color: #B4B4B4;
-        font-family: 'Poppins', sans-serif;
+          /* font-family: 'Poppins', sans-serif; */
         }
   
         .inputMonth > input:placeholder-shown + h2{
@@ -733,14 +733,14 @@ margin-left: 1vw;
           color: #B4B4B4;
           font-size: 3vw !important;
           transition: all 0.5s;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
         
         }
         .inputMonth > input:focus + h2{
   
           font-size: 1.8vw !important;
           top: 0.6vw !important;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
       
           }
   

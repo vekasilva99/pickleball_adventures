@@ -55,7 +55,7 @@
 
 
 .content > .input{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   width: 90%;
   position: relative;
 }
@@ -69,7 +69,7 @@
   font-size: 1vw;
   color: #2C2F34;
   padding-top: 1.2vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 .content > .input > input:placeholder-shown + h2{
@@ -80,7 +80,7 @@
   color: #B4B4B4;
   font-size: 1vw;
   transition: all 0.5s;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 
 }
 .content > .input > input:focus {
@@ -93,7 +93,7 @@ border: none;
 
 font-size: 0.8vw;
 top: 0.3vw;
-font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .content > .input > input + h2{
@@ -104,7 +104,7 @@ font-family: 'Poppins', sans-serif;
   top: 0.3vw;
   text-transform: uppercase;
   color: #B4B4B4;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   }
 
   .content > .input{
@@ -130,7 +130,7 @@ font-family: 'Poppins', sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 1.5vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   }
 
   .signUp{
@@ -143,13 +143,13 @@ font-family: 'Poppins', sans-serif;
   }
 
   .signUp > h2{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
     font-size: 1vw;
   }
 
   .signUp > button{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #FDC316;
     font-size: 1vw;
     cursor: pointer;
@@ -197,7 +197,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .content > .input{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   width: 100%;
   position: relative;
 }
@@ -211,7 +211,7 @@ font-family: 'Poppins', sans-serif;
   font-size: 1vw;
   color: #2C2F34;
   padding-top: 1.2vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 .content > .input > input:placeholder-shown + h2{
@@ -222,7 +222,7 @@ font-family: 'Poppins', sans-serif;
   color: #B4B4B4;
   font-size: 1vw;
   transition: all 0.5s;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 
 }
 .content > .input > input:focus {
@@ -235,7 +235,7 @@ border: none;
 
 font-size: 0.8vw;
 top: 0.3vw;
-font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .content > .input > input + h2{
@@ -246,7 +246,7 @@ font-family: 'Poppins', sans-serif;
   top: 0.3vw;
   text-transform: uppercase;
   color: #B4B4B4;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   }
 
   .content > .input{
@@ -272,7 +272,7 @@ font-family: 'Poppins', sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 1.5vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   }
 
   .signUp{
@@ -285,13 +285,13 @@ font-family: 'Poppins', sans-serif;
   }
 
   .signUp > h2{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
     font-size: 1vw;
   }
 
   .signUp > button{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #FDC316;
     font-size: 1vw;
     cursor: pointer;
@@ -390,13 +390,13 @@ top: 1vw;
   }
 
   .signUp > h2{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #2C2F34;
     font-size: 2.5vw;
   }
 
   .signUp > button{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     color: #FDC316;
     font-size: 2.5vw;
     cursor: pointer;

@@ -22,13 +22,13 @@
 
 
 .input{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     width: 48%;
     position: relative;
   }
 
   .inputLarge{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     width: 100%;
     position: relative;
   }
@@ -42,7 +42,7 @@
     font-size: 1vw;
     color: #2C2F34;
     padding-top: 1.2vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   }
   
    .input > input:placeholder-shown + h2{
@@ -53,7 +53,7 @@
     color: #B4B4B4;
     font-size: 1vw;
     transition: all 0.5s;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   
   }
    .input > input:focus {
@@ -66,7 +66,7 @@
   
   font-size: 0.8vw;
   top: 2vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   }
   
    .input > input + h2{
@@ -77,7 +77,7 @@
     top: 2vw;
     text-transform: uppercase;
     color: #B4B4B4;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     }
   
    .input{
@@ -103,7 +103,7 @@
       color: white;
       text-transform: uppercase;
       font-size: 1.5vw;
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
     }
   
     .signUp{
@@ -116,13 +116,13 @@
     }
   
     .signUp > h2{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #2C2F34;
       font-size: 1vw;
     }
   
     .signUp > button{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #FDC316;
       font-size: 1vw;
       cursor: pointer;
@@ -146,7 +146,7 @@
     }
   
     .inputContainer > .input > h3{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #2C2F34;
       font-size: 1vw;
     }
@@ -173,7 +173,7 @@
         top: 0.5vw !important;
         text-transform: uppercase;
         color: #B4B4B4;
-        font-family: 'Poppins', sans-serif;
+          /* font-family: 'Poppins', sans-serif; */
         }
   
         .inputMonth > input:placeholder-shown + h2{
@@ -184,14 +184,14 @@
           color: #B4B4B4;
           font-size: 1vw;
           transition: all 0.5s;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
         
         }
         .inputMonth > input:focus + h2{
   
           font-size: 0.8vw !important;
           top: 0.5vw !important;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
       
           }
 
@@ -206,7 +206,7 @@
             font-size: 1vw;
             color: #2C2F34;
             padding-top: 1.2vw;
-            font-family: 'Poppins', sans-serif;
+              /* font-family: 'Poppins', sans-serif; */
           }
           
            .input > textarea:placeholder-shown + h2{
@@ -217,7 +217,7 @@
             color: #B4B4B4;
             font-size: 1vw;
             transition: all 0.5s;
-            font-family: 'Poppins', sans-serif;
+              /* font-family: 'Poppins', sans-serif; */
           
           }
            .input > textarea:focus {
@@ -230,7 +230,7 @@
           
           font-size: 0.8vw;
           top: 2vw;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
           }
           
            .input > textarea + h2{
@@ -241,7 +241,7 @@
             top: 2vw;
             text-transform: uppercase;
             color: #B4B4B4;
-            font-family: 'Poppins', sans-serif;
+              /* font-family: 'Poppins', sans-serif; */
             }
   
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -263,7 +263,7 @@
 
   
    .input{
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     width: 100%;
     position: relative;
   }
@@ -277,7 +277,7 @@
     font-size: 1vw;
     color: #2C2F34;
     padding-top: 1.2vw;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   }
   
    .input > input:placeholder-shown + h2{
@@ -288,7 +288,7 @@
     color: #B4B4B4;
     font-size: 1vw;
     transition: all 0.5s;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
   
   }
    .input > input:focus {
@@ -301,7 +301,7 @@
   
   font-size: 0.8vw;
   top: 0.3vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   }
   
    .input > input + h2{
@@ -312,7 +312,7 @@
     top: 0.3vw;
     text-transform: uppercase;
     color: #B4B4B4;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     }
   
    .input{
@@ -338,7 +338,7 @@
       color: white;
       text-transform: uppercase;
       font-size: 1.5vw;
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
     }
   
     .signUp{
@@ -351,13 +351,13 @@
     }
   
     .signUp > h2{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #2C2F34;
       font-size: 1vw;
     }
   
     .signUp > button{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #FDC316;
       font-size: 1vw;
       cursor: pointer;
@@ -392,7 +392,7 @@
         top: 0.6vw !important;
         text-transform: uppercase;
         color: #B4B4B4;
-        font-family: 'Poppins', sans-serif;
+          /* font-family: 'Poppins', sans-serif; */
         }
   
         .inputMonth > input:placeholder-shown + h2{
@@ -403,14 +403,14 @@
           color: #B4B4B4;
           font-size: 3vw !important;
           transition: all 0.5s;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
         
         }
         .inputMonth > input:focus + h2{
   
           font-size: 1.8vw !important;
           top: 0.6vw !important;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
       
           }
   
@@ -515,13 +515,13 @@
     }
   
     .signUp > h2{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #2C2F34;
       font-size: 2.5vw;
     }
   
     .signUp > button{
-      font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
       color: #FDC316;
       font-size: 2.5vw;
       cursor: pointer;
@@ -570,7 +570,7 @@
         top: 0.6vw !important;
         text-transform: uppercase;
         color: #B4B4B4;
-        font-family: 'Poppins', sans-serif;
+          /* font-family: 'Poppins', sans-serif; */
         }
   
         .inputMonth > input:placeholder-shown + h2{
@@ -581,14 +581,14 @@
           color: #B4B4B4;
           font-size: 3vw !important;
           transition: all 0.5s;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
         
         }
         .inputMonth > input:focus + h2{
   
           font-size: 1.8vw !important;
           top: 0.6vw !important;
-          font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
       
           }
   

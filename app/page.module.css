@@ -84,7 +84,7 @@
  }
 
 .title{
-  font-family: 'Poppins', sans-serif;
+  /*   /* font-family: 'Poppins', sans-serif; */ */
   font-size: 5vw;
   line-height: 1;
 
@@ -92,7 +92,7 @@
 }
 
 .button{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   text-transform: uppercase; 
   background-color: #FDC316;
   padding: 1vw 3vw;
@@ -144,7 +144,7 @@
 }
 
 .page h2{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-size: 3vw;
   color: #2C2F34;
   font-weight: 400;
@@ -155,7 +155,7 @@
 }
 
 .page p{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-size: 1.2vw;
   color: #B4B4B4;
   font-weight: 400;
@@ -232,7 +232,7 @@
   background-color: #FDC316;
   padding: 0.2vw 1vw;
   border-radius: 100vw;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   text-transform: uppercase;
 }
 
@@ -263,7 +263,7 @@ color: #B4B4B4 !important;
 
 .secondaryButton{
   margin-top: 5vh;
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   text-transform: uppercase;
   border-radius: 100vw;
   border: 2px solid #FDC316;
@@ -294,7 +294,7 @@ color: #B4B4B4 !important;
 
   font-size: 4vw;
 
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 margin: 0;
 color: #2C2F34;
 opacity: 0.75;
@@ -307,7 +307,7 @@ min-height: 100%;
 
 .quoteContent{
 
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   line-height: 1.2;
 padding-right: 5%;
 padding-left: 5%;
@@ -350,7 +350,7 @@ margin-bottom: 1.5vh;
 }
 
 .feature h4{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-size: 1.2vw;
   font-weight: 500;
   color: #2C2F34;
@@ -358,7 +358,7 @@ margin-bottom: 1.5vh;
 }
 
 .feature p{
-  font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
   font-size: 1.2vw;
   font-weight: 400;
   color: #B4B4B4;

@@ -35,7 +35,7 @@
 .yellowText{
     padding-top: 20vh;
     color: #FDC316;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     /* margin-left: 5vw; */
     height: 80vh;
 }
@@ -63,7 +63,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     font-size: 1.2vw;
     color: #2C2F34;
     opacity: 0.75;
@@ -163,7 +163,7 @@ border-bottom: none;
 .left{
     /* padding-top: 20vh; */
     color: #2C2F34;
-    font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
     /* margin-left: 5vw; */
     /* height: 100vh; */
     line-height: 1.2;
