@@ -19,9 +19,26 @@
 
 }
 .pageGradient > img{
-    width:40vw;
+    width:20vw;
     height: auto;
     object-fit: contain;
+}
+
+.pageGradient > p{
+    font-size: 1.2vw;
+    color: #2C2F34;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.75;
+    max-width: 60%;
+    text-align: center;
+}
+
+.column1 > p{
+    font-size: 1.2vw;
+    color: #2C2F34;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.75;
+    text-align: left;  
 }
 .button{
     font-family: 'Poppins', sans-serif;
@@ -31,7 +48,6 @@
     border-radius: 100vw;
     font-size: 1.1vw;
     color: white;
-    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,10 +77,13 @@
   .row{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    margin: 5vh 0;
+   
   }
 
   .column1{
-   width: 50vw;
+   width: 60vw;
 
   }
 
@@ -126,9 +145,169 @@
     border-bottom: 2px solid #2C2F34;
     width: 100%;
     text-align: left;
+    font-family: 'Poppins', sans-serif;
     
 }
 
 .listItem:last-of-type{
 border-bottom: none;
 }
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .imageAbsolute{
+      width:300vw;
+      height: 100vw;
+      object-fit: cover;
+      
+    }
+    
+    .yellowText{
+      padding-top: 5vh;
+      height: 70vh;
+    }
+  
+    .yellowText h2{
+      font-size: 10vw;
+    }
+    .yellowText h5{
+      margin-top: 2vh;
+    }
+  
+    .center{
+      font-size: 2vw;
+    }
+      
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    }
+  
+    @media (min-width: 768px) and (max-width: 1024px)  {
+      .center h3{
+          font-size: 2vw;
+      }
+  
+      .listItem{
+          font-size: 2vw;
+      }
+  }
+    
+    @media (min-width: 481px) and (max-width: 767px) {
+  
+      .center h3{
+          font-size: 2vw;
+      }
+  
+    }
+    
+    @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      .center h3{
+          font-size: 4vw;
+      }
+  .pageGradient{
+      padding: 5vw;
+  }
+  
+  .yellowText h2{
+      font-size: 15vw;
+  }
+  
+  .yellowText{
+      padding-top: 5vh;
+  }
+  .yellowText h5{
+      font-size: 4vw;
+      margin-top: 2vh;
+  }
+  
+  .imageAbsolute{
+      opacity: 0.2;
+  }
+  
+  .listContainerTitle h3{
+  font-size: 14vw;
+  }
+  
+  .listContainerTitle h2{
+      font-size: 15vw;
+      }
+  .listContainer{
+      width: 90vw;
+      flex-direction: column;
+  }
+  
+  
+  .listContainerTitle{
+      width: 100%;
+  }
+  
+  .list{
+      width: 100%;
+      border-left: none;
+      padding-left: 0;
+  
+  }
+  
+  .listItem{
+      font-size: 4vw;
+      padding: 3vw 0;
+  }
+  
+  .slider{
+      height:  60vh;
+  }
+  
+  .slider img{
+      object-fit: cover;
+      width: 90vw;
+      min-width: 90vw;
+      height: 60vh;
+      min-height: 60vh;
+  
+  }
+  .left h2{
+      font-size: 8vw;
+  }
+  
+  .left h3{
+      font-size: 4vw;
+      width: 100%;
+  }
+
+  .pageGradient > p{
+    font-size: 4vw;
+    max-width: 100%;
+  }
+
+  .row{
+    flex-direction: column;
+
+  }
+
+  .column1{
+    width: 100%;
+  }
+
+  .column2{
+    width: 100%;
+    margin-top: 5vh;
+  }
+  .column1 > p{
+    font-size: 4vw;
+  }
+
+  .column2 > img{
+    width: 100%;
+    height: auto;
+  }
+    }
+    
+    @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  
+    }
+    

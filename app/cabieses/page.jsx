@@ -14,8 +14,8 @@ export default function Cabieses() {
      <Header titleLine1="Our" titleLine2="Foundation" background="assets/logo/cabieses2.png" backgroundTop="assets/logo/cabieses1.png" whiteBackground={true}/>
  
      <div className={styles.pageGradient}>
-   <img src="assets/logo/cabieses.png" />
-      <Title normal={true} text={'One ball can change a life, and a life can change the world'} opacity={true} />
+   <img src="assets/logo/cabieses3.png" />
+      <Title normal={true} text={'One ball can change a life, and a life can change the world'} opacity={true} marginTop={'5vh'} marginBottom={'2vh'} />
       <button className={styles.button}>Donate Now</button>
       <video autoPlay muted playsInline loop className={styles.videoHome}>
             <source src="assets/videos/cabieses.mp4" type="video/mp4"></source>
@@ -33,7 +33,7 @@ export default function Cabieses() {
         />
         <div className={styles.row}>
           <div className={styles.column1}>
-          <Title normal={true} text={'Vision'} opacity={true} />
+          <Title normal={true} text={'Vision'} opacity={true}  left={true}/>
           <p>To support the development of the greatest number of outstanding young athletes, at national and international level, with the purpose of forming the leaders of the future.</p>
           </div>
           <div className={styles.column2}>

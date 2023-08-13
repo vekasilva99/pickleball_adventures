@@ -16,7 +16,7 @@ export const Navbar = () =>{
                 <div>
               <button className={styles.navItem} onClick={()=>{router.push("/destinations");}}>Destinations</button>
               <button className={styles.navItem} onClick={()=>{router.push("/about-us");}}>About Us</button>
-              <button className={styles.navItem} onClick={()=>{router.push("/foundation");}}>Foundation</button>
+              <button className={styles.navItem} onClick={()=>{router.push("/cabieses");}}>Foundation</button>
               <button className={styles.navItem} onClick={()=>{router.push("/contact-us");}}>Contact</button>
               </div>
               <button className={styles.navItem} onClick={()=>{router.push("/sign-in");}}>Sign In</button>

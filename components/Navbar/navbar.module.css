@@ -1,5 +1,6 @@
 .navbar{
-    width: calc(100vw - 20px);
+    width: calc(100vw);
+    padding: 0 10px;
     height: auto;
     position: fixed;
     display: flex;
@@ -8,6 +9,7 @@
     top: 10px;
     z-index: 20;
     animation: navbar 10s linear;
+
     
 }
 
