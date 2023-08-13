@@ -1,0 +1,87 @@
+.color{
+  background-color: pink;
+}
+
+.text{
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+}
+
+.large{
+  font-size: 6vw;
+}
+
+.left{
+  text-align: left !important;
+  width: 100%;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: bold;
+}
+.right{
+
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+.opacity{
+opacity: 0.75;
+}
+
+.normal{
+  font-size: 3vw;
+}
+
+.small{
+  font-size: 2vw;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .large{
+    font-size: 6vw;
+  }
+  .normal{
+    font-size: 4vw;
+  }
+  .small{
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .large{
+    font-size: 12vw;
+  }
+  .normal{
+    font-size: 6vw;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .small{
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .large{
+    font-size: 15vw;
+  }
+  .normal{
+    font-size: 8vw;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .small{
+    font-size: 7vw;
+  }
+}

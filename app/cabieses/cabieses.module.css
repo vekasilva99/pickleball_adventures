@@ -1,0 +1,134 @@
+.main{
+    background-color: white;
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+    height: fit-content;
+    position: relative;
+  }
+
+.pageGradient{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.pageGradient > img{
+    width:40vw;
+    height: auto;
+    object-fit: contain;
+}
+.button{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase; 
+    background-color: #FDC316;
+    padding: 1vw 3vw;
+    border-radius: 100vw;
+    font-size: 1.1vw;
+    color: white;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: all 1s;
+  
+  }
+  
+  .button > img{
+    width:  0;
+    margin-left: 0.5vw;
+    visibility: hidden;
+    transition: all 1s;
+  }
+  .button:hover > img{
+    width:  1.5vw;
+    margin-left: 0.5vw;
+    visibility: visible;
+  }
+
+
+  .videoHome{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column1{
+   width: 50vw;
+
+  }
+
+  .column2 >img{
+    width: 40vw;
+    height: 50vw;
+  }
+
+  .listContainer{
+    width: calc(100vw - 80px);
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10vh;
+}
+
+.listContainerTitle{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.listContainerTitle h3{
+    font-size: 6vw;
+    text-align: left;
+    line-height: 1;
+    color: #2C2F34;
+    opacity: 0.75;
+    margin: 0 !important;
+}
+
+.listContainerTitle h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: #FDC316;
+    opacity: 0.75;
+    margin: 0 !important;
+}
+
+.list{
+    width: 50%;
+    border-left: 2px solid #2C2F34;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+}
+
+.listItem{
+    font-size: 1.2vw;
+    color: #2C2F34;
+    text-transform: capitalize;
+    padding: 1vw 0;
+    border-bottom: 2px solid #2C2F34;
+    width: 100%;
+    text-align: left;
+    
+}
+
+.listItem:last-of-type{
+border-bottom: none;
+}

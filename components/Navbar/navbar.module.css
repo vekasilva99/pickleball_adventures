@@ -1,0 +1,271 @@
+.navbar{
+    width: calc(100vw - 20px);
+    height: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 10px;
+    z-index: 20;
+    animation: navbar 10s linear;
+    
+}
+
+@keyframes navbar {
+    0% {
+      opacity: 0;
+     }
+     50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+     100% {
+        opacity: 1;
+     }
+   }
+.signInMobile{
+    display: none;
+}
+
+.navbarMobile{
+    display: none;
+}
+
+.rightContainer{
+    width: 50%;
+    height: 100%;
+
+}
+
+.rightContainer > img{
+    width: 4vw;
+    height: 4vw;
+    object-fit: contain;
+}
+
+.rightContainer > img:last-of-type{
+    width: 5vw;
+    height: fit-content;
+    object-fit: contain;
+}
+.leftContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding-left: 3vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navItem{
+    border: 1px solid #2C2F34;
+    background-color: white;
+    border-radius: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8vw;
+    padding: 0.3vw 0;
+    width: 6.5vw;
+    text-transform: uppercase;
+    opacity: 0.75;
+    transition: 0.5s;
+    margin-right: 0.5vw;
+}
+
+.navItem:hover{
+    opacity: 1;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+.navItem{
+    font-size: 1vw;
+    width: 8vw;
+}
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+  
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .navbar{
+        display: none;
+    }
+    
+    .navbarMobile{
+        display: flex;
+        bottom:0;
+        position: fixed;
+        height: 9vh;
+        width: 100vw;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px -5px 40px 22px rgba(0, 0, 0, 0.1); 
+        z-index: 20;
+        justify-content: space-evenly;
+        align-items: center;
+        animation: navbar 10s linear;
+    }
+    
+    .navItem{
+        border: none;
+        display: flex;
+        flex-direction: column;
+      
+        height: fit-content;
+        padding: 0;
+        border-radius: 0;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        transition: all 1s;
+        opacity: 0.75;
+    }
+    
+    .navItem img{
+        width: 5vw;
+        height: 5vw;
+        object-fit: contain;
+        transition: all 1s;
+        
+    
+    }
+    
+    .navItem h2{
+        font-size: 2vw;
+        transition: all 1s;
+        margin-top: 2vw;
+        color: #2C2F34;
+    }
+    
+    
+    .navItem:focus{
+        flex-direction: row;
+        width: fit-content;
+        padding: 2vw 5vw;
+        border-radius: 100vw;
+        background-color: #FDC316;
+        opacity: 1;
+    }
+    
+    .navItem:focus h2{
+        margin-left: 2vw;
+        font-size: 2.5vw;
+        margin-top: 0;
+        color: white;
+    
+    
+    }
+    
+    .signInMobile{
+        display: flex;
+        position: fixed;
+        top:10px;
+        z-index: 20;
+        right: 10px;
+        font-size: 2.5vw;
+        background-color: #2C2F34;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        padding: 1.5vw 4vw;
+        border-radius: 100vw;
+        color: white;
+        animation: navbar 10s linear;
+    }
+
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+.navbar{
+    display: none;
+}
+
+.navbarMobile{
+    display: flex;
+    bottom:0;
+    position: fixed;
+    height: 9vh;
+    width: 100vw;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px -5px 40px 22px rgba(0, 0, 0, 0.1); 
+    z-index: 20;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: navbar 10s linear;
+}
+
+.navItem{
+    border: none;
+    display: flex;
+    flex-direction: column;
+  
+    height: fit-content;
+    padding: 0;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    transition: all 1s;
+    opacity: 0.75;
+}
+
+.navItem img{
+    width: 8vw;
+    height: 8vw;
+    object-fit: contain;
+    transition: all 1s;
+    
+
+}
+
+.navItem h2{
+    font-size: 2vw;
+    transition: all 1s;
+    margin-top: 2vw;
+    color: #2C2F34;
+}
+
+
+.navItem:focus{
+    flex-direction: row;
+    width: fit-content;
+    padding: 2vw 5vw;
+    border-radius: 100vw;
+    background-color: #FDC316;
+    opacity: 1;
+}
+
+.navItem:focus h2{
+    margin-left: 2vw;
+    font-size: 2.5vw;
+    margin-top: 0;
+    color: white;
+
+
+}
+
+.signInMobile{
+    display: flex;
+    position: fixed;
+    top:10px;
+    z-index: 20;
+    right: 10px;
+    font-size: 3vw;
+    background-color: #2C2F34;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    padding: 2vw 5vw;
+    border-radius: 100vw;
+    color: white;
+    animation: navbar 10s linear;
+}
+
+}

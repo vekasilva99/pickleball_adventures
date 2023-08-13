@@ -1,0 +1,416 @@
+.main{
+  background-color: white;
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: fit-content;
+  padding: 10px;
+  position: relative;
+}
+
+.videoHome{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+
+
+
+}
+
+.row{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content{
+  width: calc(50vw - 10px);
+  height:calc(100vh - 20px);
+  padding-top: 15vh;
+  padding-left: 3vw;
+ 
+
+
+ 
+}
+
+
+.videoContainer{
+  height: calc(100vh - 20px);
+  width: calc(50vw - 10px);
+  position: relative;
+
+}
+
+.videoContainer > img{
+  position: absolute;
+  z-index: 10;
+  width: 8vw;
+  top: 0;
+  right: 0;
+}
+
+
+
+.content > .input{
+  font-family: 'Poppins', sans-serif;
+  width: 90%;
+  position: relative;
+}
+
+.input > input{
+  width: 100%;
+  background-color: white;
+  border-radius: 1vw;
+  padding: 0.9vw 2vw;
+  border: 1px solid #B4B4B4;
+  font-size: 1vw;
+  color: #2C2F34;
+  padding-top: 1.2vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content > .input > input:placeholder-shown + h2{
+  position: absolute;
+  left: 2vw;
+  top: 1.1vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+  font-size: 1vw;
+  transition: all 0.5s;
+  font-family: 'Poppins', sans-serif;
+
+}
+.content > .input > input:focus {
+
+background-color: rgba(180,180,180,0.3);
+outline: none;
+border: none;
+  }
+.content > .input > input:focus + h2{
+
+font-size: 0.8vw;
+top: 0.3vw;
+font-family: 'Poppins', sans-serif;
+}
+
+.content > .input > input + h2{
+ 
+  font-size: 0.8vw;
+  position: absolute;
+  left: 2vw;
+  top: 0.3vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+  font-family: 'Poppins', sans-serif;
+  }
+
+  .content > .input{
+    margin-bottom: 4vh;
+  }
+
+
+  .content > button{
+    width: 90%;
+    background-color: #FDC316;
+    border-radius: 100vw;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s;
+  }
+
+  .content > button:hover{
+    opacity: 1;
+  }
+
+  .content > button > h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .signUp{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+  }
+
+  .signUp > h2{
+    font-family: 'Poppins', sans-serif;
+    color: #2C2F34;
+    font-size: 1vw;
+  }
+
+  .signUp > button{
+    font-family: 'Poppins', sans-serif;
+    color: #FDC316;
+    font-size: 1vw;
+    cursor: pointer;
+    margin-left: 0.5vw;
+    transition: all 0.2s;
+    border-bottom: none;
+  }
+
+  .signUp > button:hover{
+    border-bottom: 1px solid #FDC316;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+
+
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .row{
+    flex-direction: column;
+  }
+
+
+
+.videoContainer{
+  width: calc(100vw - 20px);
+  height:calc(40vh - 10px);
+
+}
+.content{
+  width: calc(100vw - 20px);
+  height:calc(60vh - 10px);
+  padding: 3vh 0;
+ 
+}
+
+.content > .input{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+.input > input{
+  width: 100%;
+  background-color: white;
+  border-radius: 1vw;
+  padding: 0.9vw 2vw;
+  border: 1px solid #B4B4B4;
+  font-size: 1vw;
+  color: #2C2F34;
+  padding-top: 1.2vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content > .input > input:placeholder-shown + h2{
+  position: absolute;
+  left: 2vw;
+  top: 1.1vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+  font-size: 1vw;
+  transition: all 0.5s;
+  font-family: 'Poppins', sans-serif;
+
+}
+.content > .input > input:focus {
+
+background-color: rgba(180,180,180,0.3);
+outline: none;
+border: none;
+  }
+.content > .input > input:focus + h2{
+
+font-size: 0.8vw;
+top: 0.3vw;
+font-family: 'Poppins', sans-serif;
+}
+
+.content > .input > input + h2{
+ 
+  font-size: 0.8vw;
+  position: absolute;
+  left: 2vw;
+  top: 0.3vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+  font-family: 'Poppins', sans-serif;
+  }
+
+  .content > .input{
+    margin-bottom: 4vh;
+  }
+
+
+  .content > button{
+    width: 90%;
+    background-color: #FDC316;
+    border-radius: 100vw;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s;
+  }
+
+  .content > button:hover{
+    opacity: 1;
+  }
+
+  .content > button > h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .signUp{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+  }
+
+  .signUp > h2{
+    font-family: 'Poppins', sans-serif;
+    color: #2C2F34;
+    font-size: 1vw;
+  }
+
+  .signUp > button{
+    font-family: 'Poppins', sans-serif;
+    color: #FDC316;
+    font-size: 1vw;
+    cursor: pointer;
+    margin-left: 0.5vw;
+    transition: all 0.2s;
+    border-bottom: none;
+  }
+
+  .signUp > button:hover{
+    border-bottom: 1px solid #FDC316;
+  }
+
+  
+}
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+
+
+
+
+
+  
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .row{
+    flex-direction: column;
+  }
+
+.videoContainer{
+  width: calc(100vw - 20px);
+  height:calc(40vh - 10px);
+}
+.content{
+  width: calc(100vw - 20px);
+  height:calc(60vh - 10px);
+  padding: 3vh 0;
+  padding-top: 10vh;
+}
+.content > .input{
+
+  width: 100%;
+ 
+}
+
+.input > input{
+
+  border-radius: 2vw;
+  padding: 2.5vw 3vw;
+  font-size: 3vw;
+  padding-top: 3vw;
+}
+
+.content > .input > input:placeholder-shown + h2{
+  left: 2.5vw;
+  top: 2.8vw;
+  font-size: 3vw;
+
+}
+
+.content > .input > input:focus + h2{
+
+font-size: 1.8vw;
+top: 1vw;
+
+}
+
+.content > .input > input + h2{
+ 
+  font-size: 1.8vw;
+  left: 2.5vw;
+  top: 1vw;
+
+  }
+
+  .content > .input{
+    margin-bottom: 4vh;
+  }
+
+
+  .content > button{
+    width: 100%;
+    padding: 2vw 4vw;
+  }
+
+
+
+  .content > button > h2{
+ 
+    font-size: 4vw;
+
+  }
+
+  .signUp{
+    width: 100%;
+    margin-top: 2vh;
+  }
+
+  .signUp > h2{
+    font-family: 'Poppins', sans-serif;
+    color: #2C2F34;
+    font-size: 2.5vw;
+  }
+
+  .signUp > button{
+    font-family: 'Poppins', sans-serif;
+    color: #FDC316;
+    font-size: 2.5vw;
+    cursor: pointer;
+    margin-left: 0.5vw;
+    transition: all 0.2s;
+    border-bottom: none;
+  }
+
+  .signUp > button:hover{
+    border-bottom: 1px solid #FDC316;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape)  {
+
+
+}

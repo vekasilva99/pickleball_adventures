@@ -1,0 +1,164 @@
+.quote {
+  width: 100vw;
+  border-top: 2px solid #2c2f34;
+  border-bottom: 2px solid #2c2f34;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.quoteTitle {
+  font-size: 6vw;
+
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: #2c2f34;
+  opacity: 0.75;
+  border-right: 2px solid #2c2f34;
+  justify-content: flex-start;
+  padding: 2vw ;
+  align-items: center;
+width: 50vw;
+min-width: 50vw;
+}
+
+.quoteContent {
+  width: 50vw;
+  min-width: 50vw;
+  min-height: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw ;
+  
+ 
+}
+
+.quoteContent > p{
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+  padding: 2vw;
+  color: #2c2f34;
+  opacity: 0.75;
+  font-size: 1.2vw;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .quoteTitle {
+    font-size: 6vw;
+  }
+  .quoteContent > p {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .quote {
+    width: 100vw;
+    border-top: 2px solid #2c2f34;
+    border-bottom: 2px solid #2c2f34;
+    margin-top: 10vh;
+    height: 60vh;
+  }
+  .quoteTitle {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #2c2f34;
+    font-size: 7vw;
+    justify-content: flex-start;
+    padding: 0 5%;
+  }
+
+  .quoteContent > p {
+    font-size: 2.5vw;
+  
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .quote {
+    width: 100vw;
+    border-top: 2px solid #2c2f34;
+    border-bottom: 2px solid #2c2f34;
+    margin-top: 10vh;
+  }
+  .quoteTitle {
+    width: 100vw;
+    border: none;
+    border-right:  2px solid #2c2f34;
+    font-size: 7vw;
+    justify-content: flex-start;
+    padding: 0 5%;
+  }
+
+  .quoteContent > p {
+    font-size: 2.5vw;
+  
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .quote {
+    width: 100vw;
+    border-top: 2px solid #2c2f34;
+    border-bottom: 2px solid #2c2f34;
+    margin-top: 10vh;
+  }
+
+  .quoteTitle {
+    width: 100vw;
+    border: none;
+    border-bottom: 2px solid #2c2f34;
+    font-size: 10vw;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5vw;
+  }
+
+  .quoteContent{
+    width: 100vw;
+    padding: 5vw;
+  }
+  .quoteContent > p{
+    font-size: 4vw;
+    text-align: left;
+
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  .quote {
+    width: 100vw;
+
+    border-top: 2px solid #2c2f34;
+    border-bottom: 2px solid #2c2f34;
+    margin-top: 10vh;
+
+  }
+
+  .quoteTitle {
+    width: 100vw;
+    border: none;
+    border-bottom: 2px solid #2c2f34;
+    font-size: 10vw;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5vw;
+  }
+
+  .quoteContent{
+    width: 100vw;
+    padding: 5vw;
+  }
+  .quoteContent > p{
+    font-size: 4vw;
+    text-align: left;
+
+  }
+}

@@ -1,0 +1,137 @@
+.footer{
+    width: calc(100vw - 20px);
+    height: 20vh;
+    min-height: 300px;
+    margin-top: 10vh;
+    padding: 0 2vw;
+    font-family: 'Poppins', sans-serif;
+    color: #2C2F34;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.footer h2{
+    font-weight: 500;
+    font-size: 2vw;
+    opacity: 0.75;
+
+}
+
+.footer h3{
+
+  font-weight: 500;
+    font-size: 1.2vw;
+    margin-top: 2vh;
+    opacity: 0.75;
+}
+
+.footer p{
+
+    font-weight: 300;
+      font-size: 1.2vw;
+      margin-top: 2vh;
+      opacity: 0.75;
+  }
+
+  .footer img{
+    width: 2.5vw;
+    margin-bottom: 3vh;
+    opacity: 0.75;
+    transition: all 1s;
+    cursor: pointer;
+    object-fit: contain;
+  }
+
+  .footer img:hover{
+    opacity: 1;
+    width: 2.7vw;
+  }
+  .footer img:last-of-type{
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .footer h2{
+      font-size: 3vw;
+    }
+
+    .footer h3{
+      font-size: 2vw;
+    }
+    .footer p{
+      font-size: 2vw;
+    }
+  
+    .footer img{
+      width: 4vw;
+      height: 4vw;
+    }
+  
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .footer h3{
+      font-size: 1.2vw;
+  }
+
+  .footer h4{
+      font-size: 1.2vw;
+  }
+
+
+    
+  }
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .footer h2{
+      font-size: 4vw;
+  }
+
+  .footer h3{
+      font-size: 2.5vw;
+  }
+  .footer h4{
+    font-size: 2.5vw;
+}
+
+  .footer p{
+      font-size: 2.5vw;
+  }
+
+  .footer img{
+      width: 6vw;
+      height: 6vw;
+  }
+  .footer{
+      padding-bottom: 9vh;
+  }
+  
+    
+  }
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .footer h2{
+        font-size: 6vw;
+    }
+
+    .footer h3{
+        font-size: 4vw;
+    }
+
+    .footer p{
+        font-size: 4vw;
+    }
+
+    .footer img{
+        width: 8vw;
+        height: 8vw;
+    }
+    .footer{
+        padding-bottom: 9vh;
+    }
+  }

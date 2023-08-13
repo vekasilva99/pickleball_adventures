@@ -1,0 +1,26 @@
+.event{
+  min-width: calc(100vw - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.5s;
+}
+
+.event > p{
+  font-size: 1.2vw !important;
+  text-align: center;
+  max-width: 60%;
+}
+
+.event > ul > li{
+  font-size: 1.2vw !important;
+  text-align: center;
+text-align: left;
+}
+
+.event > img{
+width: 60vw;
+height: 35vw;
+margin-top: 5vh;
+}
