@@ -9,8 +9,8 @@ export const Navbar = () =>{
         <>
         <div className={styles.navbar}>
             <div className={styles.rightContainer}>
-                <img src="assets/logo/logo.png"/>
-                <img src="assets/logo/cabieses.png"/>
+                <img src="/assets/logo/logo.png"/>
+                <img src="/assets/logo/cabieses.png"/>
             </div>
             <div className={styles.leftContainer}>
                 <div>
@@ -26,19 +26,19 @@ export const Navbar = () =>{
         <div className={styles.navbarMobile}>
           
               <button className={styles.navItem} onClick={()=>{router.push("/destinations");}}>
-<img src="assets/icons/lodging.png"/>
+<img src="/assets/icons/plane.png"/>
                <h2>Destinations</h2> 
                 
                 </button>
               <button className={styles.navItem} onClick={()=>{router.push("/about-us");}}>
-              <img src="assets/icons/lodging.png"/>
+              <img src="/assets/icons/info.png"/>
                <h2>About Us</h2> 
               </button>
-              <button className={styles.navItem} onClick={()=>{router.push("/foundation");}}>
-              <img src="assets/icons/lodging.png"/>
+              <button className={styles.navItem} onClick={()=>{router.push("/cabieses");}}>
+              <img src="/assets/icons/cabieses1.png"/>
                <h2>Foundation</h2> 
               </button>
-              <button className={styles.navItem} onClick={()=>{router.push("/contact-us");}}><img src="assets/icons/lodging.png"/>
+              <button className={styles.navItem} onClick={()=>{router.push("/contact-us");}}><img src="/assets/icons/envelop.png"/>
                <h2>Contact</h2> </button>
            
         </div>

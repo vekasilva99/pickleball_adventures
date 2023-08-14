@@ -92,9 +92,9 @@ export default function SignUp() {
         </div>
         <div className={styles.videoContainer}>
           <video autoPlay muted playsInline loop className={styles.videoHome}>
-            <source src="assets/videos/2.mp4" type="video/mp4"></source>
+            <source src="/assets/videos/2.mp4" type="video/mp4"></source>
           </video>
-          <img src="assets/icons/arrow-45.png"></img>
+          <img src="/assets/icons/arrow-45.png"></img>
         </div>
       </div>
     </div>

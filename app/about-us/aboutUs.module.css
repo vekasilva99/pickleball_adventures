@@ -210,10 +210,12 @@ border-bottom: none;
 
 .column2 > p{
     text-align: left;
+    opacity: 0.75;
 }
 
 .column3 > p{
     text-align: left;
+    opacity: 0.75;
 }
 
 .column3{
@@ -346,6 +348,26 @@ font-size: 14vw;
 .left h3{
     font-size: 4vw;
     width: 100%;
+}
+
+.column2 > p{
+    font-size: 4vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.column3 > p{
+    font-size: 4vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.row{
+    flex-direction: column;
+}
+
+.row:nth-of-type(3){
+    flex-direction: column-reverse !important;
 }
   }
   

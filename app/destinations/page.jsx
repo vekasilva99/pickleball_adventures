@@ -31,13 +31,13 @@ return show
     <>
     <div className={getClass()}>
       <div className={styles.modal}>
-        <img className={styles.close} src="assets/icons/close-yellow.png" onClick={()=>{toggle()}}/>
+        <img className={styles.close} src="/assets/icons/close-yellow.png" onClick={()=>{toggle()}}/>
         <div className={styles.modalContent}>
           <h3>7 Nights</h3>
           <h2>Lima, Peru</h2>
           <button className={styles.button} onClick={()=>{router.push("/destinations/peru");}}>
             <h2>EXPLORE THIS ITINERARY</h2>
-            <img src="assets/icons/arrow-45.png" />
+            <img src="/assets/icons/arrow-45.png" />
           </button>
         </div>
         <div className={styles.dateContent}>
@@ -49,7 +49,7 @@ return show
             <h2>$5,500</h2>
             <button className={styles.button} onClick={()=>{router.push("/reserve");}}>
             <h2>SELECT DATE</h2>
-            <img src="assets/icons/arrow-45.png" />
+            <img src="/assets/icons/arrow-45.png" />
           </button>
           </div>
         </div>
@@ -57,11 +57,11 @@ return show
     </div>
     <div className={styles.main}>
       <Navbar />
-     <Header titleLine1="Our" titleLine2="Destinations" background="assets/images/beach.png" whiteBackground={true} backgroundTop="assets/images/beach.jpg"/>
+     <Header titleLine1="Our" titleLine2="Destinations" background="/assets/images/beach.png" whiteBackground={true} backgroundTop="/assets/images/beach.jpg"/>
  <div className={styles.page}>
 <div className={styles.destinationsContainer}>
 <div className={styles.destinationCard} >
-            <img src="assets/images/Peru1.jpg" />
+            <img src="/assets/images/Peru1.jpg" />
             <div className={styles.whiteGradient}></div>
             <div className={styles.cardInfo}>
             <h3>7 Nights</h3>
@@ -76,16 +76,17 @@ return show
           </div>
 
           <div className={styles.destinationCard}>
-            <img src="assets/images/ecuador.jpg" />
+            <img src="/assets/images/ecuador.jpg" />
             <div className={styles.whiteGradientNotActive}></div>
             <div className={styles.cardInfo}>
             <h3>7 Nights</h3>
               <h2>Quito, Ecuador</h2>
+              <button className={styles.notActive}>Coming Soon</button>
             </div>
           </div>
 
           <div className={styles.destinationCard}>
-            <img src="assets/images/venezuela.jpg" />
+            <img src="/assets/images/venezuela.jpg" />
             <div className={styles.whiteGradientNotActive}></div>
             <div className={styles.cardInfo}>
             <h3>7 Nights</h3>
@@ -94,7 +95,7 @@ return show
           </div>
 
              <div className={styles.destinationCard}>
-            <img src="assets/images/colombia.jpeg" />
+            <img src="/assets/images/colombia.jpeg" />
             <div className={styles.whiteGradientNotActive}></div>
             <div className={styles.cardInfo}>
             <h3>7 Nights</h3>

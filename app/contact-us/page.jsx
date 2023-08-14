@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
     <div className={styles.main}>
       <Navbar />
-     <Header whiteBackground={true} titleLine1="Contact" titleLine2="Us" background="assets/images/pickleball.png" backgroundTop="assets/images/pickleball.jpg"/>
+     <Header whiteBackground={true} titleLine1="Contact" titleLine2="Us" background="/assets/images/pickleball.png" backgroundTop="/assets/images/pickleball.jpg"/>
  
      <div className={styles.pageGradient}>
      <div className={styles.inputContainer}>
@@ -35,7 +35,7 @@ export default function ContactUs() {
             
           </div>
           <button>
-            <h2>Sign Up</h2>
+            <h2>Send</h2>
           </button>
       
       

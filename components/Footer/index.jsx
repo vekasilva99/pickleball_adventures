@@ -13,9 +13,9 @@ export const Footer = () =>{
             <h4>contact@cabiesespickleball.com</h4>
             </div>
             <div>
-                <img src="assets/icons/instagram.png"/>
-                <img src="assets/icons/facebook.png"/>
-                <img src="assets/icons/email.png"/>
+                <img src="/assets/icons/instagram.png"/>
+                <img src="/assets/icons/facebook.png"/>
+                <img src="/assets/icons/email.png"/>
             </div>
         
         </div>

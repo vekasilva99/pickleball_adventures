@@ -6,6 +6,7 @@
 .text{
     /* font-family: 'Poppins', sans-serif; */
   line-height: 1.2;
+  text-align: center;
 }
 
 .large{

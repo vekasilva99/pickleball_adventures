@@ -26,6 +26,15 @@
   
   }
 
+  .notActive{
+    margin-top: 5vh;
+    border-radius: 100vw;
+    color: #B4B4B4;
+    border: 1px solid #B4B4B4;
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+  }
+
   .overlay{
     width: 100vw;
     height: 100vh;
@@ -342,6 +351,9 @@ margin-bottom: 2vh;
       margin-bottom: 5vh;
 
     }
+    .notActive{
+      margin-top: 2vh;
+    }
   }
   
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -381,6 +393,8 @@ margin-bottom: 2vh;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, #FFF 30%);
 
     }
+
+  
 
     .price{
       height: 10%;
@@ -725,6 +739,10 @@ margin-bottom: 2vh;
         padding: 4vw 5vw;
       }
   
+      .notActive{
+        font-size: 4vw;
+        padding: 1vw 3vw;
+      }
   }
   
   @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape)  {

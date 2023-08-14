@@ -9,10 +9,10 @@ import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
 
 const images = [
-  "assets/images/pickleball1.png",
-  "assets/images/pickleball2.png",
-  "assets/images/pickleball.jpg",
-  "assets/images/Peru1.jpg",
+  "/assets/images/pickleball1.png",
+  "/assets/images/pickleball2.png",
+  "/assets/images/pickleball.jpg",
+  "/assets/images/Peru1.jpg",
 ];
 export default function AboutUs() {
   const [currentSlide, setCurrentSlide]=useState(0)
@@ -50,8 +50,8 @@ export default function AboutUs() {
       <Header
         titleLine1="About"
         titleLine2="Us"
-        background="assets/images/download.png"
-        backgroundTop="assets/images/download.jpg"
+        background="/assets/images/download.png"
+        backgroundTop="/assets/images/download.jpg"
         whiteBackground={false}
         yellowBackground={true}
       />
@@ -59,7 +59,7 @@ export default function AboutUs() {
       <div className={styles.pageGradient}>
         <img
           className={styles.imageAbsolute}
-          src="assets/images/woman-swimming.png"
+          src="/assets/images/woman-swimming.png"
         />
         <div className={styles.yellowText}>
           <h2>
@@ -105,11 +105,11 @@ export default function AboutUs() {
       </div>
       <div className={styles.row}>
         <div className={styles.column1}>
-          <img src="assets/images/machu-pichu.jpg"/>
+          <img src="/assets/images/machu-pichu.jpg"/>
         </div>
         <div className={styles.column2}>
           <p> Mi vida siempre ha estado en vuelta en los deportes el poder haber jugado en el tour profesional de tenis y viajar a diferentes partes del mundo, decidí venir a Estados Unidos a estudiar pero el deporte dejo de ser una prioridad. Con el Pickleball la vida me dio una segunda oportunidad para demostrar mi talento, pero dobre todo me volvió a unir a mi familia y me dio la posibilidad de poder dejar un legado en mi país al ayudar a mi comunidad.</p>
-          <Title   normal={true} text={'- Hercilio'} opacity={true} italic={true} left={true}/>
+          <Title   normal={true} text={'- Hercilio Cabieses'} opacity={true} italic={true} left={true}/>
         </div>
       </div>
 
@@ -117,10 +117,10 @@ export default function AboutUs() {
         
         <div className={styles.column3}>
           <p>Pickleball me dio nuevamente la oportunidad de competir, ya que debió a un accidente que tuve acabo con mi carrera de tenista. Quiero ser un modelo para los demás y que sepan que nunca tienen que aceptar un No por respuesta. Con dedicación y disciplina puedes cumplir todas tus metas. Este deporte me abrió muchas puertas</p>
-          <Title   normal={true} text={'- Miranda'} opacity={true} italic={true} left={true}/>
+          <Title   normal={true} text={'- Miranda Cabieses'} opacity={true} italic={true} left={true}/>
         </div>
         <div className={styles.column1}>
-          <img src="assets/images/machu-pichu.jpg"/>
+          <img src="/assets/images/machu-pichu.jpg"/>
         </div>
       </div>
       <Quote
