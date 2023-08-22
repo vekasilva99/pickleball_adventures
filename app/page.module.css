@@ -263,6 +263,7 @@ color: #B4B4B4 !important;
 
 .secondaryButton{
   margin-top: 5vh;
+  margin-bottom: 5vh;
     /* font-family: 'Poppins', sans-serif; */
   text-transform: uppercase;
   border-radius: 100vw;

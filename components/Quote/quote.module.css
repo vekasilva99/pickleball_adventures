@@ -1,16 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .quote {
-  width: 100vw;
-  border-top: 2px solid #2c2f34;
-  border-bottom: 2px solid #2c2f34;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  /* height: fit-content; */
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding: 2vw;
 
+background-color: #fdc316;
+  /* height: fit-content; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: all 1s;
+position: relative;
 }
 
+.quote > img{
+position: absolute;
+right: 0;
+top: 0;
+width: 8vw;
+height: 8vw;
+object-fit: contain;
+transition: all 1s;
+}
+.quoteContainer{
+  width: 100%;
+}
+
+.quote:hover{
+  width: 100%;
+  transition: all 1s;
+}
+.quote:hover > h1{
+  font-size: 10vw !important;
+}
+
+.quote:hover > img{
+  width: 10vw;
+  height: 10vw;
+}
+
+
+.quote:hover > p{
+  font-size: 2vw !important;
+}
 .quoteTitle {
   font-size: 6vw;
 
@@ -18,148 +48,51 @@
   margin: 0;
   color: #2c2f34;
   opacity: 0.75;
-  border-right: 2px solid #2c2f34;
+
   justify-content: flex-start;
-  padding: 2vw ;
+
   align-items: center;
-width: 50vw;
-min-width: 50vw;
+
 }
 
 .quoteContent {
-  width: 50vw;
-  min-width: 50vw;
-  min-height: 100%;
+
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2vw ;
+
   
  
 }
 
-.quoteContent > p{
+.quote > p{
   /* font-family: "Poppins", sans-serif; */
   line-height: 1.2;
-  padding: 2vw;
-  color: #2c2f34;
-  opacity: 0.75;
+  color: white !important;
+  text-align: left !important;
+transition: all 1s;
   font-size: 1.2vw;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .quoteTitle {
-    font-size: 6vw;
-  }
-  .quoteContent > p {
-    font-size: 2vw;
-  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .quote {
-    width: 100vw;
-    border-top: 2px solid #2c2f34;
-    border-bottom: 2px solid #2c2f34;
-    margin-top: 10vh;
-    height: 60vh;
-  }
-  .quoteTitle {
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #2c2f34;
-    font-size: 7vw;
-    justify-content: flex-start;
-    padding: 0 5%;
-  }
 
-  .quoteContent > p {
-    font-size: 2.5vw;
-  
-  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
-  .quote {
-    width: 100vw;
-    border-top: 2px solid #2c2f34;
-    border-bottom: 2px solid #2c2f34;
-    margin-top: 10vh;
-  }
-  .quoteTitle {
-    width: 100vw;
-    border: none;
-    border-right:  2px solid #2c2f34;
-    font-size: 7vw;
-    justify-content: flex-start;
-    padding: 0 5%;
-  }
-
-  .quoteContent > p {
-    font-size: 2.5vw;
   
-  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  .quote {
-    width: 100vw;
-    border-top: 2px solid #2c2f34;
-    border-bottom: 2px solid #2c2f34;
-    margin-top: 10vh;
-  }
-
-  .quoteTitle {
-    width: 100vw;
-    border: none;
-    border-bottom: 2px solid #2c2f34;
-    font-size: 10vw;
-    display: flex;
-    justify-content: flex-start;
-    padding: 5vw;
-  }
-
-  .quoteContent{
-    width: 100vw;
-    padding: 5vw;
-  }
-  .quoteContent > p{
-    font-size: 4vw;
-    text-align: left;
-
-  }
+  
 }
 
 @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
-  .quote {
-    width: 100vw;
-
-    border-top: 2px solid #2c2f34;
-    border-bottom: 2px solid #2c2f34;
-    margin-top: 10vh;
-
-  }
-
-  .quoteTitle {
-    width: 100vw;
-    border: none;
-    border-bottom: 2px solid #2c2f34;
-    font-size: 10vw;
-    display: flex;
-    justify-content: flex-start;
-    padding: 5vw;
-  }
-
-  .quoteContent{
-    width: 100vw;
-    padding: 5vw;
-  }
-  .quoteContent > p{
-    font-size: 4vw;
-    text-align: left;
-
-  }
+  
 }

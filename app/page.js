@@ -20,7 +20,7 @@ export default function Home() {
           <img src="/assets/icons/arrow-45.png"></img>
         </div>
         <div className={styles.content}>
-          <Title large={true} text={'Pickleball Adventures'} />
+          <Title large={true} text={'Pickleball Adventures'} left={true}/>
           <button className={styles.button} onClick={()=>{router.push("/destinations");}}>
             <h2>Book Now</h2>
             <img src="/assets/icons/arrow-45.png" />
@@ -64,7 +64,7 @@ export default function Home() {
 
         <button className={styles.secondaryButton} onClick={()=>{router.push("/destinations");}}>See More</button>
 
-       <Quote titleLine1={'Experience'} titleLine2={'something new'} content={`Experience a boutique adventure where you'll discover a unique, internationally acclaimed destination filled with culture and history. ​ You'll also have the opportunity to make a difference in the lives of underprivileged children and youth, providing them with opportunities and a better future through sports. All while sharing your passion for the game of pickleball. Explore charming places guided by local people, with guaranteed safety. Join us and get ready for an adventure that will surpass your expectations. Be one of the chosen ones who leaves a lasting impact on the lives of others!`}/>
+       <Quote titleLine1={'Let the adventure'} titleLine2={'begin'} content={`Live a unique trip experience while having the opportunity to make a difference in the lifes of underprivileged children and youth, providing them with opportunities and a better future through sports. All while sharing your passion for the game of pickleball. Explore charming places guided by local people, with guaranteed safety. Join us and get ready for an adventure that will surpass your expectations. Be one of the chosen ones who leaves a lasting impact on the lives of others!`}/>
        <Title  marginLeft={'8vw'} normal={true} text={'What’s Included'} opacity={true} marginTop={'10vh'} marginBottom={'2vh'} left={true}/>
      
       <div className={styles.featuresContainer}>

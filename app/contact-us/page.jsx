@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./contact.module.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Header3";
 
 export default function ContactUs() {
   return (

@@ -19,11 +19,66 @@ const images = [
 ];
 
 const images2 = [
-  "../assets/images/peru/7.jpg",
-  "../assets/images/peru/5.jpg",
-  "../assets/images/peru/6.jpg",
-  "../assets/images/peru/8.jpg",
+  {image: "../assets/images/peru/hotel/16.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/17.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/21.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/34.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/1.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/2.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/3.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/4.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/5.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/6.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/7.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/8.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/9.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/10.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/11.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/12.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/13.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/14.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/15.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/18.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/19.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/20.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/22.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/23.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/24.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/25.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/26.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/27.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/28.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/29.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/30.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/31.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/32.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel/33.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
 ];
+const images3 = [
+  {image: "../assets/images/peru/hotel/31.jpg",title1:'Discover',title2:'Our Fitness Center',content:'Exercising and playing a sport is already a necessity and responds to a lifestyle. Release your energy in our recently remodeled gym, after an afternoon of walking or work.'},
+  {image: "../assets/images/peru/hotel/19.jpg",title1:'Discover',title2:'Our Fitness Center',content:'Exercising and playing a sport is already a necessity and responds to a lifestyle. Release your energy in our recently remodeled gym, after an afternoon of walking or work.'},
+  {image: "../assets/images/peru/hotel/18.jpg",title1:'Discover',title2:'Our Fitness Center',content:'Exercising and playing a sport is already a necessity and responds to a lifestyle. Release your energy in our recently remodeled gym, after an afternoon of walking or work.'},
+];
+
+const images4 = [
+  {image: "../assets/images/peru/hotel/35.jpg",title1:'Yaku',title2:'Spa',content:'Take a necessary break to let the energy of the water wash away your stress at the Yaku Spa. Hot stone massages, relaxation, deep tissue, are some of the treatments offered, as well as hydrotherapies, wraps, exfoliations, facials and hairdressing.'},
+];
+
+const images5 = [
+  {image: "../assets/images/peru/hotel/36.jpg",title1:'Discover',title2:'La Panadería del Country',content:'With a varied menu of top quality artisan products, La Panadería del Country offers pastries, sandwiches, salads, pizzas, pastas, desserts and more.'},
+  {image: "../assets/images/peru/hotel/37.jpg",title1:'Discover',title2:'Perroquet',content:'Its menu is characterized by a proposal of authentic Peruvian food and the best of international cuisine. Enjoy breakfast, lunch, dinner and meetings for any occasion.'},
+  {image: "../assets/images/peru/hotel/4.jpg",title1:'Discover',title2:'Bar Inglés',content:'The English Bar is a classic of the Lima nightlife. Its dim lighting and soft music make it a perfect setting for intimate meetings and conversations, accompanied by one of the most famous Pisco Sours in the capital.'},
+  {image: "../assets/images/peru/hotel/38.jpg",title1:'Discover',title2:'Vitrales',content:'The Vitrales room is an ideal place to have tea under the colorful light of its stained glass ceiling, and the seductive view of the Gardens of the Country Club Lima Hotel.'},
+];
+
+const images6 = [
+  {image: "../assets/images/peru/hotel/40.jpg",title1:'Discover',title2:'Art',content:'The Pedro de Osma museum has donated 300 pieces of viceregal art to the Country Club Lima Hotel, enhancing the experience of each of its halls and rooms. Its gold leaf frames, the careful carving work, and the history contained in its large canvases, permeate the environment with a spirit that speaks of a unique and unmistakably Peruvian history.'},
+  {image: "../assets/images/peru/hotel/13.jpg",title1:'Discover',title2:'Our Pool',content:'Enjoy a moment of incomparable relaxation in the water and accompany it with the best of our cocktails.'},
+  {image: "../assets/images/peru/hotel/39.jpg",title1:'Enjoy',title2:'Golf',content:'We have an agreement with the Lima Golf Club, an exclusive private club a few steps from the hotel that allows hotel guests to use its facilities and enjoy a few hours of golf.'},
+];
+
+
+
 
 const restaurants = [
   {
@@ -149,14 +204,18 @@ const activities = [
 ];
 
 const events=[
-  {id:0},
-  {id:0}
+  {id:0,name:'DPASO',content:'Enjoy a journey full of flavors, colors, music, dance, tradition and living culture; that harmonize with the Peruvian Paso Horse to create an experience never lived before. This show includes: Buffet Lunch, Typical Dances, Peruvian Paso Horse Show, Horse back riding in the riding school.',images:['../assets/images/peru/23.jpeg']},
+  {id:1,name:'Clases de cajón',content:'Reconocido a nivel mundial y símbolo de la música criolla, el cajón peruano es un tesoro histórico musical. Declarado como patrimonio cultural del Perú por su  aporte valioso a nuestra cultura. Experimenta la música peruana afrodescendiente en un momento cultural inmersivo.',images:['../assets/images/peru/10.jpg']}
 ]
 export default function Destination() {
   const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+  const [selectedOption, setSelectedOption] = useState(0);
+  const [selectedOptionHotel, setSelectedOptionHotel] = useState(0);
   const [currentRestaurant, setCurrentRestaurant] = useState(restaurants[0]);
+  const [currentActivity, setCurrentActivity] = useState(activities[0]);
+  const [currentEvent, setCurrentEvent] = useState(activities[0]);
+  const [hotelImages,setHotelImages]=useState(images2)
 
   const autoScroll = true;
   let slideInterval;
@@ -186,6 +245,10 @@ export default function Destination() {
     setCurrentSlide(0);
   }, []);
 
+  useEffect(() => {
+    getImages()
+  }, [selectedOptionHotel]);
+
 
   // useEffect(() => {
   //   if (autoScroll) {
@@ -203,6 +266,43 @@ export default function Destination() {
       return "";
     }
   };
+
+  const selectedEvent = (id) => {
+    if (id == currentEvent.id) {
+      return styles.selected;
+    } else {
+      return "";
+    }
+  };
+  const selectedActivity = (id) => {
+    if (id == currentActivity.id) {
+      return styles.selected;
+    } else {
+      return "";
+    }
+  };
+
+  const getOption=(id)=>{
+    if(id==selectedOption){
+      return `${styles.option} ${styles.selectedOption}`
+    }else{
+      return `${styles.option}` 
+    }
+  }
+
+  const getImages=()=>{
+    if(selectedOptionHotel==0){
+      setHotelImages([...images2])
+    }else if(selectedOptionHotel==1){
+      setHotelImages([...images3])
+    }else if(selectedOptionHotel==2){
+      setHotelImages([...images4])
+    }else if(selectedOptionHotel==3){
+      setHotelImages([...images5])
+    }else if(selectedOptionHotel==4){
+      setHotelImages([...images6])
+    }
+  }
   return (
     <>
       <div className={styles.main}>
@@ -277,31 +377,17 @@ export default function Destination() {
         </div>
         <div className={styles.page}>
           <div className={styles.row}>
-            <div className={styles.column}>
-              <h4 className={styles.type}>Lodging</h4>
-              <Title
-                small={true}
-                text={"Hotel Country Club"}
-                marginBottom={"2vh"}
-                left={true}
-                bold={true}
-              />
-              <p>
-                Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural
-                Monument, the Country Club Lima Hotel holds more than 300 works
-                of art provided by the Pedro de Osma Museum. It is located in
-                the prestigious residential area of San Isidro in Lima.
-             
-              </p>
-            
-            </div>
-            <div className={styles.column}>
-              <div className={styles.imageContainer2}>
-              <Slider images={images2}/>
-              </div>
-            </div>
+          <Slider images={hotelImages} selected={selectedOptionHotel} select={(aux)=>{console.log('kjnhbgvfcfgvhbjn',aux);setSelectedOptionHotel(aux)}}/>
           </div>
-          <div className={styles.row}>
+          <div className={styles.optionsContainer}>
+          <div className={styles.options}>
+            <div className={getOption(0)} onClick={()=>{setSelectedOption(0)}}><h2>Restaurants</h2></div>
+            <div className={getOption(1)} onClick={()=>{setSelectedOption(1)}}><h2>Activities</h2></div>
+            <div className={getOption(2)} onClick={()=>{setSelectedOption(2)}}><h2>Events</h2></div>
+          </div>
+          </div>
+          <div className={styles.rowSlider}>
+          <div className={styles.row} style={{marginLeft:(-selectedOption*100).toString()+'%'}}>
             <div className={styles.column}>
               <h4 className={styles.type}>Restaurant</h4>
               <Title
@@ -341,30 +427,87 @@ export default function Destination() {
               })}
             </div>
           </div>
-          {activities.map((activity) => {
-            return (
-              <div className={`${styles.page} ${styles.center}`}>
-                <Title
-                  small={true}
-                  text={activity.name}
-                  marginBottom={"2vh"}
-                  bold={true}
-                />
-                <p>{activity.content}</p>
-                <div className={styles.imageContainer4}>
-                  {activity.images.map((image) => {
-                    return <img src={image} />;
-                  })}
+
+          <div className={styles.row}>
+          <div className={styles.column}>
+            <h4 className={styles.type}>Activity</h4>
+            <Title
+              normal={true}
+              text={currentActivity.name}
+              marginBottom={"2vh"}
+              left={true}
+              bold={true}
+            />
+            <h2>{currentActivity.content}</h2>
+            <div className={styles.imageContainer3}>
+              <img src={currentActivity.images[0]} />
+              <img src={currentActivity.images[1]} />
+              <img src={currentActivity.images[2]} />
+            </div>
+          </div>
+          <div className={`${styles.column} ${styles.border}`}>
+            {activities.map((restaurant) => {
+              return (
+                <div
+                  className={`${styles.item} ${selectedActivity(restaurant.id)}`}
+                  onClick={() => {
+                    setCurrentActivity(restaurant);
+                  }}
+                >
+                  <h4 className={styles.type}>Activity</h4>
+                  <Title
+                    small={true}
+                    text={restaurant.name}
+                    marginBottom={"2vh"}
+                    left={true}
+                    bold={true}
+                  />
+                  <p>{restaurant.content}</p>
                 </div>
-              </div>
-            );
-          })}
- <div className={`${styles.rowComponent}`}>
-
-<Events events={events}/>
-
-
- </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.column}>
+            <h4 className={styles.type}>Event</h4>
+            <Title
+              normal={true}
+              text={currentEvent.name}
+              marginBottom={"2vh"}
+              left={true}
+              bold={true}
+            />
+            <h2>{currentEvent.content}</h2>
+            <div className={styles.imageContainer3}>
+              <img src={currentEvent.images[0]} />
+         
+            </div>
+          </div>
+          <div className={`${styles.column} ${styles.border}`}>
+            {events.map((restaurant) => {
+              return (
+                <div
+                  className={`${styles.item} ${selectedEvent(restaurant.id)}`}
+                  onClick={() => {
+                    setCurrentEvent(restaurant);
+                  }}
+                >
+                  <h4 className={styles.type}>Event</h4>
+                  <Title
+                    small={true}
+                    text={restaurant.name}
+                    marginBottom={"2vh"}
+                    left={true}
+                    bold={true}
+                  />
+                  <p>{restaurant.content}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        </div>
 
         </div>
 

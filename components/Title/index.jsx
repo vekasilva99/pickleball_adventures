@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './title.module.css'
 
-export const Title = ({large, color,text,opacity,normal,marginTop,marginBottom,left,marginLeft, italic, small,bold}) =>{
+export const Title = ({large, color,text,opacity,normal,marginTop,marginBottom,left,marginLeft, italic, small,bold,right}) =>{
 
   const getClass=()=>{
     let cl=``
@@ -28,6 +28,9 @@ export const Title = ({large, color,text,opacity,normal,marginTop,marginBottom,l
     }
     if(bold){
       cl+=" "+styles.bold
+    }
+    if(right){
+      cl+=" "+styles.right
     }
   
     return cl
