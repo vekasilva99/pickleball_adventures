@@ -16,7 +16,6 @@ export default function Cabieses() {
      <Header titleLine1="Our" dark={true} titleLine2="Foundation" background="/assets/logo/cabieses2.png" backgroundTop="/assets/logo/cabieses1.png" whiteBackground={true}/>
  
      <div className={styles.pageGradient}>
-   <img src="/assets/logo/cabieses3.png" />
       <Title normal={true} text={'One ball can change a life, and a life can change the world'} opacity={true} marginTop={'5vh'} marginBottom={'2vh'} />
       <button className={styles.button}><h2>Donate Now</h2>
             <img src="/assets/icons/arrow-45.png" /></button>

@@ -211,3 +211,30 @@ align-items: center;
   -webkit-animation: animate-svg-fill-5 0.7s ease 5.2s both;
           animation: animate-svg-fill-5 0.7s ease 5.2s both;
 }
+
+
+@-webkit-keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+@keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(0, 0, 0);
+  }
+}
+
+.svgElem6 {
+  fill-rule: evenodd;
+  -webkit-animation: animate-svg-fill-6 0.7s ease-in 10s both;
+          animation: animate-svg-fill-6 0.7s ease-in 10s both;
+}
