@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import { GlobalProvider } from './GlobalProvider'
 import 'react-toastify/dist/ReactToastify.css';
+import { Loader } from '@/components/Loader'
 const inter = Poppins({
   weight: ['400','500','600', '700','800'],
   style: ['normal', 'italic'],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GlobalProvider >
       <body className={inter.className}>{children}</body>
+      <Loader/>
       </GlobalProvider>
     </html>
   )

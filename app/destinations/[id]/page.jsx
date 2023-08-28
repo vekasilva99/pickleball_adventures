@@ -87,9 +87,9 @@ const restaurants = [
     content:
       "Contemporary high-end restaurant offering Peruvian cuisine with a Japanese touch. Winner of first place in the Summum 2022 Awards in the category of BestRestaurants in Peru.",
     images: [
-      "../assets/images/peru/Maido/M1.jpg",
-      "../assets/images/peru/Maido/M2.jpg",
-      "../assets/images/peru/Maido/M3.jpg",
+      "../assets/images/peru/Maido/M5.jpg",
+      "../assets/images/peru/Maido/M6.jpg",
+      "../assets/images/peru/Maido/M7.jpg",
     ],
   },
 
@@ -99,9 +99,9 @@ const restaurants = [
     content:
       "Refined restaurant with elegant Peruvian dishes and views of a pre-Inca stepped pyramid. It offers Peruvian cuisine, with its rich variety of products, such as sea fish, seafood, or the immense variety of vegetables, with all colors, textures and flavors.",
     images: [
-      "../assets/images/peru/Huaca/H3.jpg",
-      "../assets/images/peru/Huaca/H5.jpg",
-      "../assets/images/peru/Huaca/H1.jpg",
+      "../assets/images/peru/Huaca/H13.jpg",
+      "../assets/images/peru/Huaca/H14.jpg",
+      "../assets/images/peru/Huaca/H15.jpg",
     ],
   },
 
@@ -112,34 +112,78 @@ const restaurants = [
     content:
       "Lounge restaurant of contemporary Peruvian food with marine inspiration with one of the most beautiful views of Lima that brings together tradition and vanguard with notable references to coastal cuisine.",
     images: [
-      "../assets/images/peru/Cala/X6.jpg",
-      "../assets/images/peru/Cala/X9.jpg",
-      "../assets/images/peru/Cala/X8.jpg",
+      "../assets/images/peru/Cala/X12.jpg",
+      "../assets/images/peru/Cala/X13.jpg",
+      "../assets/images/peru/Cala/X14.jpg",
     ],
   },
 
   {
     id: 6,
-    name: "Rosa Nautica Restaurant",
+    name: "Tanta",
     content:
-      "Restaurant internationally recognized for offering a unique dining experience. Specialists in seafood cuisine, original drinks and signature recipes. Winner of awards such as “Quality Peru Award”, “World Leader Business Enterprise”, “Customer Service Quality Program”and associated with the Chaine des Rotisseurs.",
+      "",
     images: [
-      "../assets/images/beach.jpg",
-      "../assets/images/foundation.jpg",
-      "../assets/images/pickleball.jpg",
+      "../assets/images/peru/Tanta/X8.jpg",
+      "../assets/images/peru/Tanta/X9.jpg",
+      "../assets/images/peru/Tanta/X10.jpg",
     ],
   },
 
 
   {
     id: 8,
-    name: "Fauna Restaurant",
+    name: "Panchita",
     content:
-      "Restaurant recognized as the second restaurant with the Best Ambience of Peru, top 5 among new restaurants and cuisines of the world and as one of the 20 best restaurants in Peru in the Summum 2022 awards, with a rural proposal of the creators of Carnal Prime Steakhouse.",
+      "",
     images: [
-      "../assets/images/beach.jpg",
-      "../assets/images/foundation.jpg",
-      "../assets/images/pickleball.jpg",
+      "../assets/images/peru/Panchita/11.jpeg",
+      "../assets/images/peru/Panchita/12.jpg",
+      "../assets/images/peru/Panchita/13.jpeg",
+    ],
+  },
+  {
+    id: 9,
+    name: "Domo Saltado",
+    content:
+      "",
+    images: [
+      "../assets/images/peru/DomoSaltado/D12.jpg",
+      "../assets/images/peru/DomoSaltado/D13.jpg",
+      "../assets/images/peru/DomoSaltado/D14.jpg",
+    ],
+  },
+  {
+    id: 10,
+    name: "La Panka",
+    content:
+      "",
+    images: [
+      "../assets/images/peru/LAPANKA/LP8.jpg",
+      "../assets/images/peru/LAPANKA/LP9.jpg",
+      "../assets/images/peru/LAPANKA/LP10.jpg",
+    ],
+  },
+  {
+    id: 11,
+    name: "La Mar",
+    content:
+      "",
+    images: [
+      "../assets/images/peru/LAMAR/16.jpg",
+      "../assets/images/peru/LAMAR/17.jpg",
+      "../assets/images/peru/LAMAR/18.jpg",
+    ],
+  },
+  {
+    id: 12,
+    name: "Astrid & Gaston",
+    content:
+      "",
+    images: [
+      "../assets/images/peru/Astrid&Gaston/AG9.jpg",
+      "../assets/images/peru/Astrid&Gaston/AG10.jpg",
+      "../assets/images/peru/Astrid&Gaston/AG11.jpg",
     ],
   },
 
@@ -152,9 +196,9 @@ const activities = [
     content:
       "Uninhibited restaurant that rescues the freshest seasonal products of our Peruvian sea. The restaurant seeks to be a fusion of Peruvian cevichería, with bridges to the four cardinal points, and references to other cuisines of the world such as gyozas, tacos and curries. Duration: 2 hours and a half",
     images: [
-      "../assets/images/peru/UrbanKitchen/3.jpeg",
-      "../assets/images/peru/UrbanKitchen/2.jpeg",
-      "../assets/images/peru/UrbanKitchen/9.jpeg",
+      "../assets/images/peru/UrbanKitchen/11.jpeg",
+      "../assets/images/peru/UrbanKitchen/12.jpeg",
+      "../assets/images/peru/UrbanKitchen/13.jpeg",
     ],
   },
   {
@@ -204,7 +248,7 @@ const activities = [
 ];
 
 const events=[
-  {id:0,name:'DPASO',content:'Enjoy a journey full of flavors, colors, music, dance, tradition and living culture; that harmonize with the Peruvian Paso Horse to create an experience never lived before. This show includes: Buffet Lunch, Typical Dances, Peruvian Paso Horse Show, Horse back riding in the riding school.',images:['../assets/images/peru/Dpaso/D1.jpg','../assets/images/peru/Dpaso/D2.jpg','../assets/images/peru/Dpaso/D5.jpg']},
+  {id:0,name:'DPASO',content:'Enjoy a journey full of flavors, colors, music, dance, tradition and living culture; that harmonize with the Peruvian Paso Horse to create an experience never lived before. This show includes: Buffet Lunch, Typical Dances, Peruvian Paso Horse Show, Horse back riding in the riding school.',images:['../assets/images/peru/Dpaso/D7.jpg','../assets/images/peru/Dpaso/D8.jpg','../assets/images/peru/Dpaso/D9.jpg']},
   {id:1,name:'Clases de cajón',content:'Reconocido a nivel mundial y símbolo de la música criolla, el cajón peruano es un tesoro histórico musical. Declarado como patrimonio cultural del Perú por su  aporte valioso a nuestra cultura. Experimenta la música peruana afrodescendiente en un momento cultural inmersivo.',images:['../assets/images/peru/10.jpg']}
 ]
 export default function Destination() {

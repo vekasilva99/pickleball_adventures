@@ -13,10 +13,12 @@ import { toast } from "react-toastify";
 import { countryList } from "@/helpers/countryList";
 import { countryCodes } from "@/helpers/countryCodes";
 import validator from "validator";
+import LoaderContext from "@/context/LoaderContext";
 
 
 export default function SignUp() {
   const { error, registerUser, clearErrors } = useContext(AuthContext);
+  const { setLoading } = useContext(LoaderContext);
   const notify = () => toast("Wow so easy!");
   const [first_name, setFirst_name] = useState("");
   const [last_name, setLast_name] = useState("");
@@ -78,6 +80,7 @@ if(value==""){
 
   const signUp=(e)=>{
     e.preventDefault();
+    setLoading(true)
     let isError=false
     if(first_name.replace(/ /g,'') == ""){
       setFirst_nameError('Required')
@@ -162,6 +165,8 @@ if(value==""){
       }
    
       registerUser(data);
+    }else{
+      setLoading(false)
     }
   }
   return (

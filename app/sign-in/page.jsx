@@ -15,11 +15,12 @@ import { countryList } from "@/helpers/countryList";
 import { countryCodes } from "@/helpers/countryCodes";
 import validator from "validator";
 import {signIn} from "next-auth/react"
+import LoaderContext from "@/context/LoaderContext";
 
 export default function SignIn() {
   const { error, registerUser, clearErrors } = useContext(AuthContext);
 
-
+  const { setLoading } = useContext(LoaderContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -45,6 +46,7 @@ export default function SignIn() {
 
   const login=async(e)=>{
     e.preventDefault();
+    setLoading(true)
     let isError=false
 
 
@@ -69,12 +71,16 @@ export default function SignIn() {
    
       if (data?.error) {
         toast.error(data?.error);
+        setLoading(false)
       }
   
       if (data?.ok) {
   
         router.push("/");
+        setLoading(false)
       }
+    }else{
+      setLoading(false)
     }
  
 
