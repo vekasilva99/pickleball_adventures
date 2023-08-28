@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const registerUser = async ({ first_name,last_name, email,birthdate,gender,country,state,phone_number, password }) => {
     try {
       const { data } = await axios.post(
-        `http://localhost:3000/api/users`,
+        `https://pickleball-adventures.vercel.app/api/users`,
         {
         first_name,
         last_name, 
