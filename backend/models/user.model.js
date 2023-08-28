@@ -1,56 +1,69 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs"
+const jwt = require('jsonwebtoken');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    email : {
-        type: String,
-        required: [true, "Please enter email address."],
-        unique: true,
-        trim: true,
+const userSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: false,
+    minLength:[6,'Your password must be longer than 6 characters.'],
+    select: false
+  },
+  birthdate: {
+    type: String,
+    required: true
+  },
+  gender: {
+    type: String,
+    enum:['Woman','Man','Genderqueer/Non-Binary'],
+    required: true
+  },
+  country: {
+    type: String,
+    required: true
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  phone_number: {
+    code: {
+      type: String,
+      required: true
     },
-    password: {
-        type: String,
-        required:[true, "Please enter password."]
-    },
-    birthdate: {
-        type: Date,
-        required:[true, "Please enter date of birth."]
-    },
-    gender: {
-        type: String,
-        required:[true, "Please enter gender."],
-    },
-    country: {
-        type: String,
-        required:[true, "Please enter country."]
-    },
-    state: {
-        type: String,
-        required:false
-    },
-    phone_number: {
-        type: String,
-        required:[true, "Please enter phone number."]
-    },
-    phone_number_code: {
-        type: String,
-        required:[true, "Please enter phone number code."]
-    },
-    first_name: {
-        type: String,
-        required: true,
-    },
-    last_name: {
-        type: String,
-        required: true,
-    },
-    active: {
-        type: Boolean,
-        required: true,
-    },
+    number: {
+      type: String,
+      required: true
+    }
+  },
+  first_name: {
+    type: String,
+    required: true
+  },
+  last_name: {
+    type: String,
+    required: true
+  },
+  role:{
+type:String,
+default:'30056'
+  },
+  active: {
+    type: Boolean,
+    default: true
+  },
+  
 });
 
+userSchema.methods.generateAuthToken = function () {
+  const token = jwt.sign({ _id: this._id }, 'yourSecretKey');
+  return token;
+};
 userSchema.pre("save", function (next) {
     const user = this
   

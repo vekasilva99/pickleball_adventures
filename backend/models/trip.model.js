@@ -5,30 +5,36 @@ const Schema = mongoose.Schema;
 const tripSchema = new Schema({
     name: {
         type: String,
-        required:[true, "Please enter password."]
+        required: true
     },
     city: {
         type: String,
-        required:[true, "Please enter date of birth."]
+        required: true
     },
     country: {
         type: String,
-        required:[true, "Please enter gender."],
+        required: true
     },
-    hotel: {
-        type: String,
-        required:[true, "Please enter gender."],
-    },
+    hotel: { type : Schema.Types.ObjectId, ref: 'Hotel' },
     restaurants:  [{ type : Schema.Types.ObjectId, ref: 'Restaurant' }],
     activities: [{ type : Schema.Types.ObjectId, ref: 'Activity' }],
     events:[{ type : Schema.Types.ObjectId, ref: 'Event' }],
     nights: {
         type: Number,
-        required:[true, "Please enter gender."],
+        required: true
+    },
+    images: {
+        type:[String],
+        required:true,
+
+    },
+    main_image:{
+type:String,
+required:true
     },
     active: {
         type: Boolean,
-        required: true,
+        default: true,
     },
 });
 

@@ -1,9 +1,19 @@
 "use client";
-import React from "react";
+import React,{useEffect,useContext} from "react";
 import { useRouter } from 'next/navigation';
 import styles from './navbar.module.css'
-
+import { useSession } from "next-auth/react";
+import AuthContext from "@/context/AuthContext";
 export const Navbar = () =>{
+    const { user, setUser } = useContext(AuthContext);
+    const {data}=useSession()
+   console.log(data)
+
+  useEffect(() => {
+    if (data) {
+      setUser(data?.user);
+    }
+  }, [data]);
     const router = useRouter();
     return(
         <>
@@ -19,7 +29,8 @@ export const Navbar = () =>{
               <button className={styles.navItem} onClick={()=>{router.push("/cabieses");}}>Foundation</button>
               <button className={styles.navItem} onClick={()=>{router.push("/contact-us");}}>Contact</button>
               </div>
-              <button className={styles.navItem} onClick={()=>{router.push("/sign-in");}}>Sign In</button>
+              {user ?  <button className={styles.navItem}>{user.first_name} {user.last_name}</button>:
+              <button className={styles.navItem} onClick={()=>{router.push("/sign-in");}}>Sign In</button>}
             </div>
         </div>
 
@@ -42,7 +53,8 @@ export const Navbar = () =>{
                <h2>Contact</h2> </button>
            
         </div>
-        <button className={styles.signInMobile} onClick={()=>{router.push("/sign-in");}}>Sign In</button>
+        {user ?  <button className={styles.signInMobile} >{user.first_name} {user.last_name}</button>:
+        <button className={styles.signInMobile} onClick={()=>{router.push("/sign-in");}}>Sign In</button>}
         </>
     )
 }

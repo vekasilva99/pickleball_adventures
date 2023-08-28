@@ -2,22 +2,42 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
+const informationSchema=new Schema({
+    category: {
+        type: String,
+        required:true
+    },
+    content:[{
+        title1:{
+            type: String,
+            required: true
+        },
+        title2:{
+            type: String,
+            required: true
+        },
+        content:{
+            type: String,
+            
+        },
+        image:{
+            type: String,
+            required: true
+        }
+    }]
+})
 const hotelSchema = new Schema({
     name: {
         type: String,
-        required:[true, "Please enter Hotel Name."]
+        required:true,
     },
-    content: {
-        type: String,
-
-    },
-    images: {
-        type: [String],
-  
-    },
+    information: [{
+        type:informationSchema,
+        required:true
+    }],
     active: {
         type: Boolean,
-        required: true,
+        default: true,
     },
 });
 

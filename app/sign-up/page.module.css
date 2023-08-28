@@ -53,6 +53,12 @@
 }
 
 
+.invalid{
+  border: 1px solid red !important;
+  text-transform: uppercase;
+  color: #B4B4B4 !important;
+  font-size: 1vw;
+}
 
  .input{
     /* font-family: 'Poppins', sans-serif; */
@@ -69,6 +75,7 @@
   font-size: 1vw;
   color: #2C2F34;
   padding-top: 1.2vw;
+  transition: all 0.5s;
     /* font-family: 'Poppins', sans-serif; */
 }
 
@@ -96,6 +103,10 @@ top: 2vw;
   /* font-family: 'Poppins', sans-serif; */
 }
 
+.empty{
+  text-transform: uppercase;
+  color: #B4B4B4 !important;
+}
  .input > input + h2{
  
   font-size: 0.8vw;
@@ -110,6 +121,65 @@ top: 2vw;
  .input{
     margin-bottom: 2vh;
   }
+
+  .input > select{
+    width: 100%;
+    background-color: white;
+    border-radius: 1vw;
+    padding: 0.9vw 1vw;
+    border: 1px solid #B4B4B4;
+    font-size: 1vw;
+    color: #2C2F34;
+    padding-top: 1.2vw;
+      /* font-family: 'Poppins', sans-serif; */
+  }
+
+  .input > select >option[value=""] {
+    position: absolute;
+    left: 1vw;
+    top: 2.6vw;
+    text-transform: uppercase;
+    color: #B4B4B4;
+    font-size: 1vw;
+    transition: all 0.5s;
+      /* font-family: 'Poppins', sans-serif; */
+  }
+  
+   .input > select:placeholder-shown + h2{
+    position: absolute;
+    left: 1vw;
+    top: 2.6vw;
+    text-transform: uppercase;
+    color: #B4B4B4;
+    font-size: 1vw;
+    transition: all 0.5s;
+      /* font-family: 'Poppins', sans-serif; */
+  
+  }
+   .input > select:focus {
+  
+  background-color: rgba(180,180,180,0.3);
+  outline: none;
+  border: none;
+    }
+   .input > select:focus + h2{
+  
+  font-size: 0.8vw;
+  top: 2vw;
+    /* font-family: 'Poppins', sans-serif; */
+  }
+  
+   .input > select + h2{
+   
+    font-size: 0.8vw;
+    position: absolute;
+    left: 1vw;
+    top: 2vw;
+    text-transform: uppercase;
+    color: #B4B4B4;
+      /* font-family: 'Poppins', sans-serif; */
+    }
+  
 
 
   .content > button{
@@ -180,6 +250,12 @@ top: 2vw;
   .inputMonth{
  
     width: 30%;
+    margin-bottom: 0;
+  }
+
+  .inputPhone{
+ 
+    width: 65%;
     margin-bottom: 0;
   }
 

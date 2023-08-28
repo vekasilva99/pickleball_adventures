@@ -27,6 +27,83 @@
   transition: all 1s;
 }
 
+.invalid{
+  border: 1px solid red !important;
+  text-transform: uppercase;
+  color: #B4B4B4 !important;
+  font-size: 1vw;
+}
+
+.empty{
+  text-transform: uppercase;
+  color: #B4B4B4 !important;
+}
+
+
+.input > select{
+  width: 100%;
+  background-color: white;
+  border-radius: 1vw;
+  padding: 0.9vw 1vw;
+  border: 1px solid #B4B4B4;
+  font-size: 1vw;
+  color: #2C2F34;
+  padding-top: 1.2vw;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.input > select >option[value=""] {
+  position: absolute;
+  left: 1vw;
+  top: 2.6vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+  font-size: 1vw;
+  transition: all 0.5s;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+ .input > select:placeholder-shown + h2{
+  position: absolute;
+  left: 1vw;
+  top: 2.6vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+  font-size: 1vw;
+  transition: all 0.5s;
+    /* font-family: 'Poppins', sans-serif; */
+
+}
+ .input > select:focus {
+
+background-color: rgba(180,180,180,0.3);
+outline: none;
+border: none;
+  }
+ .input > select:focus + h2{
+
+font-size: 0.8vw;
+top: 2vw;
+  /* font-family: 'Poppins', sans-serif; */
+}
+
+ .input > select + h2{
+ 
+  font-size: 0.8vw;
+  position: absolute;
+  left: 1vw;
+  top: 2vw;
+  text-transform: uppercase;
+  color: #B4B4B4;
+    /* font-family: 'Poppins', sans-serif; */
+  }
+
+
+  .inputPhone{
+ 
+    width: 65% !important;
+    margin-bottom: 0;
+  }
 .overlay.noShow{
 visibility: hidden;
 opacity: 0;

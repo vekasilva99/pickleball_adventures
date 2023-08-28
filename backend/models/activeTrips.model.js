@@ -5,32 +5,32 @@ const Schema = mongoose.Schema;
 const activeTripsSchema = new Schema({
     date: {
         type: Date,
-        required:[true, "Please enter password."]
+        required:true,
     },
     trip: {
         type: Schema.Types.ObjectId, 
         ref: 'Trip', 
-        required:[true, "Please enter date of birth."]
+        required:true,
     },
     priceSingle: {
         type: Number,
-        required:[true, "Please enter gender."],
+        required:true,
     },
     priceDouble: {
         type: Number,
-        required:[true, "Please enter gender."],
+        required:true,
     },
     maxGuests: {
         type: Number,
-        required:[true, "Please enter gender."],
+        required:true,
     },
     numberGuests: {
         type: Number,
-        required:[true, "Please enter gender."],
+        default:0,
     },
     active: {
         type: Boolean,
-        required: true,
+        default: true,
     },
 });
 

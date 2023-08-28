@@ -87,9 +87,9 @@ const restaurants = [
     content:
       "Contemporary high-end restaurant offering Peruvian cuisine with a Japanese touch. Winner of first place in the Summum 2022 Awards in the category of BestRestaurants in Peru.",
     images: [
-      "../assets/images/peru/2.jpg",
-      "../assets/images/peru/18.jpg",
-      "../assets/images/peru/9.jpg",
+      "../assets/images/peru/Maido/M1.jpg",
+      "../assets/images/peru/Maido/M2.jpg",
+      "../assets/images/peru/Maido/M3.jpg",
     ],
   },
 
@@ -99,9 +99,9 @@ const restaurants = [
     content:
       "Refined restaurant with elegant Peruvian dishes and views of a pre-Inca stepped pyramid. It offers Peruvian cuisine, with its rich variety of products, such as sea fish, seafood, or the immense variety of vegetables, with all colors, textures and flavors.",
     images: [
-      "../assets/images/beach.jpg",
-      "../assets/images/foundation.jpg",
-      "../assets/images/pickleball.jpg",
+      "../assets/images/peru/Huaca/H3.jpg",
+      "../assets/images/peru/Huaca/H5.jpg",
+      "../assets/images/peru/Huaca/H1.jpg",
     ],
   },
 
@@ -112,9 +112,9 @@ const restaurants = [
     content:
       "Lounge restaurant of contemporary Peruvian food with marine inspiration with one of the most beautiful views of Lima that brings together tradition and vanguard with notable references to coastal cuisine.",
     images: [
-      "../assets/images/beach.jpg",
-      "../assets/images/foundation.jpg",
-      "../assets/images/pickleball.jpg",
+      "../assets/images/peru/Cala/X6.jpg",
+      "../assets/images/peru/Cala/X9.jpg",
+      "../assets/images/peru/Cala/X8.jpg",
     ],
   },
 
@@ -152,9 +152,9 @@ const activities = [
     content:
       "Uninhibited restaurant that rescues the freshest seasonal products of our Peruvian sea. The restaurant seeks to be a fusion of Peruvian cevichería, with bridges to the four cardinal points, and references to other cuisines of the world such as gyozas, tacos and curries. Duration: 2 hours and a half",
     images: [
-      "../assets/images/peru/11.jpg",
-      "../assets/images/peru/33.jpg",
-      "../assets/images/peru/32.jpg",
+      "../assets/images/peru/UrbanKitchen/3.jpeg",
+      "../assets/images/peru/UrbanKitchen/2.jpeg",
+      "../assets/images/peru/UrbanKitchen/9.jpeg",
     ],
   },
   {
@@ -204,7 +204,7 @@ const activities = [
 ];
 
 const events=[
-  {id:0,name:'DPASO',content:'Enjoy a journey full of flavors, colors, music, dance, tradition and living culture; that harmonize with the Peruvian Paso Horse to create an experience never lived before. This show includes: Buffet Lunch, Typical Dances, Peruvian Paso Horse Show, Horse back riding in the riding school.',images:['../assets/images/peru/23.jpeg']},
+  {id:0,name:'DPASO',content:'Enjoy a journey full of flavors, colors, music, dance, tradition and living culture; that harmonize with the Peruvian Paso Horse to create an experience never lived before. This show includes: Buffet Lunch, Typical Dances, Peruvian Paso Horse Show, Horse back riding in the riding school.',images:['../assets/images/peru/Dpaso/D1.jpg','../assets/images/peru/Dpaso/D2.jpg','../assets/images/peru/Dpaso/D5.jpg']},
   {id:1,name:'Clases de cajón',content:'Reconocido a nivel mundial y símbolo de la música criolla, el cajón peruano es un tesoro histórico musical. Declarado como patrimonio cultural del Perú por su  aporte valioso a nuestra cultura. Experimenta la música peruana afrodescendiente en un momento cultural inmersivo.',images:['../assets/images/peru/10.jpg']}
 ]
 export default function Destination() {
@@ -481,6 +481,8 @@ export default function Destination() {
             <h2>{currentEvent.content}</h2>
             <div className={styles.imageContainer3}>
               <img src={currentEvent.images[0]} />
+              <img src={currentEvent.images[1]} />
+              <img src={currentEvent.images[2]} />
          
             </div>
           </div>

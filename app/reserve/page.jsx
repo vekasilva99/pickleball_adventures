@@ -6,6 +6,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Quote } from "@/components/Quote";
+import { countryList } from "@/helpers/countryList";
+import { countryCodes } from "@/helpers/countryCodes";
 import { Title } from "@/components/Title";
 
 
@@ -18,6 +20,47 @@ export default function Reserve() {
   const [paymentStep,setPaymentStep]=useState(4)
   const [selectedGuest,setSelectedGuest]=useState(0)
   const [showCancellation,setShowCancellation]=useState(false)
+
+  const [first_name, setFirst_name] = useState("");
+  const [last_name, setLast_name] = useState("");
+  const [email, setEmail] = useState("");
+  const [birthdate, setBirthdate] = useState("");
+  const [day, setDay] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
+  const [gender, setGender] = useState("");
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+  const [phone_number, setPhone_number] = useState("");
+  const [code, setCode] = useState("");
+  const [number, setNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
+
+  const [first_nameError, setFirst_nameError] = useState(undefined);
+  const [last_nameError, setLast_nameError] = useState(undefined);
+  const [emailError, setEmailError] = useState(undefined);
+  const [birthdateError, setBirthdateError] = useState(undefined);
+  const [dayError, setDayError] = useState(undefined);
+  const [monthError, setMonthError] = useState(undefined);
+  const [yearError, setYearError] = useState(undefined);
+  const [genderError, setGenderError] = useState(undefined);
+  const [countryError, setCountryError] = useState(undefined);
+  const [stateError, setStateError] = useState(undefined);
+  const [phone_numberError, setPhone_numberError] = useState(undefined);
+  const [codeError, setCodeError] = useState(undefined);
+  const [numberError, setNumberError] = useState(undefined);
+  const [passwordError, setPasswordError] = useState(undefined);
+  const [password2Error, setPassword2Error] = useState(undefined);
+
+  const getClassSelect=(value)=>{
+  
+    if(value==""){
+      return styles.empty
+    }else{
+      return ""
+    }
+  }
   
   const addRoom=()=>{
     setRooms(rooms+1)
@@ -63,13 +106,13 @@ export default function Reserve() {
     for(let i=0;i<rooms;i++){
       let aux2=[]
       for(let j=0;j<guests[i];j++){
-        let data={name:'',last_name:'',gender:'',date_of_birth:{month:'',day:'',year:''},citizenship:'',state:'',email:'', phone:''}
+        let data={name:'',last_name:'',gender:'',date_of_birth:{month:'',day:'',year:''},citizenship:'',state:'',email:'', phone:{code:'',number:''}}
         aux2.push(JSON.stringify(data))
       }
       aux.push(aux2)
     }
     setGuestInfo([...aux])
-console.log(aux)
+console.log('kkkkk',aux)
   }
 
   const numberOfGuests=()=>{
@@ -252,64 +295,122 @@ If you cancel your reservation after a specific date, you may be subject to canc
           <div className={styles.inputContainer}>
           <div className={styles.input}>
             <h3>First Name</h3>
-            <input placeholder=" " />
+            <input placeholder=" " required value={first_name} onChange={(e) => setFirst_name(e.target.value)} className={first_nameError!=undefined ? styles.invalid : ""}/>
             <h2>First Name</h2>
           </div>
           <div className={styles.input}>
           <h3>Last Name</h3>
-            <input  placeholder=" " />
+            <input  placeholder=" " required value={last_name} onChange={(e) => setLast_name(e.target.value)} className={last_nameError!=undefined ? styles.invalid : ""}/>
             <h2>Last Name</h2>
           </div>
-          <div className={styles.input}>
+          <div className={styles.input} >
           <h3>Gender</h3>
-            <input  placeholder=" " />
-            <h2>Gender</h2>
+            <select  placeholder=" " required value={gender} onChange={(e) => setGender(e.target.value)} className={genderError!=undefined ? styles.invalid : getClassSelect(gender)}>
+            <option value="" disabled selected>Gender</option>
+            <option value="Woman">Woman</option>
+            <option value="Man">Man</option>
+            <option value="Genderqueer/Non-Binary">Genderqueer/Non-Binary</option>
+              </select>
+          
           </div>
           <div className={styles.input}>
           <h3>Date of Birth</h3>
           <div className={styles.inputGroup}>
           <div className={`${styles.input} ${styles.inputMonth}`}>
-            <input  placeholder=" " />
-            <h2>Month</h2>
+            <select  placeholder=" " required value={month} onChange={(e) => setMonth(e.target.value)} className={monthError!=undefined ? styles.invalid : getClassSelect(month)}>
+            <option value="" disabled selected>Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="January">January</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+              </select>
             </div>
             <div className={`${styles.input} ${styles.inputMonth}`}>
-            <input  placeholder=" " />
-            <h2>Day</h2>
+            <select  placeholder=" " required value={day} onChange={(e) => setDay(e.target.value)} className={dayError!=undefined ? styles.invalid : getClassSelect(day)}>
+            <option value="" disabled selected>Day</option>
+            {[...Array(31)].map((e,i)=>{
+              return  <option value={(i+1).toString()} >{i+1}</option>
+            })}
+           
+          </select>
             </div>
             <div className={`${styles.input} ${styles.inputMonth}`}>
-            <input  placeholder=" " />
-            <h2>Year</h2>
+            <select  placeholder=" " required value={year} onChange={(e) => setYear(e.target.value)} className={yearError!=undefined ? styles.invalid : getClassSelect(year)} >
+            <option value="" disabled selected>Year</option>
+            {[...Array(120)].map((e,i)=>{
+              return  <option value={(2023-i).toString()} >{2023-i}</option>
+            })}
+           
+          </select>
             </div>
             </div>
           </div>
           <div className={styles.input}>
           <h3>Citizenship</h3>
-            <input  placeholder=" " />
-            <h2>Citizenship</h2>
+          <select  placeholder=" " required value={country} onChange={(e) => setCountry(e.target.value)} className={countryError!=undefined ? styles.invalid : getClassSelect(country)}>
+            <option value="" disabled selected>Citizenship</option>
+            {countryList.map((country,index)=>{
+              return  <option value={index} >{country.country}</option>
+            })}
+           
+          </select>
           </div>
           <div className={styles.input}>
           <h3>State/province of residency</h3>
-            <input  placeholder=" " />
-            <h2>State/province of residency</h2>
+          <select  placeholder=" " required value={state} onChange={(e) => setState(e.target.value)} className={stateError!=undefined ? styles.invalid : getClassSelect(state)}>
+            <option value="" disabled selected>State/province of residency</option>
+            {countryList[country]?.states &&
+            <>
+            {countryList[country].states.map((state,index)=>{
+              return  <option value={state} >{state}</option>
+              
+            })}</>}
+           
+          </select>
           </div>
           <div className={styles.input}>
           <h3>Email</h3>
-            <input  placeholder=" " />
+            <input  placeholder=" " required value={email} onChange={(e) => setEmail(e.target.value)} className={emailError!=undefined ? styles.invalid : ""}/>
             <h2>Email</h2>
           </div>
           <div className={styles.input}>
           <h3>Phone</h3>
-            <input placeholder=" " />
+          <div className={styles.inputGroup}>
+          <div className={`${styles.input} ${styles.inputMonth}`}>
+          <select  placeholder=" " required value={code} onChange={(e) => setCode(e.target.value)} className={codeError!=undefined ? styles.invalid : getClassSelect(code)}>
+            <option value="" disabled selected>Code</option>
+        
+            {countryCodes.map((code,index)=>{
+              return  <option value={code.dial_code} >{code.name} {code.dial_code}</option>
+              
+            })}
+           
+          </select>
+       
+            </div>
+            <div className={`${styles.input} ${styles.inputMonth} ${styles.inputPhone}`} >
+            <input placeholder=" "  required value={number} onChange={(e) => setNumber(e.target.value)} className={numberError!=undefined ? styles.invalid : ""}/>
             <h2>Phone</h2>
+            </div>
+            </div>
           </div>
           <div className={styles.input}>
           <h3>Password</h3>
-            <input type="password" placeholder=" " />
+            <input type="password" placeholder=" " required value={password} onChange={(e) => setPassword(e.target.value)} className={passwordError!=undefined ? styles.invalid : ""}/>
             <h2>Password</h2>
           </div>
           <div className={styles.input}>
           <h3>Confirm Password</h3>
-            <input type="password" placeholder=" " />
+            <input type="password" placeholder=" " required value={password2} onChange={(e) => setPassword2(e.target.value)} className={password2Error!=undefined ? styles.invalid : ""}/>
             <h2>Confirm Password</h2>
           </div>
        

@@ -5,19 +5,19 @@ const Schema = mongoose.Schema;
 const activitySchema = new Schema({
     name: {
         type: String,
-        required:[true, "Please enter password."]
+        required:true,
     },
     content: {
-        type: Date,
-        required:[true, "Please enter date of birth."]
+        type: String,
+        required:true,
     },
     images: {
         type: [String],
-        required:[true, "Please enter gender."],
+        required:true,
     },
     active: {
         type: Boolean,
-        required: true,
+        default: true,
     },
 });
 
