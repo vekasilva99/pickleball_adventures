@@ -23,10 +23,10 @@ const sendEmail = async (email, subject, payload, template) => {
         }
     });
 
-    console.log('kmjnhbgvfcgvhbjnkml',__dirname)
+    console.log('kmjnhbgvfcgvhbjnkml',process.cwd())
     console.log('kmjnhbgvfcgvhbjnkml')
    if(template !="newUser"){
-    ejs.renderFile("/Users/veka/Desktop/pickelball-adventures2/server/pages/api/utils/bookingConfirmationEmailTemplate.ejs", payload, function (err, data) {
+    ejs.renderFile(process.cwd()+"/pages/api/utils/bookingConfirmationEmailTemplate.ejs", payload, function (err, data) {
       if (err) {
           console.log(err);
       } else {
