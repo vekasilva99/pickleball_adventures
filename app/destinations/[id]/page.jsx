@@ -10,49 +10,54 @@ import { Events } from "@/components/Events";
 import { Slider } from "@/components/HotelSlider";
 import { useRouter } from 'next/navigation';
 const images = [
-  "../assets/images/peru/28.jpeg",
-  "../assets/images/peru/1.jpg",
-  "../assets/images/peru/13.jpg",
-  "../assets/images/peru/20.jpg",
-  "../assets/images/peru/27.jpg",
-  "../assets/images/peru/35.jpeg",
+  "../assets/images/peru/lima/1.jpg",
+  "../assets/images/peru/lima/2.jpg",
+  "../assets/images/peru/lima/3.jpg",
+  "../assets/images/peru/lima/4.jpg",
+  "../assets/images/peru/lima/5.jpg",
+  "../assets/images/peru/lima/6.jpg",
+  "../assets/images/peru/lima/7.jpg",
+  "../assets/images/peru/lima/8.jpg",
+  "../assets/images/peru/lima/9.jpg",
+  "../assets/images/peru/lima/10.jpg",
+  "../assets/images/peru/lima/11.jpg",
 ];
 
 const images2 = [
-  {image: "../assets/images/peru/hotel/16.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/17.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/21.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/34.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/1.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/2.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/3.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/4.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/5.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/6.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/7.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/8.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/9.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/10.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/11.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/12.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/13.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/14.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/15.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/18.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/19.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/20.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/22.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/23.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/24.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/25.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/26.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/27.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/28.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/29.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/30.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/31.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/32.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
-  {image: "../assets/images/peru/hotel/33.jpg",title1:'Discover',title2:'Hotel Country Club',content:' Five-Star Hotel Built in 1927 and stated as a Peruvian Cultural Monument, the Country Club Lima Hotel holds more than 300 works of art provided by the Pedro de Osma Museum. It is located in the prestigious residential area of San Isidro in Lima.'},
+  {image: "../assets/images/peru/hotel2/14.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/17.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/21.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/34.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/1.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/2.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/3.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/4.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/5.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/6.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/7.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/8.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/9.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/10.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/11.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/12.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/13.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/14.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/15.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/18.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/19.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/20.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/22.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/23.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/24.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/25.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/26.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/27.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/28.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/29.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/30.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/31.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/32.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
+  {image: "../assets/images/peru/hotel/33.jpg",title1:'Discover',title2:'Hotel Country Club',content:"In a historic edifice adorned with antiques and original art, this esteemed hotel graces Lima's embassy district. Positioned across from the Lima Golf Club and a short 5 km from Larcomar shopping center, its location is a fusion of prestige and convenience. The dining experience is elevated with an upscale Peruvian restaurant and a chic piano bar. Guests can also unwind in the English-style pub, fitness center, spa, and outdoor pool, while enjoying access to the neighboring golf course."},
 ];
 const images3 = [
   {image: "../assets/images/peru/hotel/31.jpg",title1:'Discover',title2:'Our Fitness Center',content:'Exercising and playing a sport is already a necessity and responds to a lifestyle. Release your energy in our recently remodeled gym, after an afternoon of walking or work.'},
@@ -82,17 +87,38 @@ const images6 = [
 
 const restaurants = [
   {
-    id: 0,
-    name: "Maido Restaurant",
+    id: 12,
+    name: "Astrid & Gaston",
     content:
-      "Contemporary high-end restaurant offering Peruvian cuisine with a Japanese touch. Winner of first place in the Summum 2022 Awards in the category of BestRestaurants in Peru.",
+      "Indulge in the culinary wonder of Restaurant Flag, crafted by renowned chef Gaston Acurio. Housed in the 17th-century Casa Moreyra hacienda, a National Heritage site, it seamlessly blends tradition and innovation. With a dynamic menu changing every six months to capture the essence of each season, the restaurant offers an exquisite fusion of flavors. Honored with accolades like Latin America's Best Restaurant, it remains an esteemed destination among the world's top 100. Within these historic walls, authenticity meets artistry, delivering an unforgettable dining experience.",
     images: [
-      "../assets/images/peru/Maido/M5.jpg",
-      "../assets/images/peru/Maido/M6.jpg",
-      "../assets/images/peru/Maido/M7.jpg",
+      "../assets/images/peru/Astrid&Gaston/AG9.jpg",
+      "../assets/images/peru/Astrid&Gaston/AG10.jpg",
+      "../assets/images/peru/Astrid&Gaston/AG11.jpg",
     ],
   },
-
+  {
+    id: 11,
+    name: "La Mar",
+    content:
+      "Step into the vibrant world of La Mar, a Peruvian restaurant and cebicheria nestled in Lima's historic Miraflores neighborhood. The atmosphere exudes the lively essence of a Lima cebicheria – a celebration of festivity, spontaneity, and radiant colors. A haven of authentic maritime delights, La Mar's cozy setting invites you to revel in the ocean's offerings – from zesty ceviche to delicate tiraditos and an array of seafood wonders. Each dish captures the restaurant's cheerful and jubilant spirit, ensuring that every bite is infused with the joyful essence of this bustling Peruvian cevicheria.",
+    images: [
+      "../assets/images/peru/LAMAR/16.jpg",
+      "../assets/images/peru/LAMAR/17.jpg",
+      "../assets/images/peru/LAMAR/18.jpg",
+    ],
+  },
+  {
+    id: 8,
+    name: "Panchita",
+    content:
+      "Discover the essence of Peruvian cuisine at this authentic restaurant, where traditional Creole flavors take center stage in a diverse menu that tantalizes with the rich aromas and tastes of Peru. Immerse yourself in a culinary journey that traverses history, skillfully weaving a tapestry of seasonings and ingredients that pay homage to Peruvian Creole culture. The restaurant's folkloric-inspired decor adds a unique blend of charm and sophistication to your dining experience. Belonging to the esteemed culinary realm of chef Gastón Acurio's corporation, it stands proudly as one of Lima's premier destinations to savor the delights of Peruvian gastronomy.",
+    images: [
+      "../assets/images/peru/Panchita/11.jpeg",
+      "../assets/images/peru/Panchita/12.jpg",
+      "../assets/images/peru/Panchita/13.jpeg",
+    ],
+  },
   {
     id: 3,
     name: "Huaca Pucllana Restaurant",
@@ -104,49 +130,33 @@ const restaurants = [
       "../assets/images/peru/Huaca/H15.jpg",
     ],
   },
-
-
   {
     id: 5,
     name: "Cala Restaurant",
     content:
-      "Lounge restaurant of contemporary Peruvian food with marine inspiration with one of the most beautiful views of Lima that brings together tradition and vanguard with notable references to coastal cuisine.",
+      "Cala Restaurant Bar Lounge beckons as a seaside sanctuary where the finest contemporary Peruvian cuisine graces your palate against a backdrop of stunning views. This luxurious establishment boasts a versatile dining experience complete with a lounge bar, a terrace, and panoramic ocean vistas. With its privileged location offering one of Lima's most exquisite vistas, Cala marries tradition and innovation, weaving the tapestry of Peruvian gastronomy across time. Nestled on the Pacific shores, it's a testament to culinary sophistication, seamlessly blending references to coastal fare with avant-garde concepts. Whether relishing sunsets in the lounge, sharing camaraderie on the terrace, or creating memories in the main hall, the rhythmic waves provide an unforgettable symphony to your dining experience, where tradition and elegance converge.",
     images: [
       "../assets/images/peru/Cala/X12.jpg",
       "../assets/images/peru/Cala/X13.jpg",
       "../assets/images/peru/Cala/X14.jpg",
     ],
   },
-
   {
-    id: 6,
-    name: "Tanta",
+    id: 0,
+    name: "Maido Restaurant",
     content:
-      "",
+      "Contemporary high-end restaurant offering Peruvian cuisine with a Japanese touch. Winner of first place in the Summum 2022 Awards in the category of BestRestaurants in Peru.",
     images: [
-      "../assets/images/peru/Tanta/X8.jpg",
-      "../assets/images/peru/Tanta/X9.jpg",
-      "../assets/images/peru/Tanta/X10.jpg",
-    ],
-  },
-
-
-  {
-    id: 8,
-    name: "Panchita",
-    content:
-      "",
-    images: [
-      "../assets/images/peru/Panchita/11.jpeg",
-      "../assets/images/peru/Panchita/12.jpg",
-      "../assets/images/peru/Panchita/13.jpeg",
+      "../assets/images/peru/Maido/M5.jpg",
+      "../assets/images/peru/Maido/M6.jpg",
+      "../assets/images/peru/Maido/M7.jpg",
     ],
   },
   {
     id: 9,
-    name: "Domo Saltado",
+    name: "Doomo Saltado",
     content:
-      "",
+      "Doomo Saltado emerges with a resolute purpose, boasting over 60 delectable varieties of saltados. Their commitment extends to both their patrons and principles, rigorously upholding biosafety protocols. In a relaxed ambiance, this restaurant serves a medley of stir-fried, grilled, and Japanese dishes. At its heart, Doomo Saltado redefines culinary creativity, drawing inspiration from the iconic 'Lomo Saltado' and crafting an extensive array of more than 60 saltado renditions. This distinctive establishment seamlessly blends Peruvian, Japanese, and fusion cuisines, delivering a diverse gastronomic journey.",
     images: [
       "../assets/images/peru/DomoSaltado/D12.jpg",
       "../assets/images/peru/DomoSaltado/D13.jpg",
@@ -154,69 +164,39 @@ const restaurants = [
     ],
   },
   {
+    id: 6,
+    name: "Tanta",
+    content:
+      "Immerse yourself in the heartwarming embrace of Tanta, a Lima-based restaurant where the essence of home resonates throughout its concept. This culinary haven invites you to partake in breakfast, lunch, or dinner, making it a sanctuary for any moment of the day. In every dish, you'll discover the cherished flavors reminiscent of the kitchens of mothers and grandmothers, a celebration of Peru's rich culinary heritage. Tanta stands as a testament to the nation's heartbeat, an embodiment of tradition and nostalgia, crafting an ambiance that echoes with the affectionate touch of homemade meals.",
+    images: [
+      "../assets/images/peru/Tanta/X8.jpg",
+      "../assets/images/peru/Tanta/X9.jpg",
+      "../assets/images/peru/Tanta/X10.jpg",
+    ],
+  },
+
+  {
     id: 10,
     name: "La Panka",
     content:
-      "",
+      "La Panka, a grill restaurant, artfully blends quintessential Peruvian cuisine with a gourmet touch. The establishment casts a spell with its dynamic culinary spectrum, from savory 'anticuchos' to succulent 'grilled chickens', each bite a testament to authentic Peruvian flavors elevated to gourmet heights. A welcoming ambiance and genial service seamlessly complete the experience, solidifying 'La Panka' as an indelible destination for a truly unforgettable gastronomic journey.",
     images: [
       "../assets/images/peru/LAPANKA/LP8.jpg",
       "../assets/images/peru/LAPANKA/LP9.jpg",
       "../assets/images/peru/LAPANKA/LP10.jpg",
     ],
   },
-  {
-    id: 11,
-    name: "La Mar",
-    content:
-      "",
-    images: [
-      "../assets/images/peru/LAMAR/16.jpg",
-      "../assets/images/peru/LAMAR/17.jpg",
-      "../assets/images/peru/LAMAR/18.jpg",
-    ],
-  },
-  {
-    id: 12,
-    name: "Astrid & Gaston",
-    content:
-      "",
-    images: [
-      "../assets/images/peru/Astrid&Gaston/AG9.jpg",
-      "../assets/images/peru/Astrid&Gaston/AG10.jpg",
-      "../assets/images/peru/Astrid&Gaston/AG11.jpg",
-    ],
-  },
+
+
 
 ];
 
 const activities = [
   {
-    id: 0,
-    name: "Urban Kitchen",
-    content:
-      "Uninhibited restaurant that rescues the freshest seasonal products of our Peruvian sea. The restaurant seeks to be a fusion of Peruvian cevichería, with bridges to the four cardinal points, and references to other cuisines of the world such as gyozas, tacos and curries. Duration: 2 hours and a half",
-    images: [
-      "../assets/images/peru/UrbanKitchen/11.jpeg",
-      "../assets/images/peru/UrbanKitchen/12.jpeg",
-      "../assets/images/peru/UrbanKitchen/13.jpeg",
-    ],
-  },
-  {
-    id: 1,
-    name: "Huaca Pucllana Site Museum",
-    content:
-      "Get to know our pre-Hispanic past visiting the Huaca Pucllana, belonging to the Lima culture. It is the most visited huaca in the city. It is an archaeological site dating back to 700 A.D. from the period of regional developments, located in the district of Miraflores. The site museum of Huaca Pucllana was inaugurated in 1984. During your visit to this archaeological complex, you can learn more about the ancestral customs of the Lima, Ychsma and Wari cultures, since they occupied Huaca Pucllana in different periods.",
-    images: [
-      "../assets/images/peru/4.jpg",
-      "../assets/images/peru/27.jpg",
-      "../assets/images/peru/17.jpg",
-    ],
-  },
-  {
     id: 2,
     name: "Pickleball Clinic",
     content:
-      "While you enjoy the various attractions and restaurants we have to offer, we will practice your favorite sport, pickleball, in our beautiful city. This clinic will be led by Hercilio Cabieses, professional Pickleball coach by the International Pickleball Teaching Professional Association (IPTPA), world and Latin American Pickleball ambassador and medalist in the U S Open 2021 tournament. Duration: 1 hour and a half each session",
+      "Experience a week of expert pickleball instruction in Lima, led by world-renowned professionals. Engage in skill-enhancing clinics, participate in fun drills, exciting games, and engaging challenges. The week concludes with a surprise event, promising an unforgettable adventure. Ensure you're equipped with your paddle – this is an opportunity not to be missed for an amazing pickleball journey.",
     images: [
       "../assets/images/peru/21.jpg",
       "../assets/images/pickleball.jpg",
@@ -224,32 +204,67 @@ const activities = [
     ],
   },
   {
-    id: 3,
-    name: "Pachacamac Museum",
+    id: 2,
+    name: "Cabieses Foundation",
     content:
-      "Most important archaeological sanctuary of the central coast. It is organized thematically showing the entire cultural sequence of the Pachacamac Sanctuary, from around 200 A.D. to the establishment of the Incas in 1470",
+      "",
     images: [
-      "../assets/images/peru/14.jpeg",
-      "../assets/images/peru/1.jpg",
-      "../assets/images/peru/24.jpg",
+      "../assets/images/peru/21.jpg",
+      "../assets/images/pickleball.jpg",
+      "../assets/images/peru/25.jpg",
+    ],
+  },
+  {
+    id: 0,
+    name: "Urban Kitchen",
+    content:
+      " Experience a unique culinary journey led by expert Peruvian chefs. Begin at San Isidro farmers market, exploring ingredients and flavors guided by a local chef. Transition to Urban Kitchen for a hands-on cooking class, learning to create traditional dishes. Indulge in the delicacies you've prepared before returning to your hotel. Armed with newfound skills, you can now recreate authentic Peruvian cuisine at your leisure.",
+    images: [
+      "../assets/images/peru/UrbanKitchen/11.jpeg",
+      "../assets/images/peru/UrbanKitchen/12.jpeg",
+      "../assets/images/peru/UrbanKitchen/13.jpeg",
     ],
   },
   {
     id: 4,
-    name: "CITY TOUR",
+    name: "City Tour",
     content:
-      "Get to know the best of Lima through an exciting tour. We will visit the district of Miraflores and the most important attractions of the Historic Center of Lima such as: Plaza San Martín, Plaza mayor, Entrance to the Basilica and/or Convent of Santo Domingo, Desamparados Station. *Bilingual tour guide service included.",
+      "Experience an exhilarating day trip from Lima to Paracas and Huacachina, complete with hotel transfers. Witness wildlife like Humboldt penguins and sea lions on the Ballestas Islands, followed by sandboarding and dune buggy rides amidst Huacachina's towering dunes. Your journey commences with an early hotel pickup, leading to Paracas on a comfortable bus. A 2-hour boat tour of the Ballestas Islands showcases captivating marine life and birds in their natural habitat. ",
     images: [
       "../assets/images/peru/13.jpg",
       "../assets/images/peru/26.jpg",
       "../assets/images/peru/35.jpeg",
     ],
   },
+  {
+    id: 1,
+    name: "Huaca Pucllana Site Museum",
+    content:
+      "Established in 1984 as a result of meticulous research initiated in 1981, the Huaca Pucllana Site Museum was conceived to safeguard and conserve archaeological artifacts while maintaining an active presence at the site. The museum offers a unique tourist circuit that provides insights into the pyramid's third section and the preserved lower portions, shedding light on its ceremonial past. Immersive life-size recreations of ancient Lima culture settlers engaged in various activities, along with excavation process photographs, offer a vivid window into the site's rich history.",
+    images: [
+      "../assets/images/peru/4.jpg",
+      "../assets/images/peru/27.jpg",
+      "../assets/images/peru/17.jpg",
+    ],
+  },
+
+  {
+    id: 3,
+    name: "Pachacamac Museum",
+    content:
+      "Pachacamac, a sacred site for over 1200 years, held profound significance as a coastal sanctuary. It drew countless pilgrims for Andean ceremonies and served as a renowned oracle shaping the destinies of influential leaders through its prophecies. Encompassing the Lima, Wari, Ychsma, and Inca cultures, the site's rich history spans diverse peoples and cultural epochs.",
+    images: [
+      "../assets/images/peru/14.jpeg",
+      "../assets/images/peru/1.jpg",
+      "../assets/images/peru/24.jpg",
+    ],
+  },
+
 ];
 
 const events=[
-  {id:0,name:'DPASO',content:'Enjoy a journey full of flavors, colors, music, dance, tradition and living culture; that harmonize with the Peruvian Paso Horse to create an experience never lived before. This show includes: Buffet Lunch, Typical Dances, Peruvian Paso Horse Show, Horse back riding in the riding school.',images:['../assets/images/peru/Dpaso/D7.jpg','../assets/images/peru/Dpaso/D8.jpg','../assets/images/peru/Dpaso/D9.jpg']},
-  {id:1,name:'Clases de cajón',content:'Reconocido a nivel mundial y símbolo de la música criolla, el cajón peruano es un tesoro histórico musical. Declarado como patrimonio cultural del Perú por su  aporte valioso a nuestra cultura. Experimenta la música peruana afrodescendiente en un momento cultural inmersivo.',images:['../assets/images/peru/10.jpg']}
+  {id:0,name:'DPASO',content:'Elevate your Lima experience with the Santiago de Surco Peruvian Paso and Dance Dinner Show – a night of unmatched cultural richness. Revel in the synergy of dancers and Peruvian horses for an unforgettable evening, complemented by a sumptuous dinner. Immerse yourself in traditional Peruvian culture through dance and the renowned Peruvian paso. Delight in a delectable buffet dinner featuring Peruvian favorites, making it a quintessential night out in Peru.',images:['../assets/images/peru/Dpaso/D7.jpg','../assets/images/peru/Dpaso/D8.jpg','../assets/images/peru/Dpaso/D9.jpg']},
+  {id:1,name:'Clases de cajón',content:"Designed to enhance your musical skills, these courses encompass theoretical and practical aspects, cultivating your ability to read and write music scores. You'll gain technical expertise and interpretative proficiency, empowering independent learning and enabling repertoire selection. The learning experience is enriched with theoretical readings on crucial instrument facets and body awareness insights for effective practice.",images:['../assets/images/peru/10.jpg']}
 ]
 export default function Destination() {
   const router = useRouter();

@@ -11,6 +11,24 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .totalPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .totalPrice > h5{
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-right: 0.5vw;
+  }
+  .totalPrice > h6{
+    color: white;
+    font-size: 1.2vw;
+    margin-right: 0.5vw;
+  }
 .overlay{
   position: fixed;
   width: 100vw;
@@ -118,6 +136,53 @@ opacity: 0;
   flex-direction: row;
   justify-content: space-between;
 
+}
+
+.modalSuccess{
+  background-color: white;
+  box-shadow: -10px 0px 40px 14px rgba(0, 0, 0, 0.1);
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.modalSuccess > button{
+  font-size: 1vw;
+  text-transform: uppercase;
+    /* font-family: 'Poppins', sans-serif; */
+  color: white;
+  background-color: #FDC316;
+  padding: 0.5vw 1vw;
+  border-radius: 100vw;
+  margin-top: 2vw;
+  opacity: 0.8;
+  transition: all 0.5s;
+
+}
+
+.modalSuccess > button:hover{
+  opacity: 1;
+}
+
+.modalSuccess > h2{
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  color: #2C2F34;
+}
+.modalSuccess > h3{
+  font-size: 1vw;
+  color: #2C2F34;
+
+}
+
+.modalSuccess > img{
+  object-fit: contain;
+  width: 5vw;
+  height: 5vw;
+  margin-bottom: 1vw;
 }
 .modal > p:first-of-type{
   width: 33%;

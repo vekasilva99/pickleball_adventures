@@ -94,8 +94,20 @@
   text-transform: uppercase;
   font-size: 1vw;
   color: #2C2F34;
+  text-align: center;
 }
 
 .selected{
   border-top: 4px solid #2C2F34;
+}
+
+@media (max-width: 480px) {
+.element > img{
+  width: 6vw;
+  height: 6vw;
+}
+.element > h3{
+  font-size: 2vw;
+  max-width: 80%;
+}
 }

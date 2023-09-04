@@ -9,10 +9,13 @@ import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
 
 const images = [
-  "/assets/images/pickleball1.png",
   "/assets/images/pickleball2.png",
-  "/assets/images/pickleball.jpg",
-  "/assets/images/Peru1.jpg",
+  "/assets/images/us/1.jpeg",
+  "/assets/images/us/2.jpeg",
+  "/assets/images/us/4.jpeg",
+  "/assets/images/us/5.jpeg",
+  "/assets/images/us/6.jpeg",
+ 
 ];
 export default function AboutUs() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -58,7 +61,7 @@ export default function AboutUs() {
       <div className={styles.pageGradient}>
         <div className={styles.row}>
           <div className={styles.column1}>
-            <img src="/assets/images/machu-pichu.jpg" />
+            <img src="/assets/images/us/10.jpg" />
           </div>
           <div className={styles.column2}>
             <p>

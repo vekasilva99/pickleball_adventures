@@ -40,6 +40,13 @@
   margin-top: 5vh;
 }
 
+.item > p{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
 .options{
   display: flex;
   flex-direction: row;
@@ -407,18 +414,14 @@ height: 40vw;
   min-width: calc(100vw - 20px);
 }
   @media (min-width: 768px) and (max-width: 1024px) {
-    .page{
-      width: 100vw;
-    }
+ 
 
 
   }
   
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     
-    .page{
-      width: 100vw;
-    }
+  
   
   }
   
@@ -550,9 +553,68 @@ height: 100%;
   }
   
   @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape)  {
-      .page{
-      width: 100vw;
-    }
+  
 
   
   }
+
+    
+  @media  (max-width: 480px) {
+ 
+.optionsContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.options{
+  display: flex;
+  flex-direction: row;
+  padding: 3vw 2vw;
+  /* border-radius: 1vw; */
+  border-bottom: 1px solid #2C2F34;
+}
+
+.option{
+  padding: 1vw 0vw;
+  background-color: transparent;
+  border: 1px solid #2C2F34;
+  margin-left: 1vw;
+  width: 28vw;
+  text-align: center;
+  margin-right: 1vw;
+  border-radius: 100vw;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.option:hover{
+  opacity: 1;
+}
+
+.option.selectedOption{
+  background-color: #FDC316;
+  opacity: 1;
+  border: 1px solid transparent;
+}
+
+.option.selectedOption > h2{
+  color: #2C2F34;
+
+}
+.option >h2{
+  font-size: 3vw;
+  text-transform: uppercase;
+  color: #2C2F34;
+  opacity:1;
+  
+
+}
+
+
+
+}
