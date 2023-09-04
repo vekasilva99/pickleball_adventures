@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const handlebars = require("handlebars");
 const fs = require("fs");
 const path = require("path");
-const {prueba,reservationConfirmation} = require('../mail_templates');
+const {prueba,reservationConfirmation,newUser} = require('../mail_templates');
 const ejs = require("ejs");
 
 function toBase64(filePath) {
@@ -29,7 +29,7 @@ const sendEmail = async (email, subject, payload, template) => {
         from: 'vekasilva99@gmail.com',
         to: email,
         subject: subject,
-        html:template !="newUser" ? reservationConfirmation(payload) :prueba(payload) ,
+        html:template !="newUser" ? reservationConfirmation(payload) :newUser(payload) ,
       };
     };
 

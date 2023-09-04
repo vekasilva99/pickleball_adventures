@@ -253,14 +253,14 @@ export default function PasswordReset() {
         dataAux.rooms.push(roomAux);
       }
 
-      console.log('kmjnhbgvhbjnk',dataAux)
+  
       try {
         const { data } = await axios.post(
           `${process.env.WEBAPP_URL}api/reservation`,
           dataAux
         );
 
-        console.log("DATTTTAAAA", data);
+      
         if (data?.newReservation) {
           setLoading(false);
           setShowSuccessModal(true);
@@ -268,7 +268,7 @@ export default function PasswordReset() {
       } catch (error) {
         setLoading(false);
         toast.error(error.response?.data.error);
-        console.log("ERRORRRR", error.response.data);
+   
       }
     }
   };
