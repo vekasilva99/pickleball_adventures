@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 const handlebars = require("handlebars");
 const fs = require("fs");
 const path = require("path");
-const {prueba} = require('../mail_templates');
+const {prueba,reservationConfirmation} = require('../mail_templates');
 const ejs = require("ejs");
 
 function toBase64(filePath) {
@@ -12,7 +12,7 @@ function toBase64(filePath) {
 }
 
 const sendEmail = async (email, subject, payload, template) => {
-  console.log('entre')
+
   try {
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
@@ -23,41 +23,13 @@ const sendEmail = async (email, subject, payload, template) => {
         }
     });
 
-    console.log('kmjnhbgvfcgvhbjnkml',process.cwd())
-    console.log('kmjnhbgvfcgvhbjnkml')
-   if(template !="newUser"){
-    ejs.renderFile(process.cwd()+"/pages/api/utils/bookingConfirmationEmailTemplate.ejs", payload, function (err, data) {
-      if (err) {
-          console.log(err);
-      } else {
-        const options = () => {
-          return {
-            from: 'vekasilva99@gmail.com',
-            to: email,
-            subject: subject,
-            html: data,
-          };
-        };
-    
-        // Send email
-        transporter.sendMail(options(), (error, info) => {
-          if (error) {
-            return error;
-          } else {
-            return res.status(200).json({
-              success: true,
-            });
-          }
-        });
-        }
-    });
-   }else{
+   
     const options = () => {
       return {
         from: 'vekasilva99@gmail.com',
         to: email,
         subject: subject,
-        html:prueba(payload) ,
+        html:template !="newUser" ? reservationConfirmation(payload) :prueba(payload) ,
       };
     };
 
@@ -72,8 +44,6 @@ const sendEmail = async (email, subject, payload, template) => {
       }
     });
 
-   }
-
   
 
   } catch (error) {
@@ -81,14 +51,6 @@ const sendEmail = async (email, subject, payload, template) => {
   }
 };
 
-/*
-Example:
-sendEmail(
-  "youremail@gmail.com,
-  "Email subject",
-  { name: "Eze" },
-  "./templates/layouts/main.handlebars"
-);
-*/
+
 
 module.exports = sendEmail;

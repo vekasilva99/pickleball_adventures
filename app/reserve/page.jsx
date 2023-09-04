@@ -230,7 +230,7 @@ export default function PasswordReset() {
       setCurrentStep(guestsInfoStep);
       setLoading(false);
     } else {
-      let dataAux = { rooms: [], tripId: process.env.PERU_PROD,total:totalPrice };
+      let dataAux = { rooms: [], tripId: process.env.PERU,total:totalPrice };
 
       for (let i = 0; i < guestsInfo.length; i++) {
         let roomAux = { room_number: i + 1, guests: [],price:calculateTotalPerRoom(guests[i])};
