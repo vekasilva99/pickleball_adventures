@@ -622,8 +622,8 @@ margin-bottom: 2vh;
     }
     .destinationCard{
       width: 80vw;
-      height: 100vw;
-      margin-bottom: 10vh;
+      height: 80vw;
+      margin-bottom: 5vh;
 
     }
 
@@ -655,7 +655,7 @@ margin-bottom: 2vh;
     }
 
     .destinationCard:hover .price{
-      height: 35%;
+      height: 45%;
       width: 100%;
        }
 
@@ -667,11 +667,11 @@ margin-bottom: 2vh;
     
       }
 
-      .cardInfo h3{
-        font-size: 8vw;
+      .cardInfo h2{
+        font-size: 6.5vw;
         line-height: 1.1;
       }
-      .cardInfo h2{
+      .cardInfo h3{
         font-size: 5vw;
         line-height: 1.1;
       }

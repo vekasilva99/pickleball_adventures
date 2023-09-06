@@ -90,7 +90,15 @@ transition: all 1s;
   
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  
+  .quote > p{
+    font-size: 3vw;
+  }
+  .quote:hover > p{
+    font-size: 4vw !important;
+  }
+  .quote:hover > h1{
+    font-size: 20vw !important;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {

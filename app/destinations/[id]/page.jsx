@@ -193,7 +193,7 @@ const restaurants = [
 
 const activities = [
   {
-    id: 2,
+    id: 5,
     name: "Pickleball Clinic",
     content:
       "Experience a week of expert pickleball instruction in Lima, led by world-renowned professionals. Engage in skill-enhancing clinics, participate in fun drills, exciting games, and engaging challenges. The week concludes with a surprise event, promising an unforgettable adventure. Ensure you're equipped with your paddle – this is an opportunity not to be missed for an amazing pickleball journey.",
@@ -209,9 +209,9 @@ const activities = [
     content:
       "",
     images: [
-      "../assets/images/peru/21.jpg",
-      "../assets/images/pickleball.jpg",
-      "../assets/images/peru/25.jpg",
+      "../assets/images/foundation/23.jpg",
+      "../assets/images/foundation/19.jpg",
+      "../assets/images/foundation/26.jpg",
     ],
   },
   {
@@ -273,7 +273,7 @@ export default function Destination() {
   const [selectedOptionHotel, setSelectedOptionHotel] = useState(0);
   const [currentRestaurant, setCurrentRestaurant] = useState(restaurants[0]);
   const [currentActivity, setCurrentActivity] = useState(activities[0]);
-  const [currentEvent, setCurrentEvent] = useState(activities[0]);
+  const [currentEvent, setCurrentEvent] = useState(events[0]);
   const [hotelImages,setHotelImages]=useState(images2)
 
   const autoScroll = true;
@@ -446,7 +446,7 @@ export default function Destination() {
           </div>
           </div>
           <div className={styles.rowSlider}>
-          <div className={styles.row} style={{marginLeft:(-selectedOption*100).toString()+'%'}}>
+          <div className={styles.row2} style={{marginLeft:(-selectedOption*100).toString()+'%'}}>
             <div className={styles.column}>
               <h4 className={styles.type}>Restaurant</h4>
               <Title
@@ -487,7 +487,7 @@ export default function Destination() {
             </div>
           </div>
 
-          <div className={styles.row}>
+          <div className={styles.row2}>
           <div className={styles.column}>
             <h4 className={styles.type}>Activity</h4>
             <Title
@@ -527,7 +527,7 @@ export default function Destination() {
             })}
           </div>
         </div>
-        <div className={styles.row}>
+        <div className={styles.row2}>
           <div className={styles.column}>
             <h4 className={styles.type}>Event</h4>
             <Title

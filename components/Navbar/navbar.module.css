@@ -131,7 +131,7 @@
         opacity: 0.75;
     }
     
-    .navItem img{
+    .navItem div{
         width: 5vw;
         height: 5vw;
         object-fit: contain;
@@ -220,13 +220,46 @@
     opacity: 0.75;
 }
 
-.navItem img{
+.navItem div{
     width: 8vw;
+    
     height: 8vw;
     object-fit: contain;
     transition: all 1s;
     
 
+}
+
+.plane{
+    background-image: url('/assets/icons/plane.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+}
+
+.info{
+    background-image: url('/assets/icons/info.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+}
+
+.foundation{
+    background-image: url('/assets/icons/cabieses1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+}
+
+.contact{
+    background-image: url('/assets/icons/envelop.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
 }
 
 .navItem h2{
@@ -236,6 +269,33 @@
     color: #2C2F34;
 }
 
+.navItem:focus > .plane{
+    background-image: url('/assets/icons/plane-white.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navItem:focus > .info{
+    background-image: url('/assets/icons/info-white.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navItem:focus > .foundation{
+    background-image: url('/assets/icons/cabieses1-white.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.navItem:focus > .contact{
+    background-image: url('/assets/icons/envelop-white.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .navItem:focus{
     flex-direction: row;

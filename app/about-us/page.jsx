@@ -9,9 +9,9 @@ import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
 
 const images = [
-  "/assets/images/pickleball2.png",
   "/assets/images/us/1.jpeg",
   "/assets/images/us/2.jpeg",
+  "/assets/images/us/3.jpeg",
   "/assets/images/us/4.jpeg",
   "/assets/images/us/5.jpeg",
   "/assets/images/us/6.jpeg",
@@ -24,12 +24,12 @@ export default function AboutUs() {
   let slideInterval;
   let intervalTime = 3000;
   const nextSlide = () => {
-    setCurrentSlide(currentSlide === 3 ? 0 : currentSlide + 1);
+    setCurrentSlide(currentSlide === 1 ? 0 : currentSlide + 1);
     console.log("next");
   };
 
   const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 3 : currentSlide - 1);
+    setCurrentSlide(currentSlide === 0 ? 1 : currentSlide - 1);
     console.log("prev");
   };
   function auto() {
@@ -60,9 +60,7 @@ export default function AboutUs() {
 
       <div className={styles.pageGradient}>
         <div className={styles.row}>
-          <div className={styles.column1}>
-            <img src="/assets/images/us/10.jpg" />
-          </div>
+        
           <div className={styles.column2}>
             <p>
               {" "}
@@ -82,7 +80,9 @@ export default function AboutUs() {
               left={true}
             />
           </div>
-
+          <div className={styles.column1}>
+            <img src="/assets/images/us/10.jpg" />
+          </div>
           <div className={styles.column3}>
             <p>
               Pickleball me dio nuevamente la oportunidad de competir, ya que
@@ -92,6 +92,7 @@ export default function AboutUs() {
               puedes cumplir todas tus metas. Este deporte me abrió muchas
               puertas
             </p>
+            <div className={styles.big}>
             <Title
               normal={true}
               text={"Miranda - Cabieses"}
@@ -99,6 +100,16 @@ export default function AboutUs() {
               italic={true}
               right={true}
             />
+            </div>
+            <div className={styles.small}>
+            <Title
+              normal={true}
+              text={"- Miranda Cabieses"}
+              opacity={true}
+              italic={true}
+              left={true}
+            />
+            </div>
           </div>
           
         </div>
@@ -249,21 +260,49 @@ export default function AboutUs() {
           />
 
           <div className={styles.slider}>
-            {images.map((image, index) => {
-              if (index == 0) {
-                return (
-                  <img
-                  id={`image-${index}`}
-                    src={image}
-                    style={{
+            <div className={styles.imageContainer}   style={{
                       marginLeft: (currentSlide * -100).toString() + "%",
-                    }}
+                    }}>
+            <img
+                  id={`image-${1}`}
+                    src={  "/assets/images/us/1.jpeg"}
+
+                  
                   />
-                );
-              } else {
-                return <img  id={`image-${index}`} src={image} />;
-              }
-            })}
+                       <img
+                  id={`image-${2}`}
+                    src={  "/assets/images/us/2.jpeg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${3}`}
+                    src={  "/assets/images/us/3.jpeg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/us/4.jpeg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/us/5.jpeg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/us/6.jpeg"}
+
+                  
+                  />
+            </div>
+       
           </div>
           <div className={styles.left}>
             <Title

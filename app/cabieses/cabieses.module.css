@@ -8,6 +8,40 @@
     position: relative;
   }
 
+
+.slider{
+  width: 100%;
+  height:40vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.imageContainer{
+display: flex;
+min-width: calc(100vw - 20px);
+height: 100%;
+justify-content: space-between;
+transition: all 1s;
+}
+
+.imageContainer > img{
+  object-fit: cover;
+  min-width: 31vw;
+  width: 31vw !important;
+  height:50vw !important;
+  transition: all 1s;
+
+}
+
+.imageContainer > img:first-of-type{
+  margin-left: 0%;
+}
+
+
   .buttonFixed{
     position: fixed;
     bottom: 2vw;
@@ -693,6 +727,36 @@ fill: #00a5e0;
   
     }
     @media (min-width: 320px) and (max-width: 480px) {
+
+      .button{
+        /* font-family: 'Poppins', sans-serif; */
+      text-transform: uppercase; 
+      background-color: #FDC316;
+      padding: 2vw 4vw;
+      border-radius: 100vw;
+      font-size: 3.5vw;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      transition: all 1s;
+    
+    }
+    .buttonFixed{
+      bottom: 10vh;
+    }
+    .button > img{
+      width:  0;
+      margin-left: 0.5vw;
+      visibility: hidden;
+      transition: all 1s;
+    }
+    .button:hover > img{
+      width:  4vw;
+      margin-left: 2vw;
+      visibility: visible;
+    }
       .center h3{
           font-size: 4vw;
       }

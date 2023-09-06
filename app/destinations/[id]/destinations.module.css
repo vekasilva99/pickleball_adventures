@@ -31,6 +31,16 @@
   transition: all 0.5s;
 }
 
+.row2{
+  width: calc(100vw - 20px);
+  min-width: calc(100vw - 20px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.5s;
+}
+
 .optionsContainer{
   width: 100%;
   display: flex;
@@ -100,6 +110,14 @@
   justify-content: space-between;
 }
 
+.page > .row2{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .page > .row > .column{
 padding-top: 0;
 align-items: flex-start;
@@ -108,6 +126,14 @@ padding-left: 2vw;
 
 }
 
+.page > .row2 > .column{
+  padding-top: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 2vw;
+  
+  }
+
 .page > .row > .column:last-of-type{
   padding-top: 0;
   align-items: flex-end;
@@ -115,6 +141,13 @@ padding-left: 2vw;
   padding-left: 2vw;
   
   }
+  .page > .row2 > .column:last-of-type{
+    padding-top: 0;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 2vw;
+    
+    }
 
 .page ul{
   list-style: disc;
@@ -456,6 +489,18 @@ height: 40vw;
     
     }
 
+    .row2{
+      flex-direction: column !important;
+      min-height: fit-content !important;
+      margin-top: 2vh;
+    
+    }
+
+   
+    .row2 > .column{
+      padding-top: 0;
+    }
+
     .imageContainer2{
       width: 100%;
       margin-bottom: 5vh;
@@ -486,6 +531,14 @@ height: 40vw;
    .row > .column{
 padding-left: 0 !important;
     }
+    .row2 > .column{
+      padding-left: 0 !important;
+          }
+          .row2 > .column:last-of-type{
+            margin-top: 5vh !important;
+            border: none;
+                }
+
     .imageContainer > img:first-of-type{
       width: 50vw;
     height: 70vw;
@@ -500,6 +553,12 @@ padding-left: 0 !important;
 height: 100%;
 
     }
+
+
+    .row2 > .column:first-of-type {
+      height: 100%;
+      
+          }
 
     .back{
       font-size: 4vw;
@@ -523,7 +582,7 @@ height: 100%;
     }
 
     .type{
-      font-size: 1.5vw;
+      font-size: 2.5vw;
     }
     
     .page p{

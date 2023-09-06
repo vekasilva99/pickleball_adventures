@@ -22,6 +22,7 @@ const prices = {
 };
 export default function PasswordReset() {
   const [currentStep, setCurrentStep] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
   const [rooms, setRooms] = useState(1);
   const [guests, setGuests] = useState([]);
   const [guestsInfo, setGuestInfo] = useState([]);
@@ -387,7 +388,7 @@ export default function PasswordReset() {
       </div>
       <Navbar />
       <div className={styles.row}>
-        <div className={styles.column1}>
+        <div className={showDetails ? `${styles.column1} ${styles.showDetails}`: `${styles.column1}` }>
           <div className={styles.sidebar}>
             <Title
               color={"white"}
@@ -396,7 +397,9 @@ export default function PasswordReset() {
               left={true}
             />
             <h2>Sept. 3, 2023 - Sept. 10, 2023</h2>
-            <button className={styles.back}>Go Back</button>
+            <button className={!showDetails ? styles.back : `${styles.back} ${styles.noShowButton}`}>Go Back</button>
+
+            <button className={showDetails ? styles.back : `${styles.back} ${styles.noShowButton}`} onClick={()=>{setShowDetails(false)}}>Go Back</button>
             <div
               className={
                 currentStep > 0
@@ -480,6 +483,7 @@ export default function PasswordReset() {
           </div>
         </div>
         <div className={styles.column2}>
+          <button className={styles.buttonDetails} onClick={()=>{setShowDetails(true)}}>View Details</button>
           <div className={styles.steps}>
             <div
               className={styles.step}

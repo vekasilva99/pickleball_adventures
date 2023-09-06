@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./cabieses.module.css";
 import { Navbar } from "@/components/Navbar";
@@ -6,8 +8,54 @@ import { Header } from "@/components/Header1";
 import { Title } from "@/components/Title";
 import { Quote } from "@/components/Quote";
 
+const images = [
+  "/assets/images/foundation/1.jpeg",
+  "/assets/images/foundation/2.jpeg",
+  "/assets/images/foundation/3.jpeg",
+  "/assets/images/foundation/4.jpeg",
+  "/assets/images/foundation/5.jpeg",
+  "/assets/images/foundation/6.jpeg",
+ 
+];
 
+const images2 = [
+  "/assets/images/us/1.jpeg",
+  "/assets/images/us/2.jpeg",
+  "/assets/images/us/3.jpeg",
+  "/assets/images/us/4.jpeg",
+  "/assets/images/us/5.jpeg",
+  "/assets/images/us/6.jpeg",
+ 
+];
 export default function Cabieses() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const autoScroll = true;
+  let slideInterval;
+  let intervalTime = 3000;
+  const nextSlide = () => {
+    setCurrentSlide(currentSlide === 8 ? 0 : currentSlide + 1);
+    console.log("next");
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? 8 : currentSlide - 1);
+    console.log("prev");
+  };
+  function auto() {
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, []);
+
+  useEffect(() => {
+    if (autoScroll) {
+      auto();
+    }
+    return () => clearInterval(slideInterval);
+  }, [currentSlide]);
   return (
     <div className={styles.main}>
         <button className={`${styles.button} ${styles.buttonFixed}`}>          <h2>Donate Now</h2>
@@ -38,7 +86,7 @@ export default function Cabieses() {
           <Title large={true} text={'Vision'} opacity={true}  left={true}/>
           <p>To support the development of the greatest number of outstanding young athletes, at national and international level, with the purpose of forming the leaders of the future.</p>
           </div>
-          <div className={styles.column2}>
+          {/* <div className={styles.column2}>
             <div className={styles.imgColumn}>
             <img src="/assets/images/foundation/1.jpg"/>
               <img src="/assets/images/foundation/3.jpg"/>
@@ -56,6 +104,192 @@ export default function Cabieses() {
             <img src="/assets/images/foundation/19.jpg"/>
               <img src="/assets/images/foundation/22.jpg"/>
             </div>
+          </div> */}
+
+<div className={styles.slider}>
+            <div className={styles.imageContainer}   style={{
+                      marginLeft: (currentSlide * -100).toString() + "%",
+                    }}>
+            <img
+                  id={`image-${1}`}
+                    src={  "/assets/images/foundation/1.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${2}`}
+                    src={  "/assets/images/foundation/3.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${3}`}
+                    src={  "/assets/images/foundation/4.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/5.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/6.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/7.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/8.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/9.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/10.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/11.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/12.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/13.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/14.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/15.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/16.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/17.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/18.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/19.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/20.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/21.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/22.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/23.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/24.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/25.jpg"}
+
+                  
+                  />
+            </div>
+            <div className={styles.imageContainer} >
+            <img
+                  id={`image-${4}`}
+                    src={  "/assets/images/foundation/26.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${5}`}
+                    src={  "/assets/images/foundation/27.jpg"}
+
+                  
+                  />
+                       <img
+                  id={`image-${6}`}
+                    src={  "/assets/images/foundation/28.jpg"}
+
+                  
+                  />
+            </div>
+       
           </div>
         </div>
         <div className={styles.listContainer}>

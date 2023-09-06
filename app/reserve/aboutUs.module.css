@@ -11,6 +11,15 @@
     flex-direction: column;
     align-items: center;
   }
+  .noShowButton{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .buttonDetails{
+    visibility: hidden;
+    opacity: 0;
+  }
 
   .totalPrice{
     display: flex;
@@ -271,6 +280,8 @@ position: relative;
       /* font-family: 'Poppins', sans-serif; */
     text-transform: uppercase;
     margin-top: 2vh;
+    visibility: visible;
+    opacity: 1;
   }
 
   .column2{
@@ -292,6 +303,7 @@ position: relative;
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.5s;
+    margin-bottom: 10vh;
    /* margin-left: 2vw;
    margin-right: 2vw; */
   }
@@ -896,6 +908,66 @@ margin-left: 1vw;
   @media (min-width: 320px) and (max-width: 480px) {
 
 
+    .buttonDetails{
+      margin-left: 2vw;
+      margin-bottom: 2vh;
+      font-size: 4vw;
+      padding: 1vw 3vw;
+      border-radius: 100vw;
+      color: #FDC316;
+      text-transform: uppercase;
+      border: 2px solid #FDC316;
+  visibility: visible;
+  opacity: 1;
+    }
+
+ 
+
+    .showDetails{
+      visibility: visible !important;
+      opacity: 1 !important;
+    width: 100% !important;
+      position: absolute;
+      top: 0;
+      padding-top: 0 !important;
+    }
+
+    .showDetails > .sidebar{
+      min-height: 91vh;
+      z-index: 10;
+      padding: 15vw 10px;
+    }
+
+    .map{
+      width: 50vw;
+      height: 50vw;
+      position: absolute;
+      right: 10px;
+      bottom: 5vw;
+     
+    }
+
+    .row h2{
+      font-size: 3vw !important;
+    }
+
+    .row h3{
+      font-size: 3vw !important;
+    }
+    .row h4{
+      font-size: 3vw !important;
+    }
+
+    .totalPrice > h5{
+      font-size: 3vw;
+    }
+    .totalPrice > h6{
+      font-size: 3vw;
+    }
+    .back{
+      font-size: 3vw;
+      padding: 1vw 2.5vw;
+    }
    .input{
   
     width: 100%;
@@ -954,6 +1026,69 @@ margin-left: 1vw;
       margin-bottom: 2vh;
     }
   
+
+      .input > input{
+  
+    border-radius: 2vw;
+    padding: 2.5vw 3vw;
+    font-size: 3vw;
+    padding-top: 3vw;
+  }
+  
+   .input > input:placeholder-shown + h2{
+    left: 2.5vw;
+    top: 7.5vw;
+    font-size: 3vw;
+  
+  }
+  
+   .input > input:focus + h2{
+  
+  font-size: 1.8vw;
+  top: 6vw;
+  
+  }
+   .input > input + h2{
+   
+    font-size: 1.8vw;
+    left: 2.5vw;
+    top: 6vw;
+  
+    }
+  
+
+    .input > select{
+  
+      border-radius: 2vw;
+      padding: 2.5vw 3vw;
+      font-size: 3vw;
+      padding-top: 3vw;
+    }
+    
+     .input > select:placeholder-shown + h2{
+      left: 2.5vw;
+      top: 7.5vw;
+      font-size: 3vw;
+    
+    }
+    
+     .input > select:focus + h2{
+    
+    font-size: 1.8vw;
+    top: 6vw;
+    
+    }
+     .input > select + h2{
+     
+      font-size: 1.8vw;
+      left: 2.5vw;
+      top: 6vw;
+    
+      }
+    
+     .input{
+        margin-bottom: 2vh;
+      }
   
   
     .inputContainer{
@@ -1021,12 +1156,12 @@ margin-left: 1vw;
             padding-top: 6vh;
           }
           .containerImg{
-            height: 20vh;
+            height: 30vh;
           }
 
           .column2{
             width: 100%;
-            padding-top: 6vh;
+            padding-top: 10vh;
             height: fit-content;
           
            
