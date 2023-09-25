@@ -1,4 +1,4 @@
-import { axios } from '@octokit/rest'
+import { axios } from 'axios'
 
 
 // zod env type checking
