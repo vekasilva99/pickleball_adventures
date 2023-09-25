@@ -1,9 +1,10 @@
 import React from "react";
 import styles from './footer.module.css'
+import { Reveal } from "../Reveal";
 
 export const Footer = () =>{
     return(
-        
+        <Reveal>
         <div className={styles.footer}>
             <div>
             <h2>Contact</h2>
@@ -19,5 +20,6 @@ export const Footer = () =>{
             </div>
         
         </div>
+        </Reveal>
     )
 }

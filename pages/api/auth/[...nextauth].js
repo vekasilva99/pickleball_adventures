@@ -54,6 +54,7 @@ export default async function auth(req, res) {
         return session;
       },
     },
+
     pages: {
       signIn: "/sign-in",
     },

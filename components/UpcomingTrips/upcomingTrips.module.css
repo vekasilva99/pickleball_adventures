@@ -1,0 +1,634 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.main {
+  background-color: white;
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageGradient {
+  /* background: linear-gradient(180deg, #FEEDB9 0%,#FFF 30%, #FFF 100%); */
+  width: 100vw;
+  position: relative;
+  padding: 10px;
+}
+
+.navigation {
+  width: 100%;
+
+  display: flex;
+  padding: 0 20%;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.5);
+}
+
+.navItem {
+  padding: 0.8vw 0;
+  margin-right: 2vw;
+  color: rgba(180, 180, 180, 0.6);
+  font-size: 1.2vw;
+  line-height: 1;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  color: #fdc316;
+}
+.navItem.active {
+  border-bottom: 3px solid #fdc316;
+  color: #fdc316;
+}
+
+.medium{
+  width: 60%;
+}
+
+.medium > p{
+  font-size: 1vw;
+  color: #2c2f34;
+  opacity: 0.75;
+  text-align: left;
+}
+
+.destinationsContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.modalContent {
+  width: 100%;
+  padding: 3vw 2vw;
+}
+
+.button {
+  /* font-family: 'Poppins', sans-serif; */
+  text-transform: uppercase;
+  background-color: #fdc316;
+  padding: 1vw 3vw;
+  border-radius: 100vw;
+  font-size: 1vw;
+  color: white;
+  /* margin-top: 2vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: all 1s;
+}
+
+.destinationCard {
+  width: 60vw;
+  height: 15vw;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 25px 40px 7px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s;
+  margin-bottom: 10vh;
+}
+
+.destinationCard:nth-of-type(n + 4) {
+  margin-top: 4vh;
+}
+
+.destinationCard > img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.whiteGradient {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 1.77%,
+    rgba(255, 255, 255, 0.5) 20.77%,
+    #fff 30%
+  );
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.cardInfo {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: fit-content;
+  width: 65%;
+  height: 100%;
+  padding: 1vw 0;
+  padding-bottom: 2vw;
+}
+
+.cardInfo h2 {
+  color: #2c2f34;
+  margin: 0;
+  font-size: 1.5vw;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.cardInfo h3{
+  color: #2c2f34;
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 400;
+
+  opacity: 0.75;
+}
+.cardInfo h4{
+  color: #2c2f34;
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 400;
+
+  opacity: 1;
+}
+
+.whiteGradientNotActive {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #fff 30%);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.destinationCard2 {
+  width: 60vw;
+  height: 60vh;
+  position: relative;
+  transition: all 0.5s;
+  margin-bottom: 10vh;
+}
+
+.reservation{
+  width: 100%;
+  height: 40vh;
+  position: absolute;
+  z-index: 0;
+  top:0;
+  background-image: url('/assets/images/Peru1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1vw;
+}
+
+.overlay{
+  width: 100%;
+  height: 40vh;
+  z-index: 0;
+  top:0;
+  background-color: #2c2f34;
+  opacity: 0.3;
+  border-radius: 1vw;
+  position: absolute;
+}
+
+
+.reservationInfoContainer{
+  height: fit-content;
+  margin-top: 30vh;
+  z-index: 100;
+  position: absolute;
+  right: 5vw;
+  left: 5vw;
+
+}
+.reservationInfo{
+  height: 30vh;
+  z-index: 3;
+  background-color: white;
+  border-radius: 1vw;
+  padding: 1vw;
+  margin-bottom: 2vh;
+  box-shadow: 0px 25px 40px 7px rgba(0, 0, 0, 0.05);
+}
+
+.reservationTitle{
+  width: 100%;
+  height: 30vh;
+  top:0;
+  z-index: 0;
+  padding: 1vw;
+  position: absolute;
+}
+
+.reservationTitle > .row{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reservationTitle > .row > h3{
+  color: white;
+  font-size: 1vw;
+}
+
+.daysToGo{
+  background: linear-gradient(180deg, #fdc316 0%,#fdc316 49%, #FEEDB9 50%);
+  display: flex;
+  flex-direction: row;
+  padding: 0.5vw;
+  border-radius: 1vw;
+  color: white;
+  align-items: center;
+
+}
+.daysToGo > h1{
+  font-size: 2.5vw;
+  font-weight: 500;
+  margin-right: 1vw;
+  opacity: 0.75;
+  
+}
+.daysToGo  h2{
+  font-size: 1vw;
+  font-weight: 300;
+  margin-right: 1vw;
+  opacity: 0.75;
+  line-height: 1.2;
+  
+}
+
+.reservationTitle{
+  font-size: 3vw;
+  color: white;
+}
+
+.reservationInfo > .row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reservationInfo h1{
+  font-size: 2vw;
+  font-weight: 500;
+  color: #2c2f34;
+}
+.reservationInfo h2{
+  font-size: 0.8vw;
+  font-weight: 300;
+  color: rgba(180, 180, 180, 0.6);
+  line-height: 1;
+  text-transform: uppercase;
+  
+}
+.reservationInfo h4{
+  font-size: 1vw;
+  color: #fdc316;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: all 0.5s;
+}
+
+.reservationInfo h4:hover{
+  opacity: 1;
+}
+
+.reservationInfo h3{
+  font-size: 1vw;
+  font-weight: 300;
+  color: #2c2f34;
+  line-height: 1;
+font-weight: 500;
+margin-top: 5vh;
+  
+}
+
+.reservationInfo h5{
+  font-size: 1vw;
+  font-weight: 300;
+  color: #2c2f34;
+  line-height: 1;
+margin-top: 1vh;
+  
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page {
+    width: 100vw;
+  }
+
+  .destinationCard {
+    margin-bottom: 5vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .page {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .page {
+    width: 100vw;
+  }
+  .destinationCard {
+    width: 80vw;
+    height: 100vw;
+    margin-bottom: 10vh;
+  }
+
+  .destinationCard > img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .whiteGradient {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 1.77%,
+      rgba(255, 255, 255, 0.5) 20.77%,
+      #fff 30%
+    );
+  }
+
+  .whiteGradientNotActive {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #fff 30%);
+  }
+
+  .cardInfo {
+    top: 35%;
+    left: 5%;
+    width: 100%;
+    color: #2c2f34;
+  }
+
+  .cardInfo h3 {
+    font-size: 8vw;
+    line-height: 1.1;
+  }
+  .cardInfo h2 {
+    font-size: 5vw;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  .page {
+    width: 100vw;
+  }
+  .destinationCard {
+    width: 90vw;
+    height: 30vw;
+    margin-bottom: 10vh;
+  }
+
+  .destinationCard > img {
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .whiteGradient {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 1.77%,
+      rgba(255, 255, 255, 0.5) 20.77%,
+      #fff 30%
+    );
+  }
+
+  .whiteGradientNotActive {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #fff 30%);
+  }
+
+  .cardInfo {
+    top: 10%;
+    left: 30%;
+    width: 90%;
+    color: #2c2f34;
+  }
+
+  .cardInfo h3 {
+    font-size: 2vw;
+    line-height: 1.1;
+  }
+  .cardInfo h2 {
+    font-size: 4vw;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .page {
+    width: 100vw;
+  }
+  .destinationCard {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5vh;
+  }
+
+  .destinationCard > img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+  
+  }
+
+  .whiteGradient {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 1.77%,
+      rgba(255, 255, 255, 0.5) 25.77%,
+      #fff 45%
+    );
+  }
+
+  .whiteGradientNotActive {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #fff 40%);
+  }
+
+  .cardInfo {
+    top: 35%;
+    left: 0;
+    width: 100%;
+    color: #2c2f34;
+    height: 65%;
+    padding: 2vw;
+    justify-content: space-around;
+  }
+
+  .cardInfo h2 {
+    font-size: 6.5vw;
+    line-height: 1.1;
+  }
+  .cardInfo h3 {
+    font-size: 5vw;
+    line-height: 1.1;
+  }
+  .cardInfo h4 {
+    font-size: 5vw;
+    line-height: 1.1;
+  }
+  .navigation{
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .navItem{
+    font-size: 4vw;
+    margin-right: 0;
+    padding: 3vw 0;
+    width: 50%;
+  }
+
+  .destinationCard2{
+    width: 100%;
+  }
+
+  .reservation{
+    height: 25vh;
+    border-radius: 2vw;
+  }
+
+  .overlay{
+    height: 25vh;
+    border-radius: 2vw;
+
+  }
+
+  .reservationTitle{
+    height: 20vh;
+  }
+
+  .reservationInfoContainer{
+    margin-top: 20vh;
+  }
+
+  .reservationInfo{
+    height: 15vh;
+    padding: 2vw;
+    border-radius: 2vw;
+  }
+
+  .reservationTitle > .row > h3{
+    font-size: 3vw;
+  }
+
+  .reservationTitle{
+    font-size: 8vw;
+    padding: 2vw;
+  }
+
+  .daysToGo > h1{
+    font-size: 8vw;
+  }
+  .daysToGo h2{
+    font-size: 3vw;
+  }
+
+  .reservationInfo h2{
+    font-size: 3vw;
+  }
+
+  .reservationInfo h1{
+    font-size: 5vw;
+  }
+  .reservationInfo h4{
+    font-size: 3vw;
+  }
+  .reservationInfo h3{
+    font-size: 3vw;
+    margin-top: 2vh;
+  }
+  .reservationInfo h5{
+    font-size: 3vw;
+    margin-top: 1vh;
+  }
+.medium{
+  width: 100%;
+}
+
+.medium p{
+  font-size: 3vw;
+}
+}
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+  .page {
+    width: 100vw;
+  }
+  .destinationCard {
+    width: 90vw;
+    height: 40vw;
+    margin-bottom: 10vh;
+  }
+
+  .destinationCard > img {
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .whiteGradient {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 1.77%,
+      rgba(255, 255, 255, 0.5) 20.77%,
+      #fff 30%
+    );
+  }
+
+  .whiteGradientNotActive {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #fff 30%);
+  }
+
+  .cardInfo {
+    top: 10%;
+    left: 35%;
+    width: 100%;
+    color: #2c2f34;
+  }
+
+  .cardInfo h3 {
+    font-size: 3vw;
+    line-height: 1.1;
+  }
+  .cardInfo h2 {
+    font-size: 6vw;
+    line-height: 1.1;
+  }
+
+
+}

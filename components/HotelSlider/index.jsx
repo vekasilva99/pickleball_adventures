@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./events.module.css";
 import { Title } from "../Title";
+import { Reveal } from "../Reveal";
 
 const images = [
   "../assets/images/beach.jpg",
@@ -58,14 +59,23 @@ if(selected==id){
         <div className={styles.gradient2}></div>
         <div className={styles.gradient}></div>
         {images[currentSlide] &&
+       
         <div className={styles.title}>
+ <Reveal>
           <h2>{images[0].title1}</h2>
+          </Reveal>
+          <Reveal>
           <h2>{images[0].title2}</h2>
+          </Reveal>
+          <Reveal>
           <p>
           {images[0].content}
           </p>
+          </Reveal>
         </div>}
+        
         <div className={styles.imageContainer}>
+        <Reveal width="100%">
           {images.map((image, index) => {
             if (index == 0) {
               return <img src={image.image} />;
@@ -73,8 +83,12 @@ if(selected==id){
               return <img src={image.image} />;
             }
           })}
+          
+</Reveal>
         </div>
+    
       </div>
+      <Reveal>
       <div className={styles.elements} >
         <div className={`${getClass(0)}`} onClick={()=>{select(0)}}>
           <img src="../assets/icons/hotel.png" />
@@ -97,6 +111,7 @@ if(selected==id){
           <h3>Events</h3>
         </div>
       </div>
+      </Reveal>
     </div>
   );
 };

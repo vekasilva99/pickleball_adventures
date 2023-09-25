@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header1";
 import { Title } from "@/components/Title";
 import { Quote } from "@/components/Quote";
+import { Reveal } from "@/components/Reveal";
 
 const images = [
   "/assets/images/foundation/1.jpeg",
@@ -65,16 +66,21 @@ export default function Cabieses() {
  
      <div className={styles.pageGradient}>
       <Title normal={true} text={'One ball can change a life, and a life can change the world'} opacity={true} marginTop={'5vh'} marginBottom={'2vh'} />
+     <Reveal>
       <button className={styles.button}><h2>Donate Now</h2>
             <img src="/assets/icons/arrow-45.png" /></button>
+            </Reveal>
+            <Reveal>
       <video autoPlay muted playsInline loop className={styles.videoHome}>
             <source src="/assets/videos/cabieses.mp4" type="video/mp4"></source>
           </video>
+          </Reveal>
           <Title  normal={true} text={'What is Cabieses Foundation'} opacity={true} marginTop={'5vh'} marginBottom={'2vh'}/>
-     
+          <Reveal width="fit-content">
      <p style={{marginBottom:'5vh'}}>
      Is a non profit organization where we support children and young people for any social sectors who wish to develop their skills and abilities in sports without exclusion and humanitarian cooperation.
      </p>
+     </Reveal>
      <Quote
           titleLine1={"Origin"}
           content={
@@ -84,7 +90,9 @@ export default function Cabieses() {
         <div className={styles.row}>
           <div className={styles.column1}>
           <Title large={true} text={'Vision'} opacity={true}  left={true}/>
+          <Reveal width="100%">
           <p>To support the development of the greatest number of outstanding young athletes, at national and international level, with the purpose of forming the leaders of the future.</p>
+          </Reveal>
           </div>
           {/* <div className={styles.column2}>
             <div className={styles.imgColumn}>
@@ -105,7 +113,7 @@ export default function Cabieses() {
               <img src="/assets/images/foundation/22.jpg"/>
             </div>
           </div> */}
-
+<Reveal width="100%">
 <div className={styles.slider}>
             <div className={styles.imageContainer}   style={{
                       marginLeft: (currentSlide * -100).toString() + "%",
@@ -291,8 +299,10 @@ export default function Cabieses() {
             </div>
        
           </div>
+          </Reveal>
         </div>
         <div className={styles.listContainer}>
+        <Reveal width="100%">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 2246 1559">
 
   <path id="Color_Fill_1" data-name="Color Fill 1" className={styles.svgElem1} d="M1008,526c39.7-.571,116.45,48.454,91,96-14.58,3.059-17.02-3.565-26-8-10.81,5.156-6.05,12.342-11,21h-10c-5.38-3.883-7.88-12.068-5-21-22.94,4.614-20.91,23.831-37,27,9.44,48.549-12.267,47.8-26,82,3.514,4.19,10.043,8.389,7,16l-9,9c-1.689,3.86-.5,7.076,1,10,27.42,11.774,27.93,59.8,51,77,15.61,11.643,36.18,14.476,43,35,66.62-10.021,116.53,12.646,152,40,75.64-19.257,120.56-111.1,85-199,12.17-23.226,89.91-18.162,99,7,14.44,39.976-.54,97.117-11,129-35.72,108.888-115.03,163.91-240,185-44.61,7.53-90.18-8.97-119-21-93.257-38.932-146.767-108.12-166-222-4.062-24.052-4.038-55.775,1-78,14.487-63.911,44.307-120.049,88-155Zm220,30c65.42-2.171,68.01,80.447,12,91-34.87,6.57-61.91-34.243-47-65C1200.36,566.823,1212.42,563.378,1228,556Zm-59,161c98.11-1.909,103.44,129.165,15,145-52.1,9.329-97.1-48.912-77-99C1118.89,733.376,1138.76,729.12,1169,717Z"></path>
@@ -313,6 +323,7 @@ export default function Cabieses() {
   <path id="Color_Fill_15" data-name="Color Fill 15" className={styles.svgElem15}  d="M1649,947h-15q0.495-26.5,1-53c18.45-.589,30.61.3,40,8q1.005,6.5,2,13c-3.01,5.981-6.16,8.041-11,12q5.505,10,11,20h-16l-12-20v20Zm34-53h34v12h-19v9h17v11h-17v9h19v12h-34V894Zm80,16c-12.58.172-14.48-3.435-23-5-0.67,1-1.33,2-2,3,0.33,1,.67,2,1,3,10.36,5.487,20.17,6.625,25,18-0.17,4.919-.76,7.417-3,10-6.24,13.638-27.69,7.2-36,1-0.67-3-1.33-6-2-9h14c3.45,3.076,2.63,4.167,9,5,0.67-1,1.33-2,2-3v-3c-8.1-4.38-19.92-6.365-24-15-2.8-7.922.74-13.442,4-18a51.943,51.943,0,0,1,28-1C1759.56,900.652,1762.24,902.037,1763,910Zm8-16c17.42-.757,34.61-1.616,40,10,3.4,5.76,2.03,14.137-2,18-4.04,6.518-11.95,7.5-23,7v18h-15V894Zm48,0h34v12h-19v9h17v11h-17v9h19v12h-34V894Zm58,0c19.98-.781,27.59,4.422,33,18v1c-13.11-.191-20.97-7.677-29-5l-6,6c-2.86,4.774-1.5,9.812,0,15l6,5c10.67-.915,16.41-10.135,29-5-5.7,15.216-32.69,27.468-46,10C1849.86,920.444,1864.01,901.59,1877,894Zm37,0h43v12h-14v41h-15V906h-14V894Zm-265,12v12c6.52,0.077,9.25-.922,13-3-0.22-4.513-.71-5.391-2-8Zm137,0v12c6.14-.021,8.42-1.016,12-3-0.33-2-.67-4-1-6-0.67-1-1.33-2-2-3h-9Z"></path>
   <path id="Color_Fill_17" data-name="Color Fill 17" className={styles.svgElem17}  d="M1645,1122c-12.58.17-14.48-3.44-23-5-0.67,1-1.33,2-2,3,0.33,1,.67,2,1,3,10.36,5.49,20.17,6.63,25,18-0.17,4.92-.76,7.42-3,10-6.24,13.64-27.69,7.2-36,1-0.67-3-1.33-6-2-9h14c3.45,3.08,2.63,4.17,9,5,0.67-1,1.33-2,2-3v-3c-8.1-4.38-19.92-6.36-24-15-2.8-7.92.74-13.44,4-18,9.77-3.26,17.33-3.87,28-1C1641.56,1112.65,1644.24,1114.04,1645,1122Zm-117-16c28.63-1.21,60.63,6.52,47,38-6.46,14.9-24.59,15.93-47,15v-53Zm55,0h15v53h-15v-53Zm86,0c19.98-.78,27.59,4.42,33,18v1c-13.11-.19-20.97-7.68-29-5l-6,6c-2.86,4.77-1.5,9.81,0,15,2,1.67,4,3.33,6,5,10.67-.92,16.41-10.13,29-5-5.7,15.22-32.69,27.47-46,10C1641.86,1132.44,1656.01,1113.59,1669,1106Zm40,0h15v53h-15v-53Zm23,0c17.52-.76,34.58-1.69,40,10,3.4,5.76,2.03,14.14-2,18-4.04,6.52-11.95,7.5-23,7v18h-15v-53Zm48,0h15v42h16v11h-31v-53Zm37,0h15v53h-15v-53Zm23,0h15q9,14.505,18,29h2v-29h14v53c-5.58.35-12.32,0.64-15-2l-18-27h-1v29h-15v-53Zm57,0h34v12h-19v9h17v11h-17v9h19v12h-34v-53Zm-150,12v12c6.14-.02,8.42-1.02,12-3-0.33-2-.67-4-1-6-0.67-1-1.33-2-2-3h-9Zm-204,1v27c9.48,0.48,14.12-.86,17-7,2.86-4.77,1.5-9.81,0-15-2-1.33-4-2.67-6-4C1550.33,1119.67,1546.67,1119.33,1543,1119Z"></path>
 </svg>
+</Reveal>
 
         {/* <div className={styles.listContainerTitle}>    
          <Title   large={true} text={'Cabieses Foundation'} opacity={true}  left={true}/>

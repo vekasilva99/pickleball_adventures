@@ -10,35 +10,35 @@
 
 
 .slider{
-  width: 100%;
-  height:40vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
+    width: 100%;
+    height:40vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
 
 }
 
 .imageContainer{
-display: flex;
-min-width: calc(100vw - 20px);
-height: 100%;
-justify-content: space-between;
-transition: all 1s;
+  display: flex;
+  min-width: calc(100vw - 20px);
+  height: 100%;
+  justify-content: space-between;
+  transition: all 1s;
 }
 
 .imageContainer > img{
-  object-fit: cover;
-  min-width: 31vw;
-  width: 31vw !important;
-  height:50vw !important;
-  transition: all 1s;
+    object-fit: cover;
+    min-width: 31vw;
+    width: 31vw !important;
+    height:50vw !important;
+    transition: all 1s;
 
 }
 
 .imageContainer > img:first-of-type{
-  margin-left: 0%;
+    margin-left: 0%;
 }
 
 
@@ -66,16 +66,16 @@ transition: all 1s;
     object-fit: contain;
 }
 
-.pageGradient > p{
+.pageGradient p{
     font-size: 1.2vw;
     color: #2C2F34;
       /* font-family: 'Poppins', sans-serif; */
     opacity: 0.75;
-    max-width: 60%;
+    max-width: 60vw;
     text-align: center;
 }
 
-.column1 > p{
+.column1 p{
     font-size: 1.2vw;
     color: #2C2F34;
       /* font-family: 'Poppins', sans-serif; */
@@ -830,7 +830,7 @@ fill: #00a5e0;
       width: 100%;
   }
 
-  .pageGradient > p{
+  .pageGradient p{
     font-size: 4vw;
     max-width: 100%;
   }
@@ -848,7 +848,7 @@ fill: #00a5e0;
     width: 100%;
     margin-top: 5vh;
   }
-  .column1 > p{
+  .column1 p{
     font-size: 4vw;
   }
 

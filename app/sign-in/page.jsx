@@ -8,7 +8,8 @@ import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
 import Link from "next/link";
 import React, { useState, useContext, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { parseCallbackUrl } from "@/helpers/index.js"
 import AuthContext from "@/context/AuthContext";
 import { toast } from "react-toastify";
 import { countryList } from "@/helpers/countryList";
@@ -28,8 +29,9 @@ export default function SignIn() {
   const router = useRouter();
   const [emailError, setEmailError] = useState(undefined);
   const [passwordError, setPasswordError] = useState(undefined);
-
-
+  const params = useSearchParams();
+  const callBackUrl = params.get("callbackUrl");
+console.log(callBackUrl)
   useEffect(() => {
 
   
@@ -66,7 +68,7 @@ export default function SignIn() {
     }
 
     if(!isError){
-      const data=await signIn('credentials',{email,password, redirect:false})
+      const data=await signIn('credentials',{email,password, callbackUrl: callBackUrl ? parseCallbackUrl(callBackUrl) : "/",})
  
    
       if (data?.error) {

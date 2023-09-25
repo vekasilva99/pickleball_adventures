@@ -7,7 +7,7 @@ const sendEmail = require("../utils/email/sendEmail");
 const ejs = require("ejs");
 
 export const newReservation = async (req, res, next) => {
-  const { rooms,tripId,total } = req.body;
+  const { rooms,tripId,total,paymentId } = req.body;
 
   try{
 const existingTrip = await ActiveTrip.findById(tripId)
@@ -70,10 +70,18 @@ for(let i=0;i<rooms.length;i++){
     });
 
    
-    const newReservation = await Reservation.create({rooms:rooms,tripId:tripId});
+    const newReservation = await Reservation.create({rooms:rooms,tripId:tripId,total:total,paymentId:paymentId});
     for(let i=0;i<emails.length;i++){
       sendEmail(emails[i],"You're all booked! Get ready for your adventure",{rooms:rooms,price:total,id:newReservation._id.toString().substring(0,8)},"reservationConfirmation");
-  
+      User.findOne({email:emails[i]})
+      .then(user => {
+        // Add the reservation ID to the user's reservations array
+        user.reservations.push(newReservation._id);
+        return user.save();
+      })
+      .then(updatedUser => {
+        console.log('Reservation added to user:', updatedUser);
+      })
     }
    
     res.status(200).json({
@@ -87,4 +95,28 @@ for(let i=0;i<rooms.length;i++){
   }
 };
 
+export const getUserReservations = async (req, res, next) => {
+
+  User.findById(req.query.id)
+  .populate({
+    path: 'reservations',
+    populate: [{
+      path: 'tripId',
+      model: 'ActiveTrips',
+      populate: {
+        path: 'trip',
+        model: 'Trip'
+      }
+    },{path:'rooms.guests',model:"User",select:'first_name last_name email'}]
+  })
+  .then(user => {
+    res.status(200).json({
+      reservations: user.reservations,
+    });
+  })
+  .catch(error => {
+    res.status(500).json({ error: 'Internal server error' });
+  });
+
+};
 

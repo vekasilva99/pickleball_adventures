@@ -243,6 +243,71 @@
             color: #B4B4B4;
               /* font-family: 'Poppins', sans-serif; */
             }
+            .overlay{
+              position: fixed;
+              width: 100vw;
+              height: 100vh;
+              background: rgba(253, 195, 22, 0.13);
+              top: 0;
+              left: 0;
+              z-index: 100000;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              visibility: visible;
+              opacity: 1;
+              transition: all 1s;
+            }
+            .overlay.noShow{
+              visibility: hidden;
+              opacity: 0;
+              }
+              
+            .modalSuccess{
+              background-color: white;
+              box-shadow: -10px 0px 40px 14px rgba(0, 0, 0, 0.1);
+              padding: 2vw;
+              display: flex;
+              flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            }
+            .modalSuccess > button{
+              font-size: 1vw;
+              text-transform: uppercase;
+                /* font-family: 'Poppins', sans-serif; */
+              color: white;
+              background-color: #FDC316;
+              padding: 0.5vw 1vw;
+              border-radius: 100vw;
+              margin-top: 2vw;
+              opacity: 0.8;
+              transition: all 0.5s;
+            
+            }
+            
+            .modalSuccess > button:hover{
+              opacity: 1;
+            }
+            
+            .modalSuccess h2{
+              font-size: 2vw;
+              margin-bottom: 2vw;
+              color: #2C2F34;
+            }
+            .modalSuccess h3{
+              font-size: 1vw;
+              color: #2C2F34;
+            
+            }
+            
+            .modalSuccess > img{
+              object-fit: contain;
+              width: 5vw;
+              height: 5vw;
+              margin-bottom: 1vw;
+            }
   
   @media (min-width: 768px) and (max-width: 1024px) {
   

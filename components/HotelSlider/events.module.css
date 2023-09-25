@@ -25,7 +25,7 @@
   height: 100%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 37.24%, rgba(255, 255, 255, 0.50) 73.90%, #FFF 95.52%);
   position: absolute;
-  z-index: 100000;
+  z-index: 10;
 }
 
 .gradient2{
@@ -33,17 +33,17 @@
   height: 100%;
   background: linear-gradient(-90deg, rgba(255, 255, 255, 0.00) 37.24%, rgba(255, 255, 255, 0.50) 73.90%, #FFF 90.52%);
   position: absolute;
-  z-index: 100000;
+  z-index: 10;
 }
 
 .title{
   position: absolute;
   bottom:10vh;
   left: 2vw;
-  z-index: 1000000;
+  z-index: 10;
 }
 
-.title > h2{
+.title  h2{
   font-size: 4vw;
   line-height: 1;
   color: #2C2F34;
@@ -52,7 +52,7 @@
 
 }
 
-.title > p{
+.title  p{
   font-size: 3vw;
   margin-top: 3vh;
   color: #2C2F34;

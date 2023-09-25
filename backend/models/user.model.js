@@ -53,6 +53,11 @@ const userSchema = new mongoose.Schema({
 type:String,
 default:'30056'
   },
+  reservations:[{
+    type: Schema.Types.ObjectId, 
+    ref: 'Reservation', 
+    default:[]
+}],
   active: {
     type: Boolean,
     default: true

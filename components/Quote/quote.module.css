@@ -40,6 +40,7 @@ transition: all 1s;
 
 .quote:hover > p{
   font-size: 2vw !important;
+  max-width: 100%;
 }
 .quoteTitle {
   font-size: 6vw;
@@ -66,7 +67,7 @@ transition: all 1s;
  
 }
 
-.quote > p{
+.quote p{
   /* font-family: "Poppins", sans-serif; */
   line-height: 1.2;
   color: white !important;
@@ -90,7 +91,7 @@ transition: all 1s;
   
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  .quote > p{
+  .quote p{
     font-size: 3vw;
   }
   .quote:hover > p{

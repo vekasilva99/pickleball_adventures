@@ -9,18 +9,19 @@ import { Title } from "@/components/Title";
 import { Events } from "@/components/Events";
 import { Slider } from "@/components/HotelSlider";
 import { useRouter } from 'next/navigation';
+import { Reveal } from "@/components/Reveal";
 const images = [
-  "../assets/images/peru/lima/1.jpg",
-  "../assets/images/peru/lima/2.jpg",
-  "../assets/images/peru/lima/3.jpg",
-  "../assets/images/peru/lima/4.jpg",
-  "../assets/images/peru/lima/5.jpg",
-  "../assets/images/peru/lima/6.jpg",
-  "../assets/images/peru/lima/7.jpg",
-  "../assets/images/peru/lima/8.jpg",
-  "../assets/images/peru/lima/9.jpg",
-  "../assets/images/peru/lima/10.jpg",
-  "../assets/images/peru/lima/11.jpg",
+  "../assets/images/peru/lima/13.jpg",
+  "../assets/images/peru/lima/14.jpg",
+  "../assets/images/peru/lima/15.jpg",
+  "../assets/images/peru/lima/16.jpg",
+  "../assets/images/peru/lima/17.jpg",
+  "../assets/images/peru/lima/18.jpg",
+  "../assets/images/peru/lima/19.jpg",
+  "../assets/images/peru/lima/12.jpg",
+  "../assets/images/peru/lima/20.jpg",
+  "../assets/images/peru/lima/21.jpg",
+  "../assets/images/peru/lima/22.jpg",
 ];
 
 const images2 = [
@@ -207,7 +208,7 @@ const activities = [
     id: 2,
     name: "Cabieses Foundation",
     content:
-      "",
+      "One ball can change a life! Be part of this unique experience along with Cabieses Foundation, in which we will visit school or underpriviledge community to introduce Pickleball and share tike with the kids. We will donate Pickleball equipment and bring new opportunities throughout the sport. Smile is worth more than a thousand words",
     images: [
       "../assets/images/foundation/23.jpg",
       "../assets/images/foundation/19.jpg",
@@ -231,9 +232,9 @@ const activities = [
     content:
       "Experience an exhilarating day trip from Lima to Paracas and Huacachina, complete with hotel transfers. Witness wildlife like Humboldt penguins and sea lions on the Ballestas Islands, followed by sandboarding and dune buggy rides amidst Huacachina's towering dunes. Your journey commences with an early hotel pickup, leading to Paracas on a comfortable bus. A 2-hour boat tour of the Ballestas Islands showcases captivating marine life and birds in their natural habitat. ",
     images: [
-      "../assets/images/peru/13.jpg",
-      "../assets/images/peru/26.jpg",
-      "../assets/images/peru/35.jpeg",
+      "../assets/images/peru/CityTour/CT1.jpg",
+      "../assets/images/peru/CityTour/CT17.jpg",
+      "../assets/images/peru/CityTour/CT15.jpg",
     ],
   },
   {
@@ -242,9 +243,9 @@ const activities = [
     content:
       "Established in 1984 as a result of meticulous research initiated in 1981, the Huaca Pucllana Site Museum was conceived to safeguard and conserve archaeological artifacts while maintaining an active presence at the site. The museum offers a unique tourist circuit that provides insights into the pyramid's third section and the preserved lower portions, shedding light on its ceremonial past. Immersive life-size recreations of ancient Lima culture settlers engaged in various activities, along with excavation process photographs, offer a vivid window into the site's rich history.",
     images: [
-      "../assets/images/peru/4.jpg",
-      "../assets/images/peru/27.jpg",
-      "../assets/images/peru/17.jpg",
+      "../assets/images/peru/HuacaPucllana/H14.jpg",
+      "../assets/images/peru/HuacaPucllana/H10.jpg",
+      "../assets/images/peru/HuacaPucllana/H11.jpg",
     ],
   },
 
@@ -254,9 +255,9 @@ const activities = [
     content:
       "Pachacamac, a sacred site for over 1200 years, held profound significance as a coastal sanctuary. It drew countless pilgrims for Andean ceremonies and served as a renowned oracle shaping the destinies of influential leaders through its prophecies. Encompassing the Lima, Wari, Ychsma, and Inca cultures, the site's rich history spans diverse peoples and cultural epochs.",
     images: [
-      "../assets/images/peru/14.jpeg",
-      "../assets/images/peru/1.jpg",
-      "../assets/images/peru/24.jpg",
+      "../assets/images/peru/MuseoPacahacamac/MP15.jpg",
+      "../assets/images/peru/MuseoPacahacamac/MP10.jpg",
+      "../assets/images/peru/MuseoPacahacamac/MP13.jpg",
     ],
   },
 
@@ -264,7 +265,7 @@ const activities = [
 
 const events=[
   {id:0,name:'DPASO',content:'Elevate your Lima experience with the Santiago de Surco Peruvian Paso and Dance Dinner Show – a night of unmatched cultural richness. Revel in the synergy of dancers and Peruvian horses for an unforgettable evening, complemented by a sumptuous dinner. Immerse yourself in traditional Peruvian culture through dance and the renowned Peruvian paso. Delight in a delectable buffet dinner featuring Peruvian favorites, making it a quintessential night out in Peru.',images:['../assets/images/peru/Dpaso/D7.jpg','../assets/images/peru/Dpaso/D8.jpg','../assets/images/peru/Dpaso/D9.jpg']},
-  {id:1,name:'Clases de cajón',content:"Designed to enhance your musical skills, these courses encompass theoretical and practical aspects, cultivating your ability to read and write music scores. You'll gain technical expertise and interpretative proficiency, empowering independent learning and enabling repertoire selection. The learning experience is enriched with theoretical readings on crucial instrument facets and body awareness insights for effective practice.",images:['../assets/images/peru/10.jpg']}
+  {id:1,name:'Clases de cajón',content:"Designed to enhance your musical skills, these courses encompass theoretical and practical aspects, cultivating your ability to read and write music scores. You'll gain technical expertise and interpretative proficiency, empowering independent learning and enabling repertoire selection. The learning experience is enriched with theoretical readings on crucial instrument facets and body awareness insights for effective practice.",images:['../assets/images/peru/ClasesCajon/CC3.jpg','../assets/images/peru/ClasesCajon/CC4.png','../assets/images/peru/ClasesCajon/CC5.jpg']}
 ]
 export default function Destination() {
   const router = useRouter();
@@ -369,7 +370,10 @@ export default function Destination() {
         <div className={styles.header}>
           <div className={styles.row}>
             <div className={styles.column}>
+              <Reveal>
               <button className={styles.back}>Go Back</button>
+              </Reveal>
+           <Reveal width="100%">
               <div className={styles.infoContainer}>
                 <div className={styles.info}>
                   <div className={styles.totalDays}>
@@ -383,8 +387,10 @@ export default function Destination() {
                     </div>
                     <h3>7 nights/8 days</h3>
                   </div>
+                
                   <h3>$5,500</h3>
                 </div>
+              
                 <Title
                   small={true}
                   text={"September 3, 2023"}
@@ -397,7 +403,9 @@ export default function Destination() {
                   <img src="../assets/icons/arrow-45.png" />
                 </button>
               </div>
+              </Reveal>
               <Title
+              widthReveal={'50vw'}
                 large={true}
                 text={"Week on Lima"}
                 opacity={true}
@@ -406,14 +414,18 @@ export default function Destination() {
                 italic={true}
               />
             </div>
+            
             <div className={styles.column}>
+              <Reveal>
               <div className={styles.imageContainer}>
                 {images.map((image, index) => {
                   return <img src={image} />;
                 })}
               </div>
+              </Reveal>
 
               <div className={`${styles.days} ${styles.absolute}`}>
+                <Reveal>
                 <div
                   className={styles.day}
                   onClick={() => {
@@ -422,6 +434,8 @@ export default function Destination() {
                 >
                   <img src="../assets/icons/arrow-left.png" />
                 </div>
+                </Reveal>
+                <Reveal>
                 <div
                   className={styles.day}
                   onClick={() => {
@@ -430,14 +444,19 @@ export default function Destination() {
                 >
                   <img src="../assets/icons/arrow-right.png" />
                 </div>
+                </Reveal>
               </div>
             </div>
+         
           </div>
         </div>
         <div className={styles.page}>
+          <Reveal>
           <div className={styles.row}>
           <Slider images={hotelImages} selected={selectedOptionHotel} select={(aux)=>{console.log('kjnhbgvfcfgvhbjn',aux);setSelectedOptionHotel(aux)}}/>
           </div>
+          </Reveal>
+          <Reveal width="100%">
           <div className={styles.optionsContainer}>
           <div className={styles.options}>
             <div className={getOption(0)} onClick={()=>{setSelectedOption(0)}}><h2>Restaurants</h2></div>
@@ -445,10 +464,14 @@ export default function Destination() {
             <div className={getOption(2)} onClick={()=>{setSelectedOption(2)}}><h2>Events</h2></div>
           </div>
           </div>
+          </Reveal>
+          <Reveal width="100%">
           <div className={styles.rowSlider}>
           <div className={styles.row2} style={{marginLeft:(-selectedOption*100).toString()+'%'}}>
             <div className={styles.column}>
+              <Reveal>
               <h4 className={styles.type}>Restaurant</h4>
+              </Reveal>
               <Title
                 normal={true}
                 text={currentRestaurant.name}
@@ -456,11 +479,19 @@ export default function Destination() {
                 left={true}
                 bold={true}
               />
+              <Reveal>
               <h2>{currentRestaurant.content}</h2>
+              </Reveal>
               <div className={styles.imageContainer3}>
+                <Reveal>
                 <img src={currentRestaurant.images[0]} />
+                </Reveal>
+                <Reveal>
                 <img src={currentRestaurant.images[1]} />
+                </Reveal>
+                <Reveal>
                 <img src={currentRestaurant.images[2]} />
+                </Reveal>
               </div>
             </div>
             <div className={`${styles.column} ${styles.border}`}>
@@ -472,7 +503,9 @@ export default function Destination() {
                       setCurrentRestaurant(restaurant);
                     }}
                   >
+                    <Reveal>
                     <h4 className={styles.type}>Restaurant</h4>
+                    </Reveal>
                     <Title
                       small={true}
                       text={restaurant.name}
@@ -480,7 +513,9 @@ export default function Destination() {
                       left={true}
                       bold={true}
                     />
+                    <Reveal>
                     <p>{restaurant.content}</p>
+                    </Reveal>
                   </div>
                 );
               })}
@@ -489,7 +524,9 @@ export default function Destination() {
 
           <div className={styles.row2}>
           <div className={styles.column}>
+          <Reveal>
             <h4 className={styles.type}>Activity</h4>
+            </Reveal>
             <Title
               normal={true}
               text={currentActivity.name}
@@ -497,11 +534,19 @@ export default function Destination() {
               left={true}
               bold={true}
             />
+            <Reveal>
             <h2>{currentActivity.content}</h2>
+            </Reveal>
             <div className={styles.imageContainer3}>
+            <Reveal>
               <img src={currentActivity.images[0]} />
+              </Reveal>
+              <Reveal>
               <img src={currentActivity.images[1]} />
+              </Reveal>
+              <Reveal>
               <img src={currentActivity.images[2]} />
+              </Reveal>
             </div>
           </div>
           <div className={`${styles.column} ${styles.border}`}>
@@ -513,7 +558,9 @@ export default function Destination() {
                     setCurrentActivity(restaurant);
                   }}
                 >
+                  <Reveal>
                   <h4 className={styles.type}>Activity</h4>
+                  </Reveal>
                   <Title
                     small={true}
                     text={restaurant.name}
@@ -521,7 +568,9 @@ export default function Destination() {
                     left={true}
                     bold={true}
                   />
+                  <Reveal>
                   <p>{restaurant.content}</p>
+                  </Reveal>
                 </div>
               );
             })}
@@ -529,7 +578,9 @@ export default function Destination() {
         </div>
         <div className={styles.row2}>
           <div className={styles.column}>
+          <Reveal>
             <h4 className={styles.type}>Event</h4>
+            </Reveal>
             <Title
               normal={true}
               text={currentEvent.name}
@@ -537,12 +588,19 @@ export default function Destination() {
               left={true}
               bold={true}
             />
+<Reveal>
             <h2>{currentEvent.content}</h2>
+            </Reveal>
             <div className={styles.imageContainer3}>
+            <Reveal>
               <img src={currentEvent.images[0]} />
+              </Reveal>
+              <Reveal>
               <img src={currentEvent.images[1]} />
+              </Reveal>
+              <Reveal>
               <img src={currentEvent.images[2]} />
-         
+              </Reveal>
             </div>
           </div>
           <div className={`${styles.column} ${styles.border}`}>
@@ -554,7 +612,9 @@ export default function Destination() {
                     setCurrentEvent(restaurant);
                   }}
                 >
+                  <Reveal>
                   <h4 className={styles.type}>Event</h4>
+                  </Reveal>
                   <Title
                     small={true}
                     text={restaurant.name}
@@ -562,13 +622,16 @@ export default function Destination() {
                     left={true}
                     bold={true}
                   />
+                  <Reveal>
                   <p>{restaurant.content}</p>
+                  </Reveal>
                 </div>
               );
             })}
           </div>
         </div>
         </div>
+        </Reveal>
 
         </div>
 

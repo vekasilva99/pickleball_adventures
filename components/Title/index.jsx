@@ -1,7 +1,8 @@
 import React from "react";
 import styles from './title.module.css'
+import { Reveal } from "../Reveal";
 
-export const Title = ({large, color,text,opacity,normal,marginTop,marginBottom,left,marginLeft, italic, small,bold,right}) =>{
+export const Title = ({large, widthReveal,color,text,opacity,normal,marginTop,marginBottom,left,marginLeft, italic, small,bold,right,extraSmall}) =>{
 
   const getClass=()=>{
     let cl=``
@@ -32,11 +33,14 @@ export const Title = ({large, color,text,opacity,normal,marginTop,marginBottom,l
     if(right){
       cl+=" "+styles.right
     }
-  
+    if(extraSmall){
+      cl+=" "+styles.extraSmall
+    }
     return cl
   }
     return(
-        
+        <Reveal width={widthReveal ? widthReveal :'fit-content'}>
    <h1 className={getClass()} style={{color: color ? color: "#2C2F34", marginTop:marginTop ? marginTop : '0', marginBottom: marginBottom ? marginBottom :"",marginLeft: marginLeft ? marginLeft :""}}>{text}</h1>
+   </Reveal>
     )
 }

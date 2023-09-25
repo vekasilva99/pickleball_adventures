@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header2";
 import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
+import { Reveal } from "@/components/Reveal";
 
 const images = [
   "/assets/images/us/1.jpeg",
@@ -59,6 +60,7 @@ export default function AboutUs() {
       />
 
       <div className={styles.pageGradient}>
+        <Reveal width="100%">
         <div className={styles.row}>
         
           <div className={styles.column2}>
@@ -101,7 +103,7 @@ export default function AboutUs() {
               right={true}
             />
             </div>
-            <div className={styles.small}>
+            {/* <div className={styles.small}>
             <Title
               normal={true}
               text={"- Miranda Cabieses"}
@@ -109,13 +111,14 @@ export default function AboutUs() {
               italic={true}
               left={true}
             />
-            </div>
+            </div> */}
           </div>
           
         </div>
-
+        </Reveal>
       
         <div className={styles.center}>
+          <Reveal>
           <div className={styles.listContainer}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +254,7 @@ export default function AboutUs() {
           <div className={styles.listItem}>Prestigious</div>
         </div> */}
           </div>
-
+          </Reveal>
           <Quote
             titleLine1={"Our Mission"}
             content={
@@ -259,6 +262,7 @@ export default function AboutUs() {
             }
           />
 
+<Reveal width="100%" >
           <div className={styles.slider}>
             <div className={styles.imageContainer}   style={{
                       marginLeft: (currentSlide * -100).toString() + "%",
@@ -304,6 +308,7 @@ export default function AboutUs() {
             </div>
        
           </div>
+          </Reveal>
           <div className={styles.left}>
             <Title
               small={true}

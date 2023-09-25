@@ -24,6 +24,14 @@ const reservationSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  total: {
+    type: Number,
+    required:true
+  },
+  paymentId: {
+    type: String,
+    required:true
+  },
   cancelled: {
     type: Boolean,
     default: false,
