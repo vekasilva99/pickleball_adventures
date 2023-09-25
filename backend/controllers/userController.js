@@ -91,6 +91,20 @@ export const requestPasswordReset = async (email) => {
   return link;
 };
 
+export const prueba = async (req, res) => {
+
+  const link = `http://localhost:3000/passwordReset?token=dcdcd&id=$cddd`;
+  sendEmail('vekasilva99@gmail.com',"You're all booked! Get ready for your adventure",{name: 'Valeska',link: link,},"newUser");
+
+
+  res.status(200).json({
+    success: true,
+    message: "Cron runned."
+  })
+};
+
+
+
 export const resetPassword = async (req, res, next) => {
   const { userId, token, password } = req.body;
   let passwordResetToken = await Token.findOne({ userId });
