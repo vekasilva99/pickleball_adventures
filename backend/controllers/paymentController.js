@@ -7,16 +7,26 @@ export const checkout=async(req, res, next)=> {
 
 
 
-  const { amount } = req.body;
+  const { amount} = req.body;
 
 
   try {
+    const customer = await stripe.customers.create();
     const paymentIntent = await stripe.paymentIntents.create({
       amount: Number(amount) * 100,
       currency: "USD",
+      customer: customer.id,
+      setup_future_usage: "off_session",
+    });
+    const paymentMethods = await stripe.paymentMethods.list({
+      customer: 'cus_OhoSWh8sEqZLPY',
+      type: "card",
     });
 
-    res.status(200).json({ clientSecret: paymentIntent.client_secret });
+  
+    
+
+    res.status(200).json({ clientSecret: paymentIntent.client_secret, customerId:customer.id });
   } catch (error) {
     // console.log(error)
     return res.status(500).json({ error: 'Internal server error' });

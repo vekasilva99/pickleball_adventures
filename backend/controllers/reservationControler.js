@@ -4,10 +4,14 @@ import  User from "../models/user.model";
 import  Reservation from "../models/reservation.model";
 import { requestPasswordReset } from "./userController";
 const sendEmail = require("../utils/email/sendEmail");
+import Stripe from "stripe";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
 const ejs = require("ejs");
 
 export const newReservation = async (req, res, next) => {
-  const { rooms,tripId,total,paymentId } = req.body;
+  const { rooms,tripId,total,downPaymentId,customer,customerEmail } = req.body;
 
   try{
 const existingTrip = await ActiveTrip.findById(tripId)
@@ -69,8 +73,13 @@ for(let i=0;i<rooms.length;i++){
       })
     });
 
-   
-    const newReservation = await Reservation.create({rooms:rooms,tripId:tripId,total:total,paymentId:paymentId});
+    const customer2 = await stripe.customers.update(
+      customer,
+      {email:customerEmail}
+    );
+
+    console.log(customer2)
+    const newReservation = await Reservation.create({rooms:rooms,tripId:tripId,total:total,downPaymentId:downPaymentId,customer:customer});
     for(let i=0;i<emails.length;i++){
       sendEmail(emails[i],"You're all booked! Get ready for your adventure",{rooms:rooms,price:total,id:newReservation._id.toString().substring(0,8)},"reservationConfirmation");
       User.findOne({email:emails[i]})

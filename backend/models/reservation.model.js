@@ -28,9 +28,16 @@ const reservationSchema = new mongoose.Schema({
     type: Number,
     required:true
   },
-  paymentId: {
+  downPaymentId: {
     type: String,
     required:true
+  },
+  customer: {
+    type: String,
+    required:true
+  },
+  paymentId: {
+    type: String,
   },
   cancelled: {
     type: Boolean,

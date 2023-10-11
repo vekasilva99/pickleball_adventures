@@ -19,7 +19,7 @@ const images = [
   "../assets/images/Peru1.jpg",
 ];
 
-export const Payment = ({ clientSecret,book }) => {
+export const Payment = ({ clientSecret,book,customerId }) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -94,10 +94,14 @@ export const Payment = ({ clientSecret,book }) => {
       redirect: "if_required"
     });
 
+   
+
+
+
 console.log(paymentIntent)
     if(paymentIntent?.status=="succeeded"){
       console.log('kkk')
-book(paymentIntent.id)
+book(paymentIntent.id, customerId,email)
 
     }
     // This point will only be reached if there is an immediate error when
@@ -139,7 +143,7 @@ book(paymentIntent.id)
           <form id="payment-form" onSubmit={handleSubmit} className={styles.payment}>
             <LinkAuthenticationElement
               id="link-authentication-element"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) =>{  setEmail(e.value.email)}}
             />
             <PaymentElement
               id="payment-element"

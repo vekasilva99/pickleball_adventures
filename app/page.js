@@ -17,8 +17,10 @@ export default function Home() {
       <div className={styles.row}>
 
         <div className={styles.videoContainer}>
-          <video autoPlay muted playsInline loop className={styles.videoHome}>
-            <source src="/assets/videos/2.mp4" type="video/mp4"></source>
+          <video autoPlay muted playsInline className={styles.videoHome}>
+            {/* <source src="/assets/videos/VideoPickleball1.mp4" type="video/mp4"></source> */}
+            {/* <source src="/assets/videos/VideoPickleball2.mp4" type="video/mp4"></source> */}
+            <source src="/assets/videos/VideoPickleball3.mp4" type="video/mp4"></source>
           </video>
           <img src="/assets/icons/arrow-45.png"></img>
         </div>

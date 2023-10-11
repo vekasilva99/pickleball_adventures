@@ -53,6 +53,7 @@ export default function Reserve() {
   const [showCancellation, setShowCancellation] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const [clientSecret, setClientSecret] = useState("");
+  const [customerId, setCustomerId] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { setLoading } = useContext(LoaderContext);
 
@@ -150,6 +151,17 @@ export default function Reserve() {
     console.log("total", total);
     setTotalPrice(total);
   };
+
+  const calculateDownPayment = (guests) => {
+    console.log(guests)
+    let total=0
+for(let i=0;i<guests.length;i++){
+total+=guests[i].guests.length
+}
+
+
+ return total*250
+  };
   const calculateTotalPerRoom = (guests) => {
     let total = 0;
 
@@ -226,7 +238,7 @@ export default function Reserve() {
     arry.filter((item, index) => arry.indexOf(item) !== index);
 
 
-  const book = async (paymentId) => {
+  const book = async (paymentId,customerId,email) => {
     setLoading(true);
     let repeated = false;
     let emails = [];
@@ -246,7 +258,7 @@ export default function Reserve() {
       setCurrentStep(guestsInfoStep);
       setLoading(false);
     } else {
-      let dataAux = { rooms: [], tripId: process.env.PERU, total: totalPrice,paymentId:paymentId };
+      let dataAux = { rooms: [], tripId: process.env.PERU, total: totalPrice,downPaymentId:paymentId,customer:customerId,customerEmail:email };
 
       for (let i = 0; i < guestsInfo.length; i++) {
         let roomAux = {
@@ -376,13 +388,14 @@ export default function Reserve() {
         dataAux.rooms.push(roomAux);
       }
       try {
-          
+       
           
         const { data } = await axios.post(`${process.env.WEBAPP_URL}api/create-payment-intent`, 
-          { amount: totalPrice },
+          { amount: calculateDownPayment(dataAux.rooms) },
         );
        
         setClientSecret(data.clientSecret) 
+        setCustomerId(data.customerId) 
 setLoading(false)
      
       } catch (error) {
@@ -1248,10 +1261,10 @@ if(clientSecret){
               );
             })}
 
-{clientSecret &&
+{clientSecret && customerId &&
             <div className={`${styles.step} ${styles.start}`}>
                 <Elements stripe={stripePromise} options={options}>
-             <Payment clientSecret={clientSecret} book={(id)=>{book(id)}}/>
+             <Payment clientSecret={clientSecret} customerId={customerId} book={(id,customerId,email)=>{book(id,customerId,email)}}/>
              </Elements>
             </div>}
           </div>
