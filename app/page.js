@@ -20,7 +20,7 @@ export default function Home() {
           <video autoPlay muted playsInline className={styles.videoHome}>
             {/* <source src="/assets/videos/VideoPickleball1.mp4" type="video/mp4"></source> */}
             {/* <source src="/assets/videos/VideoPickleball2.mp4" type="video/mp4"></source> */}
-            <source src="/assets/videos/VideoPickleball3.mp4" type="video/mp4"></source>
+            {/* <source src="/assets/videos/VideoPickleball3.mp4" type="video/mp4"></source> */}
           </video>
           <img src="/assets/icons/arrow-45.png"></img>
         </div>
