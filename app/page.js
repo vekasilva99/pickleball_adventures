@@ -75,7 +75,7 @@ export default function Home() {
       <Reveal width="100%">
         <div className={styles.row}>
           <div className={styles.videoContainer}>
-          <LazyLoad offsetVertical={400} className="lazyload-video">
+          <LazyLoad offsetVertical={200} className="lazyload-video">
             <ReactPlayer
               url="/assets/videos/VideoPickleball3.mp4"
               playing
@@ -83,6 +83,8 @@ export default function Home() {
               loop
               width="100%"
               height="100%"
+              preload={true}
+              playsinline={true}
               className={styles.videoHome}
             />
           </LazyLoad>
