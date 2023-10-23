@@ -1,15 +1,17 @@
-import React, {useEffect,useState} from "react";
 import styles from './destinationCard.module.css'
 import { Reveal } from "@/components/Reveal";
+import LazyLoad from 'react-lazy-load';
+import { useRouter } from "next/navigation";
 
 
 
 export const DestinationCard = ({item}) =>{
+  const router = useRouter();
     return(
         
       <Reveal>
       <div className={styles.destinationCard}>
-      <LazyLoad offsetVertical={300} >
+      <LazyLoad offsetVertical={300} className="lazyload-image" >
         <img src={item.imageUrl} />
         </LazyLoad>
         <div className={item.active ? styles.whiteGradient : styles.whiteGradientNotActive}></div>

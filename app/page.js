@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -15,17 +14,17 @@ import { Feature } from "@/components/Feature";
 
 const destinations=[
   {name:"Peru",
-  imageUrl:"/assets/images/Peru1.jpg",
+  imageUrl:"/assets/images/Peru1.webp",
   id:1,
   active:true
 },
 {name:"Ecuador",
-imageUrl:"/assets/images/ecuador.jpg",
+imageUrl:"/assets/images/ecuador.webp",
 id:2,
 active:false
 },
 {name:"Colombia",
-imageUrl:"/assets/images/colombia.jpeg",
+imageUrl:"/assets/images/colombia.webp",
 id:2,
 active:false
 },
@@ -36,32 +35,32 @@ const features=[
   {
   title:'Lodging',
   description:'Spend your stay in one of the most exclusive hotels.',
-  imageUrl:'/assets/icons/lodging.png'
+  imageUrl:'/assets/icons/lodging.webp'
 },
 {
   title:'Restaurants',
   description:'Prove the incredible mix of flavors at the best and recognized restaurants.',
-  imageUrl:'/assets/icons/restaurant.png'
+  imageUrl:'/assets/icons/restaurant.webp'
 },
 {
   title:'Pickleball Clinic',
   description:'Enjoy daily Pickleball Clinics led by World Class Pros.',
-  imageUrl:'/assets/icons/pickleball.png'
+  imageUrl:'/assets/icons/pickleball.webp'
 },
 {
   title:'Social Labor',
   description:'Spread the Pickleball Love to local kids from disadvantaged areas.',
-  imageUrl:'/assets/icons/hand.png'
+  imageUrl:'/assets/icons/hand.webp'
 },
 {
   title:'Guided Activities',
   description:'Explore the culture by visiting iconic places.',
-  imageUrl:'/assets/icons/activities.png'
+  imageUrl:'/assets/icons/activities.webp'
 },
 {
   title:'Events and Shows',
   description:'Enjoy a journey full of music, dance and tradition.',
-  imageUrl:'/assets/icons/events.png'
+  imageUrl:'/assets/icons/events.webp'
 },
 
 ]
@@ -88,7 +87,7 @@ export default function Home() {
               className={styles.videoHome}
             />
           </LazyLoad>
-            <img src="/assets/icons/arrow-45.png"></img>
+            <img src="/assets/icons/arrow-45.webp"></img>
           </div>
 
           <div className={styles.content}>
@@ -100,7 +99,7 @@ export default function Home() {
               }}
             >
               <h2>Book Now</h2>
-              <img src="/assets/icons/arrow-45.png" />
+              <img src="/assets/icons/arrow-45.webp" />
             </button>
           </div>
         </div>

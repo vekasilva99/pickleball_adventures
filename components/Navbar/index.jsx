@@ -5,6 +5,7 @@ import styles from "./navbar.module.css";
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import AuthContext from "@/context/AuthContext";
+import LazyLoad from 'react-lazy-load';
 export const Navbar = () => {
   const { user, setUser } = useContext(AuthContext);
   const [open,setOpen]=useState(false)
@@ -25,8 +26,12 @@ export const Navbar = () => {
     <>
       <div className={styles.navbar}>
         <div className={styles.rightContainer}>
-          <img src="/assets/logo/logo.png" />
-          <img src="/assets/logo/cabieses.png" />
+        <LazyLoad offsetVertical={300} className="lazyload-image" >
+          <img src="/assets/logo/logo.webp" />
+          </LazyLoad>
+          <LazyLoad offsetVertical={300} className="lazyload-image" >
+          <img src="/assets/logo/cabieses.webp" />
+          </LazyLoad>
         </div>
         <div className={styles.leftContainer}>
           <div>
@@ -95,7 +100,7 @@ export const Navbar = () => {
             router.push("/destinations");
           }}
         >
-          {/* <img src="/assets/icons/plane.png"/> */}
+          {/* <img src="/assets/icons/plane.webp"/> */}
           <div className={styles.plane}></div>
           <h2>Destinations</h2>
         </button>

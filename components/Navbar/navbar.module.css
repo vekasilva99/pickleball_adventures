@@ -100,13 +100,13 @@
 
 }
 
-.rightContainer > img{
+.rightContainer img{
     width: 4vw;
     height: 4vw;
     object-fit: contain;
 }
 
-.rightContainer > img:last-of-type{
+.rightContainer img:last-of-type{
     width: 5vw;
     height: fit-content;
     object-fit: contain;

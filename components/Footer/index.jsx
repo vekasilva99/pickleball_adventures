@@ -1,6 +1,6 @@
-import React from "react";
 import styles from './footer.module.css'
 import { Reveal } from "../Reveal";
+import LazyLoad from 'react-lazy-load';
 
 export const Footer = () =>{
     return(
@@ -14,9 +14,16 @@ export const Footer = () =>{
             <h4>contact@cabiesespickleball.com</h4>
             </div>
             <div>
-                <img src="/assets/icons/instagram.png"/>
-                <img src="/assets/icons/facebook.png"/>
-                <img src="/assets/icons/email.png"/>
+            <LazyLoad offsetVertical={300} className="lazyload-image" >
+                <img src="/assets/icons/instagram.webp"/>
+                </LazyLoad>
+                <LazyLoad offsetVertical={300} className="lazyload-image" >
+                <img src="/assets/icons/facebook.webp"/>
+                </LazyLoad>
+                <LazyLoad offsetVertical={300} className="lazyload-image" >
+                <img src="/assets/icons/email.webp"/>
+                </LazyLoad>
+
             </div>
         
         </div>
