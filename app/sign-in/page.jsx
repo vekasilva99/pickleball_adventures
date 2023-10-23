@@ -1,25 +1,20 @@
 "use client";
-
-import Image from "next/image";
 import styles from "./page.module.css";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
-import Link from "next/link";
 import React, { useState, useContext, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { parseCallbackUrl } from "@/helpers/index.js"
 import AuthContext from "@/context/AuthContext";
 import { toast } from "react-toastify";
-import { countryList } from "@/helpers/countryList";
-import { countryCodes } from "@/helpers/countryCodes";
 import validator from "validator";
 import {signIn} from "next-auth/react"
 import LoaderContext from "@/context/LoaderContext";
+import LazyLoad from 'react-lazy-load';
+import ReactPlayer from 'react-player';
 
 export default function SignIn() {
-  const { error, registerUser, clearErrors } = useContext(AuthContext);
+  const { error, clearErrors } = useContext(AuthContext);
 
   const { setLoading } = useContext(LoaderContext);
   const [email, setEmail] = useState("");
@@ -113,9 +108,20 @@ console.log(callBackUrl)
 </div>
         </div>
         <div className={styles.videoContainer}>
-          <video autoPlay muted playsInline loop className={styles.videoHome}>
-            <source src="/assets/videos/2.mp4" type="video/mp4"></source>
-          </video>
+      
+          <LazyLoad offsetVertical={200} className="lazyload-video">
+            <ReactPlayer
+              url="/assets/videos/2.mp4"
+              playing
+              muted
+              loop
+              width="100%"
+              height="100%"
+              preload={true}
+              playsinline={true}
+              className={styles.videoHome}
+            />
+          </LazyLoad>
           <img src="/assets/icons/arrow-45.png"></img>
         </div>
       </div>
