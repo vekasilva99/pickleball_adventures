@@ -18,6 +18,15 @@
 
 }
 
+.lazyload-video{
+  width: 100%;
+  height: 100%;
+}
+
+.videoHome > video{
+  object-fit: cover;
+}
+
 .row{
   width: 100%;
   height: 100%;
