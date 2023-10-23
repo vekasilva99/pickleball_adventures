@@ -50,7 +50,10 @@
     opacity: 1;
     width: 2.7vw;
   }
-  .footer img:last-of-type{
+  .footer .lazyload-image:last-of-type{
+    margin-bottom: 0;
+  }
+  .footer .lazyload-image:last-of-type img{
     margin-bottom: 0;
   }
 
