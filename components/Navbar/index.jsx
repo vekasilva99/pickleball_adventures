@@ -26,10 +26,10 @@ export const Navbar = () => {
     <>
       <div className={styles.navbar}>
         <div className={styles.rightContainer}>
-        <LazyLoad offsetVertical={300} className="lazyload-image" >
+        <LazyLoad offsetVertical={200} className="lazyload-image" >
           <img src="/assets/logo/logo.webp" />
           </LazyLoad>
-          <LazyLoad offsetVertical={300} className="lazyload-image" >
+          <LazyLoad offsetVertical={200} className="lazyload-image" >
           <img src="/assets/logo/cabieses.webp" />
           </LazyLoad>
         </div>

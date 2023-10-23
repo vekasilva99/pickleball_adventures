@@ -14,13 +14,13 @@ export const Footer = () =>{
             <h4>contact@cabiesespickleball.com</h4>
             </div>
             <div>
-            <LazyLoad offsetVertical={300} className="lazyload-image" >
+            <LazyLoad offsetVertical={200} className="lazyload-image" >
                 <img src="/assets/icons/instagram.webp"/>
                 </LazyLoad>
-                <LazyLoad offsetVertical={300} className="lazyload-image" >
+                <LazyLoad offsetVertical={200} className="lazyload-image" >
                 <img src="/assets/icons/facebook.webp"/>
                 </LazyLoad>
-                <LazyLoad offsetVertical={300} className="lazyload-image" >
+                <LazyLoad offsetVertical={200} className="lazyload-image" >
                 <img src="/assets/icons/email.webp"/>
                 </LazyLoad>
 

@@ -11,7 +11,7 @@ export const DestinationCard = ({item}) =>{
         
       <Reveal>
       <div className={styles.destinationCard}>
-      <LazyLoad offsetVertical={300} className="lazyload-image" >
+      <LazyLoad offsetVertical={200} className="lazyload-image" >
         <img src={item.imageUrl} />
         </LazyLoad>
         <div className={item.active ? styles.whiteGradient : styles.whiteGradientNotActive}></div>
