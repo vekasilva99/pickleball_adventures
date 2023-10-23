@@ -10,7 +10,61 @@ import { Reveal } from "@/components/Reveal";
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import ReactPlayer from 'react-player';
+import { DestinationCard } from "@/components/DestinationCard";
+import { Feature } from "@/components/Feature";
 
+const destinations=[
+  {name:"Peru",
+  imageUrl:"/assets/images/Peru1.jpg",
+  id:1,
+  active:true
+},
+{name:"Ecuador",
+imageUrl:"/assets/images/ecuador.jpg",
+id:2,
+active:false
+},
+{name:"Colombia",
+imageUrl:"/assets/images/colombia.jpeg",
+id:2,
+active:false
+},
+
+]
+
+const features=[
+  {
+  title:'Lodging',
+  description:'Spend your stay in one of the most exclusive hotels.',
+  imageUrl:'/assets/icons/lodging.png'
+},
+{
+  title:'Restaurants',
+  description:'Prove the incredible mix of flavors at the best and recognized restaurants.',
+  imageUrl:'/assets/icons/restaurant.png'
+},
+{
+  title:'Pickleball Clinic',
+  description:'Enjoy daily Pickleball Clinics led by World Class Pros.',
+  imageUrl:'/assets/icons/pickleball.png'
+},
+{
+  title:'Social Labor',
+  description:'Spread the Pickleball Love to local kids from disadvantaged areas.',
+  imageUrl:'/assets/icons/hand.png'
+},
+{
+  title:'Guided Activities',
+  description:'Explore the culture by visiting iconic places.',
+  imageUrl:'/assets/icons/activities.png'
+},
+{
+  title:'Events and Shows',
+  description:'Enjoy a journey full of music, dance and tradition.',
+  imageUrl:'/assets/icons/events.png'
+},
+
+]
 
 
 export default function Home() {
@@ -65,43 +119,9 @@ export default function Home() {
           </p>
         </Reveal>
         <div className={styles.destinationsContainer}>
-          <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/Peru1.jpg" />
-              <div className={styles.whiteGradient}></div>
-              <div className={styles.cardInfo}>
-                <h2>Peru</h2>
-                <button
-                  onClick={() => {
-                    router.push("/destinations/peru");
-                  }}
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/ecuador.jpg" />
-              <div className={styles.whiteGradientNotActive}></div>
-              <div className={styles.cardInfo}>
-                <h2>Ecuador</h2>
-                <button className={styles.buttonComingSoon}>Coming Soon</button>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/colombia.jpeg" />
-              <div className={styles.whiteGradientNotActive}></div>
-
-              <div className={styles.cardInfo}>
-                <h2>Colombia</h2>
-                <button className={styles.buttonComingSoon}>Coming Soon</button>
-              </div>
-            </div>
-          </Reveal>
+         {destinations.map((destination)=>{
+          return <DestinationCard item={destination}/>
+         })}
         </div>
         <Reveal>
           <button
@@ -130,59 +150,9 @@ export default function Home() {
         />
 
         <div className={styles.featuresContainer}>
-          <div className={styles.feature}>
-            <Reveal width="100%">
-              <img src="/assets/icons/lodging.png" />
-              <h4>Lodging</h4>
-              <p>Spend your stay in one of the most exclusive hotels.</p>
-            </Reveal>
-          </div>
-
-          <div className={styles.feature}>
-            <Reveal width="100%">
-              <img src="/assets/icons/restaurant.png" />
-              <h4>Restaurants</h4>
-              <p>
-                Prove the incredible mix of flavors at the best and recognized
-                restaurants.
-              </p>
-            </Reveal>
-          </div>
-
-          <div className={styles.feature}>
-            <Reveal width="100%">
-              <img src="/assets/icons/pickleball.png" />
-              <h4>Pickleball Clinic</h4>
-              <p>Enjoy daily Pickleball Clinics led by World Class Pros.</p>
-            </Reveal>
-          </div>
-
-          <div className={styles.feature}>
-            <Reveal width="100%">
-              <img src="/assets/icons/hand.png" />
-              <h4>Social Labor</h4>
-              <p>
-                Spread the Pickleball Love to local kids from disadvantaged
-                areas
-              </p>
-            </Reveal>
-          </div>
-
-          <div className={styles.feature}>
-            <Reveal width="100%">
-              <img src="/assets/icons/activities.png" />
-              <h4>Guided Activities</h4>
-              <p>Explore the culture by visiting iconic places.</p>
-            </Reveal>
-          </div>
-
-          <div className={styles.feature}>
-            <Reveal width="100%">
-              <img src="/assets/icons/events.png" />
-              <h4>Events and Shows</h4>
-              <p>Enjoy a journey full of music, dance and tradition.</p>
-            </Reveal>
-          </div>
+          {features.map((feature)=>{
+            return <Feature item={feature}/>
+          })}
         </div>
       </div>
       <Footer />
