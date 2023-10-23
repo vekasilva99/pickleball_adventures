@@ -9,7 +9,9 @@ export const DestinationCard = ({item}) =>{
         
       <Reveal>
       <div className={styles.destinationCard}>
+      <LazyLoad offsetVertical={300} >
         <img src={item.imageUrl} />
+        </LazyLoad>
         <div className={item.active ? styles.whiteGradient : styles.whiteGradientNotActive}></div>
         <div className={styles.cardInfo}>
           <h2>{item.name}</h2>
