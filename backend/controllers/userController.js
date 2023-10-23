@@ -7,7 +7,7 @@ import Token from "../models/token.model"
 
 export const newUser = async (req, res, next) => {
   const { email } = req.body;
-
+console.log('holaaaaa')
 
   try {
     // Check if a user with the same email already exists

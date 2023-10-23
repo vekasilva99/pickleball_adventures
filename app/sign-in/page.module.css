@@ -18,6 +18,21 @@
 
 }
 
+.videoHome video{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+
+
+
+}
+
+.lazyload-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .invalid{
   border: 1px solid red !important;
 

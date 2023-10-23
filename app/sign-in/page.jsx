@@ -109,7 +109,7 @@ console.log(callBackUrl)
         </div>
         <div className={styles.videoContainer}>
       
-          <LazyLoad offsetVertical={200} className="lazyload-video">
+          <LazyLoad offsetVertical={200} className="lazyload-video" >
             <ReactPlayer
               url="/assets/videos/2.mp4"
               playing
