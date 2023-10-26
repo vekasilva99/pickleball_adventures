@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
       );
 
       if (data?.user) {
-        router.push("/");
+        router.push("/sign-in");
         setLoading(false)
       }
 

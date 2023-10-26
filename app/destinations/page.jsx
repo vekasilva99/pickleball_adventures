@@ -7,10 +7,108 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { useRouter } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
+import LazyLoad from 'react-lazy-load';
+import { DestinationCardLarge } from "@/components/DestinationCardLarge";
+import moment from "moment";
+
+const destinations=[
+  {
+    _id: "64e7cf1c7053a6d4c4626cf4",
+    name: "Week on Lima",
+    city: "Lima",
+    country: "Peru",
+    imageUrl:"/assets/images/Peru1.webp",
+    nights: 7,
+    active: true,
+    images: [
+      "../assets/images/peru/28.webp",
+      "../assets/images/peru/1.webp",
+      "../assets/images/peru/13.webp",
+      "../assets/images/peru/20.webp",
+      "../assets/images/peru/27.webp",
+      "../assets/images/peru/35.webp"
+    ],
+    
+    dates:[
+      {
+        _id:"64e7d0b93093bbf9d66f1618",
+        date: "2023-11-08T04:00:00.000Z",
+        priceSingle: 5500,
+        priceDouble: 5000,
+        maxGuests: 100,
+        numberGuests: 32,
+        active: true,
+      }
+    ]
+  },
+  {
+    _id: "64e7cf1c7053a6d4c4626cf4",
+    name: "Week on Quito",
+    city: "Quito",
+    country: "Ecuador",
+    imageUrl:"/assets/images/ecuador.webp",
+    nights: 7,
+    active: false,
+    images: [
+      "../assets/images/peru/28.webp",
+      "../assets/images/peru/1.webp",
+      "../assets/images/peru/13.webp",
+      "../assets/images/peru/20.webp",
+      "../assets/images/peru/27.webp",
+      "../assets/images/peru/35.webp"
+    ],
+  
+  },
+  {
+    _id: "64e7cf1c7053a6d4c4626cf4",
+    name: "Week on Cartagena",
+    city: "Cartagena",
+    country: "Colombia",
+    imageUrl:"/assets/images/colombia.webp",
+    nights: 7,
+    active: false,
+    images: [
+      "../assets/images/peru/28.webp",
+      "../assets/images/peru/1.webp",
+      "../assets/images/peru/13.webp",
+      "../assets/images/peru/20.webp",
+      "../assets/images/peru/27.webp",
+      "../assets/images/peru/35.webp"
+    ],
+  
+  },
+
+  {
+    _id: "64e7cf1c7053a6d4c4626cf4",
+    name: "Week on Caracas",
+    city: "Caracas",
+    country: "Venezuela",
+    imageUrl:"/assets/images/venezuela.webp",
+    nights: 7,
+    active: false,
+    images: [
+      "../assets/images/peru/28.webp",
+      "../assets/images/peru/1.webp",
+      "../assets/images/peru/13.webp",
+      "../assets/images/peru/20.webp",
+      "../assets/images/peru/27.webp",
+      "../assets/images/peru/35.webp"
+    ],
+  
+  },
+
+]
 export default function Destinations() {
   const router = useRouter();
   const [showModal, setShowModal] = React.useState(false);
-  const toggle = () => {
+  const [selected, setSelected] = React.useState(destinations[0]);
+  const toggle = (item) => {
+    console.log('iteeeem',item)
+    if(item){
+      console.log(item)
+      setSelected(destinations[item])
+    }
+    
     setShowModal(!showModal);
   };
 
@@ -27,18 +125,22 @@ export default function Destinations() {
   }, [showModal]);
   return (
     <>
+   
       <div className={getClass()}>
+    
         <div className={styles.modal}>
+        <LazyLoad offsetVertical={200} >
           <img
             className={styles.close}
-            src="/assets/icons/close-yellow.png"
+            src="/assets/icons/close-yellow.webp"
             onClick={() => {
               toggle();
             }}
           />
+          </LazyLoad>
           <div className={styles.modalContent}>
-            <h3>7 Nights</h3>
-            <h2>Lima, Peru</h2>
+            <h3>{selected.nights} Nights</h3>
+            <h2>{selected.city}, {selected.country}</h2>
             <button
               className={styles.button}
               onClick={() => {
@@ -46,16 +148,18 @@ export default function Destinations() {
               }}
             >
               <h2>EXPLORE THIS ITINERARY</h2>
-              <img src="/assets/icons/arrow-45.png" />
+              <LazyLoad offsetVertical={200} >
+              <img src="/assets/icons/arrow-45.webp" />
+              </LazyLoad>
             </button>
           </div>
           <div className={styles.dateContent}>
             <div className={styles.month}>
-              <h4>September 2023</h4>
+              <h4>{moment(selected.dates[0].date).format('MMMM')} {moment(selected.dates[0].date).format('YYYY')}</h4>
             </div>
             <div className={styles.item}>
-              <h5>Wed, September 3, 2023</h5>
-              <h2>$5,500</h2>
+              <h5>{moment(selected.dates[0].date).format('dddd')}, {moment(selected.dates[0].date).format('MMMM')} {moment(selected.dates[0].date).format('DD')}, {moment(selected.dates[0].date).format('YYYY')}</h5>
+              <h2>${selected.dates[0].priceSingle}</h2>
               <button
                 className={styles.button}
                 onClick={() => {
@@ -63,7 +167,9 @@ export default function Destinations() {
                 }}
               >
                 <h2>SELECT DATE</h2>
-                <img src="/assets/icons/arrow-45.png" />
+                <LazyLoad offsetVertical={200} >
+                <img src="/assets/icons/arrow-45.webp" />
+                </LazyLoad>
               </button>
             </div>
           </div>
@@ -74,82 +180,15 @@ export default function Destinations() {
         <Header
           titleLine1="Our"
           titleLine2="Destinations"
-          background="/assets/images/beach.png"
+          background="/assets/images/beach.webp"
           whiteBackground={true}
-          backgroundTop="/assets/images/beach.jpg"
+          backgroundTop="/assets/images/beach.webp"
         />
         <div className={styles.page}>
           <div className={styles.destinationsContainer}>
-            <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/Peru1.jpg" />
-              <div className={styles.whiteGradient}></div>
-              <div className={styles.cardInfo}>
-                <Reveal>
-                <h3>7 Nights</h3>
-                </Reveal>
-                <Reveal>
-                <h2>Lima, Peru</h2>
-                </Reveal>
-              </div>
-              <div className={styles.price}>
-                <h1>$5,500</h1>
-                <h2>AVG PER PERSON</h2>
-                <button
-                  onClick={() => {
-                    toggle();
-                  }}
-                >
-                  View 1 date
-                </button>
-              </div>
-            </div>
-            </Reveal>
-            <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/ecuador.jpg" />
-              <div className={styles.whiteGradientNotActive}></div>
-              <div className={styles.cardInfo}>
-                <Reveal>
-                <h3>7 Nights</h3>
-                </Reveal>
-                <Reveal>
-                <h2>Quito, Ecuador</h2>
-                </Reveal>
-                <Reveal>
-                <button className={styles.notActive}>Coming Soon</button>
-                </Reveal>
-              </div>
-            </div>
-            </Reveal>
-            <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/venezuela.jpg" />
-              <div className={styles.whiteGradientNotActive}></div>
-              <div className={styles.cardInfo}>
-                <Reveal>
-                <h3>7 Nights</h3>
-                </Reveal>
-                <Reveal>
-                <h2>Caracas, Venezuela</h2>
-                </Reveal>
-              </div>
-            </div>
-            </Reveal>
-            <Reveal>
-            <div className={styles.destinationCard}>
-              <img src="/assets/images/colombia.jpeg" />
-              <div className={styles.whiteGradientNotActive}></div>
-              <div className={styles.cardInfo}>
-                <Reveal>
-                <h3>7 Nights</h3>
-                </Reveal>
-                <Reveal>
-                <h2>Cartagena, Colombia</h2>
-                </Reveal>
-              </div>
-            </div>
-            </Reveal>
+            {destinations.map((destination,index)=>{
+              return    <DestinationCardLarge item={destination} index={index}toggle={(item)=>{toggle(item)}}/>
+            })}
           </div>
         </div>
 
