@@ -37,7 +37,7 @@ export const PastTrips = ({data}) =>{
         <h3>{moment(reservation.tripId.date).format('MMM DD')} - {moment(reservation.tripId.date).add(reservation.tripId.trip.nights,'days').format('MMM DD')}, {moment(reservation.tripId.date).format('YYYY')}</h3>
       </div>
       <h4>
-        Points earned: <strong>7</strong>
+        Points earned: <strong>550</strong>
       </h4>
     </div>
   </div>

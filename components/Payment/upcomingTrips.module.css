@@ -19,6 +19,21 @@
     flex-direction: column;
     align-items: center;
   }
+.row2{
+  display: flex;
+  flex-direction: row;
+}
+  .discount{
+    background-color: #FDC316;
+    height: fit-content;
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    border-radius: 100vw;
+  }
+
+  .discount:first-of-type{
+    margin-right: 1vw;
+  }
   .noShowButton{
     visibility: hidden;
     opacity: 0;

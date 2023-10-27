@@ -19,7 +19,7 @@ const images = [
   "../assets/images/Peru1.jpg",
 ];
 
-export const Payment = ({ clientSecret,book,customerId }) => {
+export const Payment = ({ clientSecret,book,customerId,totalPrice,fiveOff,twentyFiveOff,totalFullPrice }) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -131,7 +131,16 @@ book(paymentIntent.id, customerId,email)
     <>
       <Title small={true} text={`How would you like to pay?`} left={true} />
       <Reveal>
-      <h5>Total Price: $100.00</h5>
+        {(fiveOff || twentyFiveOff) &&
+      <h5>Sub Total: ${totalFullPrice}.00</h5>}
+   
+      <h5>Total: ${totalPrice}.00</h5>
+      <div className={styles.row2}>
+        {twentyFiveOff &&
+        <div className={styles.discount}>25% Off</div>}
+        {fiveOff &&
+        <div className={styles.discount}>5% Off</div>}
+      </div>
       </Reveal>
       <div className={`${styles.container} ${styles.margin}`}>
         <Title small={true} text={"Pay with credit card"} left={true} />

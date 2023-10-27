@@ -38,6 +38,8 @@ export default function Reserve() {
   const [guests, setGuests] = useState([]);
   const [guestsInfo, setGuestInfo] = useState([]);
   const [guestsInfoStep, setGuestInfoStep] = useState(3);
+  const [fiveOff, setFiveOff] = useState(false);
+  const [twentyFiveoff, setTwentyFiveOff] = useState(false);
   const [paymentStep, setPaymentStep] = useState(4);
   const [selectedGuest, setSelectedGuest] = useState(0);
   const [selectedGuestInfo, setSelectedGuestInfo] = useState({
@@ -52,6 +54,7 @@ export default function Reserve() {
   });
   const [showCancellation, setShowCancellation] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [fulltotalPrice, setFullTotalPrice] = useState(0);
   const [clientSecret, setClientSecret] = useState("");
   const [customerId, setCustomerId] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -148,8 +151,15 @@ export default function Reserve() {
         total += guests[i] * prices.priceDouble;
       }
     }
-    console.log("total", total);
-    setTotalPrice(total);
+    if(guests.length==4){
+      setFiveOff(true)
+      setTotalPrice(total-total*0.05)
+    }else{
+      setTotalPrice(total);
+    }
+    setFullTotalPrice(total);
+ 
+    
   };
 
   const calculateDownPayment = (guests) => {
@@ -1264,7 +1274,7 @@ if(clientSecret){
 {clientSecret && customerId &&
             <div className={`${styles.step} ${styles.start}`}>
                 <Elements stripe={stripePromise} options={options}>
-             <Payment clientSecret={clientSecret} customerId={customerId} book={(id,customerId,email)=>{book(id,customerId,email)}}/>
+             <Payment totalPrice={totalPrice} totalFullPrice={fulltotalPrice} fiveOff={fiveOff} twentyFiveOff={twentyFiveoff} clientSecret={clientSecret} customerId={customerId} book={(id,customerId,email)=>{book(id,customerId,email)}}/>
              </Elements>
             </div>}
           </div>

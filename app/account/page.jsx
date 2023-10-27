@@ -40,7 +40,7 @@ const [reservations,setReservations]=useState([])
 
  
   };
-
+console.log(user)
   useEffect(() => {
     setPage(
       callBackUrl
@@ -84,6 +84,7 @@ const [reservations,setReservations]=useState([])
         backgroundTop="/assets/images/download.jpg"
         whiteBackground={false}
         yellowBackground={true}
+        
       />
 
       <div className={styles.pageGradient}>

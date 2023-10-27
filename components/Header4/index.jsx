@@ -12,7 +12,7 @@ export const Header = ({}) => {
         <div className={styles.info}>
          <div className={styles.item}>
           <h5>Society #</h5>
-          <h6>387909807</h6>
+          <h6>{user?._id.slice(0,10)}</h6>
          </div>
          <div className={styles.item}>
           <h5>Status</h5>
@@ -20,7 +20,7 @@ export const Header = ({}) => {
          </div>
          <div className={styles.item}>
           <h5>Points</h5>
-          <h6>7</h6>
+          <h6>{user?.points}</h6>
          </div>
 
         </div>
