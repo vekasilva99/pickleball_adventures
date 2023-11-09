@@ -128,7 +128,7 @@ export default function SignIn() {
         }}
       >
         <div className={styles.modalSuccess}>
-          <img src="../assets/icons/check-circle.png" />
+          <img src="../assets/icons/check-circle.webp" />
           <h2>Your Password has been updated!</h2>
           <h3>Now you can log in</h3>
           <button onClick={()=>{router.push("/sign-in");setShowSuccessModal(false);        }}>Log In</button>
@@ -157,7 +157,7 @@ export default function SignIn() {
           <video autoPlay muted playsInline loop className={styles.videoHome}>
             <source src="/assets/videos/2.mp4" type="video/mp4"></source>
           </video>
-          <img src="/assets/icons/arrow-45.png"></img>
+          <img src="/assets/icons/arrow-45.webp"></img>
         </div>
       </div>
     

@@ -106,7 +106,7 @@
     object-fit: contain;
 }
 
-.rightContainer img:last-of-type{
+.rightContainer .logoCabieses{
     width: 5vw;
     height: fit-content;
     object-fit: contain;
@@ -289,7 +289,7 @@
 }
 
 .plane{
-    background-image: url('/assets/icons/plane.png');
+    background-image: url('/assets/icons/plane.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -297,7 +297,7 @@
 }
 
 .info{
-    background-image: url('/assets/icons/info.png');
+    background-image: url('/assets/icons/info.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -305,7 +305,7 @@
 }
 
 .foundation{
-    background-image: url('/assets/icons/cabieses1.png');
+    background-image: url('/assets/icons/cabieses1.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -313,7 +313,7 @@
 }
 
 .contact{
-    background-image: url('/assets/icons/envelop.png');
+    background-image: url('/assets/icons/envelop.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -328,28 +328,28 @@
 }
 
 .navItem:focus > .plane{
-    background-image: url('/assets/icons/plane-white.png');
+    background-image: url('/assets/icons/plane-white.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .navItem:focus > .info{
-    background-image: url('/assets/icons/info-white.png');
+    background-image: url('/assets/icons/info-white.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .navItem:focus > .foundation{
-    background-image: url('/assets/icons/cabieses1-white.png');
+    background-image: url('/assets/icons/cabieses1-white.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .navItem:focus > .contact{
-    background-image: url('/assets/icons/envelop-white.png');
+    background-image: url('/assets/icons/envelop-white.webp');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

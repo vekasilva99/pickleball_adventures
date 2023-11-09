@@ -80,8 +80,8 @@ console.log(user)
       <Header
         titleLine1="About"
         titleLine2="Us"
-        background="/assets/images/download.png"
-        backgroundTop="/assets/images/download.jpg"
+        background="/assets/images/download.webp"
+        backgroundTop="/assets/images/download.webp"
         whiteBackground={false}
         yellowBackground={true}
         

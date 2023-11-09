@@ -35,3 +35,25 @@ export const getTrips = async (req, res, next) => {
     trips,
   });
 };
+
+
+export const getActiveTrip = async (req, res, next) => {
+try{
+  console.log('entre')
+  const activeTrip = await ActiveTrip.findOne({ _id: { $eq: req.query.id } });
+
+  const existingTrip = await Trip.findOne({ _id: activeTrip.trip });
+console.log('mkjnhbgvfcgvhbjnk',activeTrip)
+console.log('mkjnhbgvfcgvhbjnk',existingTrip)
+  if (!existingTrip || existingTrip==null || !activeTrip ||  activeTrip==null) {
+    return res.status(400).json({ error: 'Trip does not exist in the database.' });
+  }
+  res.status(200).json({
+    activeTrip,
+    existingTrip,
+  });
+}catch (error) {
+  console.error(error);
+  return res.status(500).json({ error: 'Internal server error' });
+}
+};

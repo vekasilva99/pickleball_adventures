@@ -1,5 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import Stripe from "stripe";
+import User from "../models/user.model";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -7,10 +8,22 @@ export const checkout=async(req, res, next)=> {
 
 
 
-  const { amount} = req.body;
+  const { amount,emails} = req.body;
 
 
   try {
+ 
+    let count=0;
+    for(const email of emails){
+      const user= await User.findOne({email})
+      if(user){
+        if(user.reservations.length >= 4){
+          count ++;
+        }
+      }
+
+    }
+
     const customer = await stripe.customers.create();
     const paymentIntent = await stripe.paymentIntents.create({
       amount: Number(amount) * 100,
@@ -26,7 +39,7 @@ export const checkout=async(req, res, next)=> {
   
     
 
-    res.status(200).json({ clientSecret: paymentIntent.client_secret, customerId:customer.id });
+    res.status(200).json({ clientSecret: paymentIntent.client_secret, customerId:customer.id, discount:count });
   } catch (error) {
     // console.log(error)
     return res.status(500).json({ error: 'Internal server error' });

@@ -27,10 +27,10 @@ export const Navbar = () => {
       <div className={styles.navbar}>
         <div className={styles.rightContainer}>
         <LazyLoad offsetVertical={200}  >
-          <img src="/assets/logo/logo.webp" />
+          <img className={styles.logoPickleball} src="/assets/logo/logo.webp" />
           </LazyLoad>
           <LazyLoad offsetVertical={200}  >
-          <img src="/assets/logo/cabieses.webp" />
+          <img className={styles.logoCabieses} src="/assets/logo/cabieses.webp" />
           </LazyLoad>
         </div>
         <div className={styles.leftContainer}>

@@ -99,7 +99,9 @@
 
   color: #2C2F34;
 }
-
+.lazyload-image{
+  height: 99%;
+}
 .button{
     /* font-family: 'Poppins', sans-serif; */
   text-transform: uppercase; 

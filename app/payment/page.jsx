@@ -11,7 +11,7 @@ import { Quote } from "@/components/Quote";
 import { countryList } from "@/helpers/countryList";
 import { countryCodes } from "@/helpers/countryCodes";
 import { Title } from "@/components/Title";
-import { useRouter } from "next/navigation";
+import { useRouter,useParams } from "next/navigation";
 import validator from "validator";
 import { toast } from "react-toastify";
 import LoaderContext from "@/context/LoaderContext";
@@ -30,7 +30,7 @@ const stripePromise = loadStripe(
   process.env.STRIPE_PUBLISHABLE_KEY
 );
 export default function Reserve() {
-
+const params = useParams();
 
   const [currentStep, setCurrentStep] = useState(3);
   const [showDetails, setShowDetails] = useState(false);
@@ -55,87 +55,9 @@ export default function Reserve() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { setLoading } = useContext(LoaderContext);
 
-  const [first_name, setFirst_name] = useState("");
-  const [last_name, setLast_name] = useState("");
-  const [email, setEmail] = useState("");
-  const [birthdate, setBirthdate] = useState("");
-  const [day, setDay] = useState("");
-  const [month, setMonth] = useState("");
-  const [year, setYear] = useState("");
-  const [gender, setGender] = useState("");
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-  const [phone_number, setPhone_number] = useState("");
-  const [code, setCode] = useState("");
-  const [number, setNumber] = useState("");
-  const [password, setPassword] = useState("");
-  const [password2, setPassword2] = useState("");
-
-  const [first_nameError, setFirst_nameError] = useState(undefined);
-  const [last_nameError, setLast_nameError] = useState(undefined);
-  const [emailError, setEmailError] = useState(undefined);
-  const [birthdateError, setBirthdateError] = useState(undefined);
-  const [dayError, setDayError] = useState(undefined);
-  const [monthError, setMonthError] = useState(undefined);
-  const [yearError, setYearError] = useState(undefined);
-  const [genderError, setGenderError] = useState(undefined);
-  const [countryError, setCountryError] = useState(undefined);
-  const [stateError, setStateError] = useState(undefined);
-  const [phone_numberError, setPhone_numberError] = useState(undefined);
-  const [codeError, setCodeError] = useState(undefined);
-  const [numberError, setNumberError] = useState(undefined);
-  const [passwordError, setPasswordError] = useState(undefined);
-  const [password2Error, setPassword2Error] = useState(undefined);
 
   const router = useRouter();
-  const getClassSelect = (value) => {
-    if (value == "") {
-      return styles.empty;
-    } else {
-      return "";
-    }
-  };
 
-  const addRoom = () => {
-    setRooms(rooms + 1);
-  };
-
-  const removeRooms = () => {
-    if (rooms > 1) {
-      setRooms(rooms - 1);
-    }
-  };
-
-  const defaultGuests = () => {
-    setGuestInfoStep(2 + rooms);
-    setPaymentStep(2 + rooms * 2);
-    let aux = [];
-    for (let i = 0; i < rooms; i++) {
-      aux.push(1);
-    }
-    setGuests(aux);
-    calculateTotal(aux);
-    console.log("GUests1", aux);
-  };
-
-  const addGuest = (index) => {
-    let aux = guests;
-
-    aux[index] = aux[index] + 1;
-    console.log(index, aux);
-    setGuests([...aux]);
-    calculateTotal(aux);
-    console.log("GUests2", aux);
-  };
-
-  const removeGuest = (index) => {
-    let aux = guests;
-
-    aux[index] = aux[index] - 1;
-    setGuests([...aux]);
-    calculateTotal(aux);
-    console.log("GUests3", aux);
-  };
 
   const calculateTotal = (guests) => {
     let total = 0;
@@ -162,64 +84,7 @@ export default function Reserve() {
     return total;
   };
 
-  const defaultGuestInfo = () => {
-    let aux = [];
 
-    for (let i = 0; i < rooms; i++) {
-      let aux2 = [];
-      for (let j = 0; j < guests[i]; j++) {
-        let data = {
-          first_name: "",
-          last_name: "",
-          gender: "",
-          date_of_birth: { month: "", day: "", year: "" },
-          country: "",
-          state: "",
-          email: "",
-          phone: { code: "", number: "" },
-        };
-        aux2.push(JSON.stringify(data));
-      }
-      aux.push(aux2);
-    }
-    setGuestInfo([...aux]);
-    console.log("kkkkk", aux);
-  };
-
-  const numberOfGuests = () => {
-    let aux = 0;
-
-    for (let i = 0; i < guests.length; i++) {
-      aux += guests[i].length;
-    }
-
-    return aux;
-  };
-
-  const changeSelectedGuest = (room, index) => {
-    console.log(
-      "hola",
-      guestsInfo,
-      room,
-      index,
-      JSON.parse(guestsInfo[room][index])
-    );
-    let aux = guestsInfo;
-    aux[room][selectedGuest] = JSON.stringify(selectedGuestInfo);
-    setSelectedGuest(index);
-    setGuestInfo(aux);
-    console.log(aux);
-    setSelectedGuestInfo(JSON.parse(guestsInfo[room][index]));
-  };
-
-  const changeRoom = (room, index) => {
-    let aux = guestsInfo;
-    aux[room][selectedGuest] = JSON.stringify(selectedGuestInfo);
-    setSelectedGuest(0);
-    setGuestInfo(aux);
-    console.log(aux);
-    setSelectedGuestInfo(JSON.parse(guestsInfo[room + 1][0]));
-  };
 
   const toFindDuplicates = (arry) =>
     arry.filter((item, index) => arry.indexOf(item) !== index);
@@ -243,7 +108,7 @@ export default function Reserve() {
       setCurrentStep(guestsInfoStep);
       setLoading(false);
     } else {
-      let dataAux = { rooms: [], tripId: process.env.PERU, total: totalPrice };
+      let dataAux = { rooms: [], tripId: params.id, total: totalPrice };
 
       for (let i = 0; i < guestsInfo.length; i++) {
         let roomAux = {
@@ -287,43 +152,7 @@ export default function Reserve() {
     }
   };
 
-  const checkGuestInfoByRoom = (room) => {
-    let empty = false;
-    let error = false;
-    let aux = guestsInfo;
-    aux[room][selectedGuest] = JSON.stringify(selectedGuestInfo);
-    setGuestInfo(aux);
-    for (let i = 0; i < aux[room].length; i++) {
-      let guestAux = JSON.parse(aux[room][i]);
-      console.log(guestAux);
-      if (
-        guestAux.first_name.replace(/ /g, "") == "" ||
-        guestAux.last_name.replace(/ /g, "") == "" ||
-        guestAux.gender.replace(/ /g, "") == "" ||
-        guestAux.date_of_birth.day.replace(/ /g, "") == "" ||
-        guestAux.date_of_birth.month.replace(/ /g, "") == "" ||
-        guestAux.date_of_birth.year.replace(/ /g, "") == "" ||
-        guestAux.country.replace(/ /g, "") == "" ||
-        guestAux.state.replace(/ /g, "") == "" ||
-        guestAux.email.replace(/ /g, "") == "" ||
-        guestAux.phone.code.replace(/ /g, "") == "" ||
-        guestAux.phone.number.replace(/ /g, "") == ""
-      ) {
-        empty = true;
-      }
 
-      if (!validator.isEmail(guestAux.email)) {
-        error = true;
-      }
-    }
-
-    console.log(empty, error);
-    if (!empty && !error) {
-      return true;
-    } else {
-      return false;
-    }
-  };
   const appearance = {
     theme: 'stripe',
   
@@ -407,7 +236,7 @@ export default function Reserve() {
         }}
       >
         <div className={styles.modalSuccess}>
-          <img src="../assets/icons/check-circle.png" />
+          <img src="../assets/icons/check-circle.webp" />
           <h2>Awesome!</h2>
           <h3>Your booking has been confirmed!</h3>
           <h3>Check your email for details.</h3>

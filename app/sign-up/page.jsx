@@ -457,7 +457,7 @@ export default function SignUp() {
               className={styles.videoHome}
             />
           </LazyLoad>
-          <img src="/assets/icons/arrow-45.png"></img>
+          <img src="/assets/icons/arrow-45.webp"></img>
         </div>
       </div>
     </div>

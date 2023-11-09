@@ -3,10 +3,10 @@ import styles from './events.module.css'
 import { Title } from "../Title";
 
 const images = [
-  "../assets/images/peru/23.jpeg",
-  "../assets/images/peru/10.jpg",
-  "../assets/images/pickleball.jpg",
-  "../assets/images/Peru1.jpg",
+  "../assets/images/peru/23.webp",
+  "../assets/images/peru/10.webp",
+  "../assets/images/pickleball.webp",
+  "../assets/images/Peru1.webp",
 ];
 
 export const Events = ({events}) =>{
@@ -17,13 +17,13 @@ export const Events = ({events}) =>{
   let intervalTime = 5000;
   const nextSlide = () => {
     setCurrentSlide(currentSlide === 1 ? 0 : currentSlide + 1);
-    console.log("next");
+  
 
   };
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 1 ? 3 : currentSlide - 1);
-    console.log("prev");
+ 
   };
   function auto() {
     slideInterval = setInterval(nextSlide, intervalTime);

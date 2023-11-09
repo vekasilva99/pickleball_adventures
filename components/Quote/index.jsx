@@ -9,7 +9,7 @@ export const Quote = ({titleLine1, titleLine2, content}) =>{
       <div className={styles.quoteContainer}>
          
         <div className={styles.quote}>
-        <img src="/assets/icons/arrow-45.png"></img>
+        <img src="/assets/icons/arrow-45.webp"></img>
              <Title   large={true} text={titleLine1} left={true} color={'white'}/>
      <Reveal width="100%">
           <p>{content}</p>

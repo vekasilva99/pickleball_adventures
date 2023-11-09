@@ -11,16 +11,16 @@ import { Quote } from "@/components/Quote";
 import { countryList } from "@/helpers/countryList";
 import { countryCodes } from "@/helpers/countryCodes";
 import { Title } from "@/components/Title";
-import { useRouter } from "next/navigation";
 import validator from "validator";
 import { toast } from "react-toastify";
 import LoaderContext from "@/context/LoaderContext";
 import { useContext } from "react";
-
+import { useRouter, useParams } from 'next/navigation';
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { Payment } from "@/components/Payment";
 import { Reveal } from "@/components/Reveal";
+import moment from "moment";
 
 
 const prices = {
@@ -59,7 +59,7 @@ export default function Reserve() {
   const [customerId, setCustomerId] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const { setLoading } = useContext(LoaderContext);
-
+  const [destination,setDestination]=useState(null)
   const [first_name, setFirst_name] = useState("");
   const [last_name, setLast_name] = useState("");
   const [email, setEmail] = useState("");
@@ -93,6 +93,7 @@ export default function Reserve() {
   const [password2Error, setPassword2Error] = useState(undefined);
 
   const router = useRouter();
+  const params = useParams();
   const getClassSelect = (value) => {
     if (value == "") {
       return styles.empty;
@@ -100,6 +101,30 @@ export default function Reserve() {
       return "";
     }
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${process.env.WEBAPP_URL}/api/activeTrips/${params.id}`);
+        let trip = response.data;
+  
+
+        console.log('dddd',trip)
+        if(trip?.activeTrip?.active){
+          setDestination(trip)
+        }else{
+          router.push('/destinations')
+        }
+      
+       
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+        router.push('/destinations')
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const addRoom = () => {
     setRooms(rooms + 1);
@@ -268,7 +293,7 @@ total+=guests[i].guests.length
       setCurrentStep(guestsInfoStep);
       setLoading(false);
     } else {
-      let dataAux = { rooms: [], tripId: process.env.PERU, total: totalPrice,downPaymentId:paymentId,customer:customerId,customerEmail:email };
+      let dataAux = { rooms: [], tripId: params.id, total: totalPrice,downPaymentId:paymentId,customer:customerId,customerEmail:email };
 
       for (let i = 0; i < guestsInfo.length; i++) {
         let roomAux = {
@@ -372,7 +397,7 @@ total+=guests[i].guests.length
       setCurrentStep(guestsInfoStep);
       setLoading(false);
     } else {
-      let dataAux = { rooms: [], tripId: process.env.PERU, total: totalPrice };
+      let dataAux = { rooms: [], tripId: params.id, total: totalPrice };
 
       for (let i = 0; i < guestsInfo.length; i++) {
         let roomAux = {
@@ -399,11 +424,13 @@ total+=guests[i].guests.length
       }
       try {
        
-          
+
         const { data } = await axios.post(`${process.env.WEBAPP_URL}api/create-payment-intent`, 
-          { amount: calculateDownPayment(dataAux.rooms) },
+          { amount: calculateDownPayment(dataAux.rooms), emails:emails },
         );
-       
+       if(data.discount > 0){
+        calculateDiscount(data.discount)
+       }
         setClientSecret(data.clientSecret) 
         setCustomerId(data.customerId) 
 setLoading(false)
@@ -417,11 +444,23 @@ setLoading(false)
         
   }
 
+
+  const calculateDiscount=(number)=>{
+
+    let discount=(fulltotalPrice*0.25)*number;
+setTwentyFiveOff(true)
+    setTotalPrice(totalPrice-discount)
+
+  }
   useEffect(() => {
 if(clientSecret){
   setCurrentStep(currentStep+1)
 }
   }, [clientSecret]);
+
+  useEffect(() => {
+    console.log(destination)
+      }, [destination]);
   const appearance = {
     theme: 'stripe',
   };
@@ -430,7 +469,7 @@ if(clientSecret){
     appearance,
   };
   return (
-  
+  <>{destination &&
     <div className={styles.main}>
       <div
         className={
@@ -497,11 +536,11 @@ if(clientSecret){
         }}
       >
         <div className={styles.modalSuccess}>
-          <img src="../assets/icons/check-circle.png" />
+          <img src="../assets/icons/check-circle.webp" />
           <h2>Awesome!</h2>
           <h3>Your booking has been confirmed!</h3>
           <h3>Check your email for details.</h3>
-          <h3>See you in Lima!</h3>
+          <h3>See you in {destination?.existingTrip?.city}!</h3>
           <button
             onClick={() => {
               router.push("/");
@@ -526,11 +565,11 @@ if(clientSecret){
             <Title
               color={"white"}
               small={true}
-              text={"Week on Lima"}
+              text={`Week on ${destination?.existingTrip?.city}`}
               left={true}
             />
             <Reveal>
-            <h2>Sept. 3, 2023 - Sept. 10, 2023</h2>
+            <h2>{moment(destination?.activeTrip?.date).format('MMM')} {moment(destination?.activeTrip?.date).format('DD')}, {moment(destination?.activeTrip?.date).format('YYYY')} - {moment(destination?.activeTrip?.date).add(destination?.existingTrip?.nights,'d').format('MMM')} {moment(destination?.activeTrip?.date).add(destination?.existingTrip?.nights,'d').format('DD')}, {moment(destination?.activeTrip?.date).add(destination?.existingTrip?.nights,'d').format('YYYY')}</h2>
             </Reveal>
             <Reveal>
             <button
@@ -674,7 +713,7 @@ if(clientSecret){
               style={{ marginLeft: (currentStep * -100).toString() + "%" }}
             >
               <div className={styles.containerImg}>
-                <img src="assets/images/peru/lima/13.jpg" />
+                <img src="../assets/images/peru/lima/13.webp" />
               </div>
               <div className={styles.container}>
                 <div className={styles.row1}>
@@ -772,7 +811,7 @@ if(clientSecret){
                         removeRooms();
                       }}
                     >
-                      <img src="assets/icons/minus.png" />
+                      <img src="../assets/icons/minus.webp" />
                     </button>
                     <h6>{rooms}</h6>
                     <button
@@ -780,7 +819,7 @@ if(clientSecret){
                         addRoom();
                       }}
                     >
-                      <img src="assets/icons/plus.png" />
+                      <img src="../assets/icons/plus.webp" />
                     </button>
                   </div>
                   </Reveal>
@@ -821,7 +860,7 @@ if(clientSecret){
                             removeGuest(index);
                           }}
                         >
-                          <img src="assets/icons/minus.png" />
+                          <img src="../assets/icons/minus.webp" />
                         </button>
                         <h6>{guests[index]}</h6>
                         <button
@@ -830,7 +869,7 @@ if(clientSecret){
                             addGuest(index);
                           }}
                         >
-                          <img src="assets/icons/plus.png" />
+                          <img src="../assets/icons/plus.webp" />
                         </button>
                       </div>
                       </Reveal>
@@ -1282,7 +1321,8 @@ if(clientSecret){
       </div>
 
       <Footer />
-    </div>
+    </div>}
+    </>
 
   );
 }

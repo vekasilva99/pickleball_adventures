@@ -5,10 +5,10 @@ import moment from "moment";
 import { Reveal } from "../Reveal";
 
 const images = [
-  "../assets/images/peru/23.jpeg",
-  "../assets/images/peru/10.jpg",
-  "../assets/images/pickleball.jpg",
-  "../assets/images/Peru1.jpg",
+  "../assets/images/peru/23.webp",
+  "../assets/images/peru/10.webp",
+  "../assets/images/pickleball.webp",
+  "../assets/images/Peru1.webp",
 ];
 
 export const PastTrips = ({data}) =>{
@@ -29,7 +29,7 @@ export const PastTrips = ({data}) =>{
       </div>
       {data.map((reservation)=>{
     return <div className={styles.destinationCard}>
-    <img src="/assets/images/Peru1.jpg" />
+    <img src="/assets/images/Peru1.webp" />
     <div className={styles.whiteGradient}></div>
     <div className={styles.cardInfo}>
       <div>

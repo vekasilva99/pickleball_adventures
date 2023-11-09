@@ -77,7 +77,7 @@ if(!error){
         }}
       >
         <div className={styles.modalSuccess}>
-          <img src="../assets/icons/check-circle.png" />
+          <img src="../assets/icons/check-circle.webp" />
           <h2>Awesome!</h2>
           <h3>Your email has been sent!</h3>
           <h3>Our team will contact us as soon as possible.</h3>
@@ -93,7 +93,7 @@ if(!error){
         </div>
       </div>
       <Navbar />
-     <Header whiteBackground={true} titleLine1="Contact" titleLine2="Us" background="/assets/images/pickleball.png" backgroundTop="/assets/images/pickleball.jpg"/>
+     <Header whiteBackground={true} titleLine1="Contact" titleLine2="Us" background="/assets/images/pickleball.webp" backgroundTop="/assets/images/pickleball.webp"/>
  
      <div className={styles.pageGradient}>
 

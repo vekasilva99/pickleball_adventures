@@ -6,30 +6,31 @@ import { Quote } from "@/components/Quote";
 import { Title } from "@/components/Title";
 import { useRouter } from "next/navigation";
 import { Reveal } from "@/components/Reveal";
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import LazyLoad from 'react-lazy-load';
 import ReactPlayer from 'react-player';
 import { DestinationCard } from "@/components/DestinationCard";
 import { Feature } from "@/components/Feature";
+import axios from "axios";
 
-const destinations=[
-  {name:"Peru",
-  imageUrl:"/assets/images/Peru1.webp",
-  id:1,
-  active:true
-},
-{name:"Ecuador",
-imageUrl:"/assets/images/ecuador.webp",
-id:2,
-active:false
-},
-{name:"Colombia",
-imageUrl:"/assets/images/colombia.webp",
-id:2,
-active:false
-},
+// const destinations=[
+//   {name:"Peru",
+//   imageUrl:"/assets/images/Peru1.webp",
+//   id:1,
+//   active:true
+// },
+// {name:"Ecuador",
+// imageUrl:"/assets/images/ecuador.webp",
+// id:2,
+// active:false
+// },
+// {name:"Colombia",
+// imageUrl:"/assets/images/colombia.webp",
+// id:2,
+// active:false
+// },
 
-]
+// ]
 
 const features=[
   {
@@ -68,6 +69,23 @@ const features=[
 
 export default function Home() {
   const router = useRouter();
+  const [destinations,setDestinations]=useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${process.env.WEBAPP_URL}/api/trips`);
+        const destinations = response.data.trips;
+        
+        setDestinations(destinations)
+       
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className={styles.main}>
       <Navbar />

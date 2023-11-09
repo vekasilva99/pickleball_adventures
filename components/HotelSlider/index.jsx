@@ -4,10 +4,10 @@ import { Title } from "../Title";
 import { Reveal } from "../Reveal";
 
 const images = [
-  "../assets/images/beach.jpg",
-  "../assets/images/foundation.jpg",
-  "../assets/images/pickleball.jpg",
-  "../assets/images/Peru1.jpg",
+  "../assets/images/beach.webp",
+  "../assets/images/foundation.webp",
+  "../assets/images/pickleball.webp",
+  "../assets/images/Peru1.webp",
 ];
 
 export const Slider = ({ images,select,selected }) => {
@@ -17,11 +17,13 @@ export const Slider = ({ images,select,selected }) => {
   let slideInterval;
   let intervalTime = 3000;
   const nextSlide = () => {
+    if(images.length>1){
     let slide = images[0];
     images.shift();
     images.push(slide);
     setCurrentSlide(currentSlide === images.length-1 ? 0 : currentSlide + 1);
-    console.log("next",images.length,currentSlide);
+
+    }
   };
 
   const prevSlide = () => {
@@ -29,14 +31,17 @@ export const Slider = ({ images,select,selected }) => {
     images.pop();
     images.unshift(slide);
     setCurrentSlide(currentSlide === 0 ? images.length-1 : currentSlide - 1);
-    console.log("prev");
+   
   };
   function auto() {
     slideInterval = setInterval(nextSlide, intervalTime);
   }
 
   useEffect(() => {
-    setCurrentSlide(0);
+ 
+      setCurrentSlide(0);
+    
+ 
   }, [images]);
 
   useEffect(() => {
@@ -91,23 +96,23 @@ if(selected==id){
       <Reveal>
       <div className={styles.elements} >
         <div className={`${getClass(0)}`} onClick={()=>{select(0)}}>
-          <img src="../assets/icons/hotel.png" />
+          <img src="../assets/icons/hotel.webp" />
           <h3>Hotel</h3>
         </div>
         <div className={getClass(1)} onClick={()=>{select(1)}}>
-          <img src="../assets/icons/gym.png" />
+          <img src="../assets/icons/gym.webp" />
           <h3>Fitness centre</h3>
         </div>
         <div className={getClass(2)} onClick={()=>{select(2)}}>
-          <img src="../assets/icons/wellness.png" />
+          <img src="../assets/icons/wellness.webp" />
           <h3>Spa and wellness centre</h3>
         </div>
         <div className={getClass(3)} onClick={()=>{select(3)}}>
-          <img src="../assets/icons/chef.png" />
+          <img src="../assets/icons/chef.webp" />
           <h3>Gastronomy</h3>
         </div>
         <div className={getClass(4)} onClick={()=>{select(4)}}>
-          <img src="../assets/icons/pin.png" />
+          <img src="../assets/icons/pin.webp" />
           <h3>Events</h3>
         </div>
       </div>

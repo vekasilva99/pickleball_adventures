@@ -306,7 +306,7 @@ module.exports = {
                   </row>
               <row class="collapse">
                 <columns small="6">
-                  <img style="width: 100%; object-fit: cover; height: 300px;" src="https://lp-cms-production.imgix.net/2022-04/shutterstock_1047718252.jpg">
+                  <img style="width: 100%; object-fit: cover; height: 300px;" src="https://lp-cms-production.imgix.net/2022-04/shutterstock_1047718252.webp">
                 </columns>
               </row>
             </container>
@@ -462,7 +462,7 @@ newUser : (data) => {
             </row>
         <row class="collapse">
           <columns small="6">
-            <img style="width: 100%; object-fit: cover; height: 300px;" src="https://lp-cms-production.imgix.net/2022-04/shutterstock_1047718252.jpg">
+            <img style="width: 100%; object-fit: cover; height: 300px;" src="https://lp-cms-production.imgix.net/2022-04/shutterstock_1047718252.webp">
           </columns>
         </row>
       </container>

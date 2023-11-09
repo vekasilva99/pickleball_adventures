@@ -4,12 +4,13 @@ import React, { useState, useEffect } from "react";
 import styles from "./destinations.module.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Title } from "@/components/Title";
-import { Events } from "@/components/Events";
+import LazyLoad from 'react-lazy-load';
 import { Slider } from "@/components/HotelSlider";
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import { Reveal } from "@/components/Reveal";
+import moment from "moment";
+import axios from "axios";
 const images = [
   "../assets/images/peru/lima/13.webp",
   "../assets/images/peru/lima/14.webp",
@@ -269,32 +270,37 @@ const events=[
 ]
 export default function Destination() {
   const router = useRouter();
+  const params = useParams();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedOption, setSelectedOption] = useState(0);
+  const [showModal, setShowModal] = React.useState(false);
   const [selectedOptionHotel, setSelectedOptionHotel] = useState(0);
   const [currentRestaurant, setCurrentRestaurant] = useState(restaurants[0]);
   const [currentActivity, setCurrentActivity] = useState(activities[0]);
   const [currentEvent, setCurrentEvent] = useState(events[0]);
-  const [hotelImages,setHotelImages]=useState(images2)
+  const [hotelImages,setHotelImages]=useState([])
+  const [destination,setDestination]=useState(null)
 
+  
   const autoScroll = true;
   let slideInterval;
   let intervalTime = 4000;
   const nextSlide = () => {
-    let slide = images[0];
-    images.shift();
-    images.push(slide);
+    let slide = destination?.images[0];
+    destination?.images.shift();
+    destination?.images.push(slide);
     setCurrentSlide(currentSlide === 2 ? 0 : currentSlide + 1);
-    console.log("next");
+
   };
 
   const prevSlide = () => {
-    let slide = images[images.length - 1];
-    images.pop();
-    images.unshift(slide);
+    let slide = destination?.images.pop();
+    destination?.images.unshift(slide);
     setCurrentSlide(currentSlide === 0 ? 2 : currentSlide - 1);
-    console.log("prev");
+  
   };
+
+
 
   // function auto() {
   //   slideInterval = setInterval(nextSlide, intervalTime);
@@ -351,30 +357,125 @@ export default function Destination() {
   }
 
   const getImages=()=>{
+    if(destination){
     if(selectedOptionHotel==0){
-      setHotelImages([...images2])
+      setHotelImages([...destination.hotel.information[0].content])
     }else if(selectedOptionHotel==1){
-      setHotelImages([...images3])
+      setHotelImages([...destination.hotel.information[1].content])
     }else if(selectedOptionHotel==2){
-      setHotelImages([...images4])
+      setHotelImages([...destination.hotel.information[2].content])
     }else if(selectedOptionHotel==3){
-      setHotelImages([...images5])
+      setHotelImages([...destination.hotel.information[3].content])
     }else if(selectedOptionHotel==4){
-      setHotelImages([...images6])
+      setHotelImages([...destination.hotel.information[4].content])
     }
   }
+  }
+
+useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${process.env.WEBAPP_URL}/api/trips/${params.id}`);
+        let trip = response.data.trip;
+  
+trip.dates=response.data.dates
+        console.log(trip)
+        if(trip.active){
+          let hotel=trip.hotel.information
+          setDestination(trip)
+          setHotelImages([...trip.hotel.information[0].content])
+        }else{
+          router.push('/destinations')
+        }
+      
+       
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+        router.push('/destinations')
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const getClass = () => {
+    let show = `${styles.overlay} `;
+    if (!showModal) {
+      show += `${styles.overlayHidden}`;
+    }
+    return show;
+  };
+
+  const groupDatesByMonth = (dates) => {
+    return dates.reduce((groupedDates, date) => {
+      const month = new Date(date.date).toLocaleString('default', { month: 'long', year: 'numeric' });
+      if (!groupedDates[month]) {
+        groupedDates[month] = [];
+      }
+      groupedDates[month].push(date);
+      console.log(groupedDates)
+      return groupedDates;
+    }, {});
+  };
   return (
     <>
+            <div className={getClass()}>
+   
+   <div className={styles.modal}>
+   <LazyLoad offsetVertical={200} >
+     <img
+       className={styles.close}
+       src="/assets/icons/close-yellow.webp"
+       onClick={() => {
+         setShowModal(false)
+       }}
+     />
+     </LazyLoad>
+     <div className={styles.modalContent}>
+       <h3>{destination?.nights} Nights</h3>
+       <h2>{destination?.city}, {destination?.country}</h2>
+     </div>
+     {destination?.dates.length > 0 &&
+     <div className={styles.dateContent}>
+       {Object.entries(groupDatesByMonth(destination.dates)).map(([month,dates])=>{
+       return <>
+       <div className={styles.month}>
+         <h4>{month}</h4>
+       </div>
+       {dates.map((date)=>{
+         return    <div className={styles.item}>
+         <h5>{moment(date.date).format('dddd')}, {moment(date.date).format('MMMM')} {moment(date.date).format('DD')}, {moment(date.date).format('YYYY')}</h5>
+         <h2>${date.priceSingle}</h2>
+         <button
+           className={styles.button}
+           onClick={() => {
+             router.push(`/reserve/${date._id}`);
+           }}
+         >
+           <h2>SELECT DATE</h2>
+           <LazyLoad offsetVertical={200} >
+           <img src="/assets/icons/arrow-45.webp" />
+           </LazyLoad>
+         </button>
+       </div>
+       })}
+    
+       </>})}
+     </div>}
+   </div>
+ </div>
       <div className={styles.main}>
         <Navbar />
+
         <div className={styles.header}>
           <div className={styles.row}>
             <div className={styles.column}>
               <Reveal>
-              <button className={styles.back}>Go Back</button>
+              <button className={styles.back} onClick={()=>{router.push('/destinations')}}>Go Back</button>
               </Reveal>
            <Reveal width="100%">
               <div className={styles.infoContainer}>
+              {destination?.dates?.length >0 &&
                 <div className={styles.info}>
                   <div className={styles.totalDays}>
                     <div className={styles.days}>
@@ -385,20 +486,21 @@ export default function Destination() {
                         <img src="../assets/icons/sun.webp" />
                       </div>
                     </div>
-                    <h3>7 nights/8 days</h3>
+                    
+                    <h3>{destination?.nights} nights/{destination?.nights +1} days</h3>
                   </div>
                 
-                  <h3>$5,500</h3>
-                </div>
+                  <h3>${destination?.dates[0].priceSingle}</h3>
+                </div>}
               
                 <Title
                   small={true}
-                  text={"September 3, 2023"}
+                  text={`${moment(destination?.dates[0].date).format('MMMM')} ${moment(destination?.dates[0].date).format('DD')}, ${moment(destination?.dates[0].date).format('YYYY')}`}
                   opacity={true}
                   marginTop={"2vh"}
                   left={true}
                 />
-                <button className={styles.button} onClick={()=>{router.push("/reserve");}}>
+                <button className={styles.button} onClick={()=>{setShowModal(true);}}>
                   <h2>Book Now</h2>
                   <img src="../assets/icons/arrow-45.webp" />
                 </button>
@@ -407,7 +509,7 @@ export default function Destination() {
               <Title
               widthReveal={'50vw'}
                 large={true}
-                text={"Week on Lima"}
+                text={destination?.name}
                 opacity={true}
                 marginBottom={"2vh"}
                 left={true}
@@ -418,7 +520,7 @@ export default function Destination() {
             <div className={styles.column}>
               <Reveal>
               <div className={styles.imageContainer}>
-                {images.map((image, index) => {
+                {destination?.images.map((image, index) => {
                   return <img src={image} />;
                 })}
               </div>
@@ -428,6 +530,7 @@ export default function Destination() {
                 <Reveal>
                 <div
                   className={styles.day}
+                  style={{cursor:'pointer'}}
                   onClick={() => {
                     prevSlide();
                   }}
@@ -438,6 +541,7 @@ export default function Destination() {
                 <Reveal>
                 <div
                   className={styles.day}
+                  style={{cursor:'pointer'}}
                   onClick={() => {
                     nextSlide();
                   }}
@@ -453,7 +557,9 @@ export default function Destination() {
         <div className={styles.page}>
           <Reveal>
           <div className={styles.row}>
+            {hotelImages.length >0 && 
           <Slider images={hotelImages} selected={selectedOptionHotel} select={(aux)=>{console.log('kjnhbgvfcfgvhbjn',aux);setSelectedOptionHotel(aux)}}/>
+            }
           </div>
           </Reveal>
           <Reveal width="100%">
@@ -483,22 +589,22 @@ export default function Destination() {
               <h2>{currentRestaurant.content}</h2>
               </Reveal>
               <div className={styles.imageContainer3}>
-                <Reveal>
+                <Reveal width="100%">
                 <img src={currentRestaurant.images[0]} />
                 </Reveal>
-                <Reveal>
+                <Reveal width="100%">
                 <img src={currentRestaurant.images[1]} />
                 </Reveal>
-                <Reveal>
+                <Reveal> width="100%"
                 <img src={currentRestaurant.images[2]} />
                 </Reveal>
               </div>
             </div>
             <div className={`${styles.column} ${styles.border}`}>
-              {restaurants.map((restaurant) => {
+              {destination?.restaurants.map((restaurant) => {
                 return (
                   <div
-                    className={`${styles.item} ${selected(restaurant.id)}`}
+                    className={`${styles.item} ${selected(restaurant._id)}`}
                     onClick={() => {
                       setCurrentRestaurant(restaurant);
                     }}
@@ -538,22 +644,22 @@ export default function Destination() {
             <h2>{currentActivity.content}</h2>
             </Reveal>
             <div className={styles.imageContainer3}>
-            <Reveal>
+            <Reveal width="100%">
               <img src={currentActivity.images[0]} />
               </Reveal>
-              <Reveal>
+              <Reveal width="100%">
               <img src={currentActivity.images[1]} />
               </Reveal>
-              <Reveal>
+              <Reveal width="100%">
               <img src={currentActivity.images[2]} />
               </Reveal>
             </div>
           </div>
           <div className={`${styles.column} ${styles.border}`}>
-            {activities.map((restaurant) => {
+            {destination?.activities.map((restaurant) => {
               return (
                 <div
-                  className={`${styles.item} ${selectedActivity(restaurant.id)}`}
+                  className={`${styles.item} ${selectedActivity(restaurant._id)}`}
                   onClick={() => {
                     setCurrentActivity(restaurant);
                   }}
@@ -592,22 +698,22 @@ export default function Destination() {
             <h2>{currentEvent.content}</h2>
             </Reveal>
             <div className={styles.imageContainer3}>
-            <Reveal>
+            <Reveal width="100%">
               <img src={currentEvent.images[0]} />
               </Reveal>
-              <Reveal>
+              <Reveal width="100%">
               <img src={currentEvent.images[1]} />
               </Reveal>
-              <Reveal>
+              <Reveal width="100%">
               <img src={currentEvent.images[2]} />
               </Reveal>
             </div>
           </div>
           <div className={`${styles.column} ${styles.border}`}>
-            {events.map((restaurant) => {
+            {destination?.events.map((restaurant) => {
               return (
                 <div
-                  className={`${styles.item} ${selectedEvent(restaurant.id)}`}
+                  className={`${styles.item} ${selectedEvent(restaurant._id)}`}
                   onClick={() => {
                     setCurrentEvent(restaurant);
                   }}

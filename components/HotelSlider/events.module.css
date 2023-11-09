@@ -110,4 +110,40 @@
   font-size: 2vw;
   max-width: 80%;
 }
+
+.title{
+  bottom: 5vh;
+}
+
+.title  h2{
+  font-size: 10vw;
+  line-height: 1;
+  color: #2C2F34;
+  opacity: 0.75;
+  font-style: italic;
+
+}
+
+.title  p{
+  font-size: 3vw;
+  margin-top: 3vh;
+  color: #2C2F34;
+  opacity: 0.75;
+}
+
+.gradient{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.24%, rgba(255, 255, 255, 0.50) 53.90%, #FFF 75.52%);
+  position: absolute;
+  z-index: 10;
+}
+
+.gradient2{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.00) 17.24%, rgba(255, 255, 255, 0.50) 33.90%, #FFF 70.52%);
+  position: absolute;
+  z-index: 10;
+}
 }

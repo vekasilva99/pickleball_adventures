@@ -10,22 +10,22 @@ import { Quote } from "@/components/Quote";
 import { Reveal } from "@/components/Reveal";
 
 const images = [
-  "/assets/images/foundation/1.jpeg",
-  "/assets/images/foundation/2.jpeg",
-  "/assets/images/foundation/3.jpeg",
-  "/assets/images/foundation/4.jpeg",
-  "/assets/images/foundation/5.jpeg",
-  "/assets/images/foundation/6.jpeg",
+  "/assets/images/foundation/1.webp",
+  "/assets/images/foundation/2.webp",
+  "/assets/images/foundation/3.webp",
+  "/assets/images/foundation/4.webp",
+  "/assets/images/foundation/5.webp",
+  "/assets/images/foundation/6.webp",
  
 ];
 
 const images2 = [
-  "/assets/images/us/1.jpeg",
-  "/assets/images/us/2.jpeg",
-  "/assets/images/us/3.jpeg",
-  "/assets/images/us/4.jpeg",
-  "/assets/images/us/5.jpeg",
-  "/assets/images/us/6.jpeg",
+  "/assets/images/us/1.webp",
+  "/assets/images/us/2.webp",
+  "/assets/images/us/3.webp",
+  "/assets/images/us/4.webp",
+  "/assets/images/us/5.webp",
+  "/assets/images/us/6.webp",
  
 ];
 export default function Cabieses() {
@@ -36,12 +36,12 @@ export default function Cabieses() {
   let intervalTime = 3000;
   const nextSlide = () => {
     setCurrentSlide(currentSlide === 8 ? 0 : currentSlide + 1);
-    console.log("next");
+   
   };
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? 8 : currentSlide - 1);
-    console.log("prev");
+   
   };
   function auto() {
     slideInterval = setInterval(nextSlide, intervalTime);
@@ -60,15 +60,15 @@ export default function Cabieses() {
   return (
     <div className={styles.main}>
         <button className={`${styles.button} ${styles.buttonFixed}`}>          <h2>Donate Now</h2>
-            <img src="/assets/icons/arrow-45.png" /></button>
+            <img src="/assets/icons/arrow-45.webp" /></button>
       <Navbar />
-     <Header titleLine1="Our" dark={true} titleLine2="Foundation" background="/assets/logo/cabieses2.png" backgroundTop="/assets/logo/cabieses1.png" whiteBackground={true}/>
+     <Header titleLine1="Our" dark={true} titleLine2="Foundation" background="/assets/logo/cabieses2.webp" backgroundTop="/assets/logo/cabieses1.webp" whiteBackground={true}/>
  
      <div className={styles.pageGradient}>
       <Title normal={true} text={'One ball can change a life, and a life can change the world'} opacity={true} marginTop={'5vh'} marginBottom={'2vh'} />
      <Reveal>
       <button className={styles.button}><h2>Donate Now</h2>
-            <img src="/assets/icons/arrow-45.png" /></button>
+            <img src="/assets/icons/arrow-45.webp" /></button>
             </Reveal>
             <Reveal>
       <video autoPlay muted playsInline loop className={styles.videoHome}>
@@ -96,21 +96,21 @@ export default function Cabieses() {
           </div>
           {/* <div className={styles.column2}>
             <div className={styles.imgColumn}>
-            <img src="/assets/images/foundation/1.jpg"/>
-              <img src="/assets/images/foundation/3.jpg"/>
+            <img src="/assets/images/foundation/1.webp"/>
+              <img src="/assets/images/foundation/3.webp"/>
             </div>
             <div className={styles.imgColumn}>
-            <img src="/assets/images/foundation/6.jpg"/>
-              <img src="/assets/images/foundation/7.jpg"/>
+            <img src="/assets/images/foundation/6.webp"/>
+              <img src="/assets/images/foundation/7.webp"/>
             </div>
             <div className={styles.imgColumn}>
-            <img src="/assets/images/foundation/13.jpg"/>
-              <img src="/assets/images/foundation/11.jpg"/>
+            <img src="/assets/images/foundation/13.webp"/>
+              <img src="/assets/images/foundation/11.webp"/>
             </div>
-            <img className={styles.imgBig}src="/assets/images/foundation/10.jpg"/>
+            <img className={styles.imgBig}src="/assets/images/foundation/10.webp"/>
             <div className={styles.imgColumn}>
-            <img src="/assets/images/foundation/19.jpg"/>
-              <img src="/assets/images/foundation/22.jpg"/>
+            <img src="/assets/images/foundation/19.webp"/>
+              <img src="/assets/images/foundation/22.webp"/>
             </div>
           </div> */}
 <Reveal width="100%">
@@ -120,19 +120,19 @@ export default function Cabieses() {
                     }}>
             <img
                   id={`image-${1}`}
-                    src={  "/assets/images/foundation/1.jpg"}
+                    src={  "/assets/images/foundation/1.webp"}
 
                   
                   />
                        <img
                   id={`image-${2}`}
-                    src={  "/assets/images/foundation/3.jpg"}
+                    src={  "/assets/images/foundation/3.webp"}
 
                   
                   />
                        <img
                   id={`image-${3}`}
-                    src={  "/assets/images/foundation/4.jpg"}
+                    src={  "/assets/images/foundation/4.webp"}
 
                   
                   />
@@ -140,19 +140,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/5.jpg"}
+                    src={  "/assets/images/foundation/5.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/6.jpg"}
+                    src={  "/assets/images/foundation/6.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/7.jpg"}
+                    src={  "/assets/images/foundation/7.webp"}
 
                   
                   />
@@ -160,19 +160,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/8.jpg"}
+                    src={  "/assets/images/foundation/8.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/9.jpg"}
+                    src={  "/assets/images/foundation/9.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/10.jpg"}
+                    src={  "/assets/images/foundation/10.webp"}
 
                   
                   />
@@ -180,19 +180,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/11.jpg"}
+                    src={  "/assets/images/foundation/11.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/12.jpg"}
+                    src={  "/assets/images/foundation/12.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/13.jpg"}
+                    src={  "/assets/images/foundation/13.webp"}
 
                   
                   />
@@ -200,19 +200,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/14.jpg"}
+                    src={  "/assets/images/foundation/14.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/15.jpg"}
+                    src={  "/assets/images/foundation/15.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/16.jpg"}
+                    src={  "/assets/images/foundation/16.webp"}
 
                   
                   />
@@ -220,19 +220,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/17.jpg"}
+                    src={  "/assets/images/foundation/17.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/18.jpg"}
+                    src={  "/assets/images/foundation/18.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/19.jpg"}
+                    src={  "/assets/images/foundation/19.webp"}
 
                   
                   />
@@ -240,19 +240,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/20.jpg"}
+                    src={  "/assets/images/foundation/20.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/21.jpg"}
+                    src={  "/assets/images/foundation/21.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/22.jpg"}
+                    src={  "/assets/images/foundation/22.webp"}
 
                   
                   />
@@ -260,19 +260,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/23.jpg"}
+                    src={  "/assets/images/foundation/23.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/24.jpg"}
+                    src={  "/assets/images/foundation/24.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/25.jpg"}
+                    src={  "/assets/images/foundation/25.webp"}
 
                   
                   />
@@ -280,19 +280,19 @@ export default function Cabieses() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/foundation/26.jpg"}
+                    src={  "/assets/images/foundation/26.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/foundation/27.jpg"}
+                    src={  "/assets/images/foundation/27.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/foundation/28.jpg"}
+                    src={  "/assets/images/foundation/28.webp"}
 
                   
                   />

@@ -10,12 +10,12 @@ import { Title } from "@/components/Title";
 import { Reveal } from "@/components/Reveal";
 
 const images = [
-  "/assets/images/us/1.jpeg",
-  "/assets/images/us/2.jpeg",
-  "/assets/images/us/3.jpeg",
-  "/assets/images/us/4.jpeg",
-  "/assets/images/us/5.jpeg",
-  "/assets/images/us/6.jpeg",
+  "/assets/images/us/1.webp",
+  "/assets/images/us/2.webp",
+  "/assets/images/us/3.webp",
+  "/assets/images/us/4.webp",
+  "/assets/images/us/5.webp",
+  "/assets/images/us/6.webp",
  
 ];
 export default function AboutUs() {
@@ -26,12 +26,12 @@ export default function AboutUs() {
   let intervalTime = 3000;
   const nextSlide = () => {
     setCurrentSlide(currentSlide === 1 ? 0 : currentSlide + 1);
-    console.log("next");
+
   };
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? 1 : currentSlide - 1);
-    console.log("prev");
+
   };
   function auto() {
     slideInterval = setInterval(nextSlide, intervalTime);
@@ -53,8 +53,8 @@ export default function AboutUs() {
       <Header
         titleLine1="About"
         titleLine2="Us"
-        background="/assets/images/download.png"
-        backgroundTop="/assets/images/download.jpg"
+        background="/assets/images/download.webp"
+        backgroundTop="/assets/images/download.webp"
         whiteBackground={false}
         yellowBackground={true}
       />
@@ -83,7 +83,7 @@ export default function AboutUs() {
             />
           </div>
           <div className={styles.column1}>
-            <img src="/assets/images/us/10.jpg" />
+            <img src="/assets/images/us/10.webp" />
           </div>
           <div className={styles.column3}>
             <p>
@@ -269,19 +269,19 @@ export default function AboutUs() {
                     }}>
             <img
                   id={`image-${1}`}
-                    src={  "/assets/images/us/1.jpeg"}
+                    src={  "/assets/images/us/1.webp"}
 
                   
                   />
                        <img
                   id={`image-${2}`}
-                    src={  "/assets/images/us/2.jpeg"}
+                    src={  "/assets/images/us/2.webp"}
 
                   
                   />
                        <img
                   id={`image-${3}`}
-                    src={  "/assets/images/us/3.jpeg"}
+                    src={  "/assets/images/us/3.webp"}
 
                   
                   />
@@ -289,19 +289,19 @@ export default function AboutUs() {
             <div className={styles.imageContainer} >
             <img
                   id={`image-${4}`}
-                    src={  "/assets/images/us/4.jpeg"}
+                    src={  "/assets/images/us/4.webp"}
 
                   
                   />
                        <img
                   id={`image-${5}`}
-                    src={  "/assets/images/us/5.jpeg"}
+                    src={  "/assets/images/us/5.webp"}
 
                   
                   />
                        <img
                   id={`image-${6}`}
-                    src={  "/assets/images/us/6.jpeg"}
+                    src={  "/assets/images/us/6.webp"}
 
                   
                   />

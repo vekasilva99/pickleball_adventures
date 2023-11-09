@@ -50,12 +50,12 @@ try{
 
 export const getTrips = async (req, res, next) => {
   let trips = await Trip.find();
-
+const currentDate=new Date();
   for(let i=0;i<trips.length;i++){
-    let activetrips = await ActiveTrip.find({trip:trips[i]._id});
+    let activetrips = await ActiveTrip.find({trip:trips[i]._id,date:{$gt:currentDate}});
     
 
-trips[i]={name:trips[i].name,city:trips[i].city,country:trips[i].country,hotel:trips[i].hotel,restaurants:trips[i].restaurants,activities:trips[i].activities,events:trips[i].events,nights:trips[i].nights,images:trips[i].images,main_image:trips[i].main_image,active:trips[i].active,dates:activetrips}
+trips[i]={_id:trips[i]._id,name:trips[i].name,city:trips[i].city,country:trips[i].country,hotel:trips[i].hotel,restaurants:trips[i].restaurants,activities:trips[i].activities,events:trips[i].events,nights:trips[i].nights,images:trips[i].images,main_image:trips[i].main_image,active:trips[i].active,dates:activetrips}
   
 
 
@@ -76,7 +76,7 @@ export const getTrip = async (req, res, next) => {
         error: "Trip not found.",
       });
     }
-
+console.log(trip)
     trip.hotel= await Hotel.findById(trip.hotel);
  
     let auxRestaurants=[]
@@ -102,10 +102,15 @@ export const getTrip = async (req, res, next) => {
   
     }
     trip.activities=auxActivities
+    const currentDate=new Date();
+    let activetrips = await ActiveTrip.find({trip:trip._id,date:{$gt:currentDate}});
+    
+let dates=[]
+     dates=activetrips
+      
+    
  
-    res.status(200).json({
-      trip,
-    });
+    res.status(200).json({trip:trip,dates:dates});
   }catch (error) {
     console.error(error);
     return res.status(500).json({ error: 'Internal server error' });

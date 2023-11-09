@@ -9,15 +9,15 @@ export const DestinationCard = ({item}) =>{
   const router = useRouter();
     return(
         
-      <Reveal>
+      <Reveal overflow={'visible'}>
       <div className={styles.destinationCard}>
-      <LazyLoad offsetVertical={200} className="lazyload-image" >
-        <img src={item.imageUrl} />
+      <LazyLoad offsetVertical={200} className="lazyload-image2" >
+        <img src={item.main_image} />
         </LazyLoad>
         <div className={item.active ? styles.whiteGradient : styles.whiteGradientNotActive}></div>
         <div className={styles.cardInfo}>
-          <h2>{item.name}</h2>
-          <button className={styles.buttonComingSoon} disabled={!item.active}   onClick={() => {
+          <h2>{item.city}, {item.country}</h2>
+          <button className={item.active ? styles.button : styles.buttonComingSoon} disabled={!item.active}   onClick={() => {
                     router.push("/destinations/peru");
                   }}>{item.active ? "Book Now" : "Coming Soon"}</button>
         </div>
